@@ -1,0 +1,27 @@
+{
+  "Items": [
+    {
+      "Id": "7c6d369b-6831-4d85-bc11-8cc8e8747301",
+      "Title": "Sample Title",
+      "Description": "This is a sample description.",
+      "PublicationDate": "2022-01-01T00:00:00Z",
+      "LastModified": "2022-01-02T00:00:00Z",
+      "UrlName": "sample-title",
+      "Content": "<div class='hero-img-full aos-init aos-animate' data-cursor='pointer2' data-aos='full-hero-reveal' style='background-image:url(https://picsum.photos/1200/800?random=1)'>xxx</div>",
+      "Author": {
+        "Name": "Author Name",
+        "ProfileUrl": "/authors/author-name"
+      },
+      "Category": [
+        "Category1",
+        "Category2"
+      ],
+      "Tags": [
+        "Tag1",
+        "Tag2"
+      ]
+    }
+  ],
+  "TotalCount": 1,
+  "Count": 1
+}

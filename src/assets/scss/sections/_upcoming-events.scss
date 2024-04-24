@@ -1,0 +1,59 @@
+@use '../abstracts'as *;
+
+
+.events-wrap {
+
+
+    .card {
+        border-radius: 0;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-color: var(--masb-highlight);
+        padding: rem(20);
+        padding-left: 0;
+        padding-right: 0;
+
+        .card-date {
+            display: inline-flex;
+            margin-bottom: 24px;
+            letter-spacing: .03rem;
+
+        }
+
+        .badge {
+            margin-left: 1rem;
+            text-transform: uppercase;
+        }
+
+        --bar-height: 6px;
+        --bar-position: 85%;
+        --bar-color: 203,
+        229,
+        244;
+
+        .link-title {
+            display: flex;
+            background: none !important;
+
+            .card-title {
+
+
+                mark {
+                    --barcolor: #f3c;
+                    transition: all .3s ease;
+                    color: var(--masb-cobalt);
+
+
+                }
+            }
+        }
+
+
+        .link-title:hover {
+            .card-title {
+                mark {}
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@use '../../../assets/scss/abstracts'as *;
+
+
+.swiper-container {
+    .swiper-wrapper {
+        padding: 0 0 60px 0;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: inline-flex;
+    background: var(--ui-emphasis-alt);
+    width: 42px !important;
+    height: 42px !important;
+    top: inherit !important;
+    bottom: 0 !important;
+    border-radius: 50%;
+    color: var(--ui-emphasis) !important;
+
+    &::after {
+        transition: all .3s ease;
+        opacity: .6;
+        font-size: 12px !important;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.swiper-button-prev {
+    left: 0px !important;
+    right: auto;
+}
+
+.swiper-button-next {
+    left: 60px !important;
+    right: auto;
+}
+
+.quote {
+    padding: 0 0 40px 0;
+}

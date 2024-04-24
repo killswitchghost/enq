@@ -1,0 +1,10 @@
+@use '../abstracts'as *;
+
+#nextsteps-section {
+
+    .sentence-container {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+    }
+}

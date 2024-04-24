@@ -1,0 +1,10 @@
+@use '../abstracts'as *;
+
+.modal.fade .modal-dialog {
+    transition: none;
+    transform: none;
+}
+
+.modal-fullscreen {
+    width: calc(100vw - 16px);
+}

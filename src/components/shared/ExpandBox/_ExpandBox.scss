@@ -1,0 +1,62 @@
+@use '../../../assets/scss/abstracts'as *;
+
+
+.expand-box {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.expand-box-title {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(var(--ui-color-rgb), .1);
+
+    @media (min-width:$lg) {
+        cursor: default;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+/* Hide content by default on mobile and show the rest */
+@media (max-width: 767px) {
+    .expand-content {
+        //display: none;
+    }
+
+    /* Adjust styles for open state */
+    .expand-box.open .expand-content {
+        display: block;
+    }
+}
+
+
+// .btn-icon-txt {
+//     display: flex;
+//     /* Optional: Styles for the grid items, if you want them to be flex containers */
+//     align-items: center;
+//     /* Aligns items vertically in the center, if flex is used */
+//     text-decoration: none;
+//     /* Removes underline from links */
+//     color: inherit;
+//     /* Inherits text color from parent */
+// }
+
+// .btn-icon-txt img {
+//     margin-right: 10px;
+//     /* Adds some space between the image and the text */
+//     width: 48px;
+//     /* Adjust as needed */
+//     height: auto;
+//     /* Keeps the aspect ratio */
+// }
+
+// .btn-icon-txt div {
+//     display: flex;
+//     flex-direction: column;
+// }

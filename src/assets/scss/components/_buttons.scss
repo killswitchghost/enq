@@ -1,0 +1,208 @@
+@use '../abstracts'as *;
+
+
+
+
+.btn {
+    --borderWidth: 3px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+    border-radius: 0;
+    font-weight: 600;
+    border: 1px solid transparent;
+
+    &:after {
+        opacity: 0;
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        z-index: -1;
+        background-size: 300% 300%;
+        transition: opacity 1s ease;
+
+    }
+
+    &:hover {
+        &:after {
+            opacity: 1;
+            animation: animatedgradient 3s ease alternate infinite;
+
+        }
+    }
+}
+
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.btn-sm {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 6px 12px;
+}
+
+
+.btn-md {
+    font-size: 16px;
+    //height: 40px;
+    padding: 8px 20px;
+}
+
+.btn-lg {
+    font-size: 16px;
+    //height: 48px;
+    padding: 14px 24px;
+}
+
+button.btn-primary,
+.btn-primary,
+a.btn-primary:link,
+a.btn-primary:visited {
+    background: #000;
+    color: #fff;
+    border: 1px solid transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #000;
+        color: #fff;
+        border: 1px solid transparent;
+    }
+}
+
+
+
+.btn-secondary,
+a.btn-secondary {
+    background: #fff;
+    background: var(--ui-gray-1);
+    color: #000;
+    border: 1px solid transparent;
+
+    &:hover {
+        background: #fff;
+        color: #000;
+        border: 1px solid transparent;
+    }
+}
+
+.btn-outline,
+.btn-outline:link,
+.btn-outline:visited {
+    background-color: var(--bs-body-bg);
+    color: var(--ui-emphasis);
+    border: 0 solid #000;
+    position: relative;
+    // border-radius: 6px;
+
+    &:before {
+        content: "";
+        border: 2px solid var(--ui-emphasis);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        // border-radius: 6px;
+    }
+
+    &:after {
+        // border-radius: 6px;
+    }
+
+    &:hover {
+        background-color: var(--bs-body-bg);
+        color: var(--ui-emphasis);
+        border: 0 solid transparent;
+    }
+}
+
+
+// .btn-outline,
+// a.btn-outline:link,
+// a.btn-outline:visited {
+//     background-color: var(--bs-body-bg);
+//     border: 2px solid var(--ui-gray-15);
+//     color: #000;
+
+
+//     &:hover {
+//         background: #000;
+//         color: #fff;
+//         border: 2px solid transparent;
+//     }
+// }
+
+
+
+.btn,
+.btn-icon-txt {
+
+    .svg-arrow {
+        transition: transform 200ms;
+        transform: translateX(0) scale(1.2);
+    }
+
+    .svg-arrow-stem {
+        stroke-dasharray: 10;
+        stroke-dashoffset: 10;
+        transition: stroke-dashoffset 200ms;
+    }
+
+    &:hover {
+        .svg-arrow {
+            transform: translateX(4px) scale(1.2);
+        }
+
+        .svg-arrow-stem {
+            stroke-dashoffset: 20;
+        }
+    }
+}
+
+
+a,
+.btn,
+button {
+    .underline {
+        cursor: pointer;
+        width: 100%;
+        position: relative;
+
+        >span {
+            background-image: linear-gradient(transparent calc(100% - 1px), var(--ui-gray-11) 1px);
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-position: bottom right;
+            transition: background-size .5s;
+            padding-bottom: 3px;
+        }
+    }
+
+    &:hover {
+        .underline {
+            >span {
+                background-position: bottom left;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@use '../abstracts'as *;
+
+
+.form-control {
+    border-radius: 0;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 2px rgba(var(--ui-color-rgb), 1);
+}
+
+.input-xl {
+    height: 54px;
+    font-size: 24px;
+    font-weight: 300;
+
+    @media (min-width: $lg) {
+        font-size: 42px;
+        height: 90px;
+    }
+}

@@ -1,0 +1,42 @@
+@use '../abstracts'as *;
+
+.collapse-respond {
+    .collapse-header {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        height: 60px;
+
+        @media (min-width:$lg) {
+            pointer-events: none;
+        }
+    }
+
+    .collapse-title {
+        margin: 0;
+    }
+
+    .btn-collapse-m {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+
+        @media (min-width:$lg) {
+            display: none;
+        }
+    }
+
+    .collapse-m {
+        &.show {
+            display: block;
+        }
+
+        @media (min-width:$lg) {
+            display: flex;
+        }
+    }
+}

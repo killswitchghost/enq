@@ -1,0 +1,90 @@
+    @use '../abstracts' as *;
+
+    .box-side {
+        padding: 1.5rem;
+
+        @media(min-width:$lg) {
+            padding: 2rem;
+        }
+
+        >div {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @media(min-width:$lg) {
+            padding: 4rem 2rem;
+
+            >div {
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+        }
+
+        .side-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        p {
+            display: none;
+
+            @media(min-width:$lg) {
+                display: flex;
+            }
+        }
+    }
+
+    [data-bs-theme="light"] {
+        .box-side {
+            background-color: rgba(241, 245, 249, .3);
+        }
+    }
+
+    // .grow-div {
+    //     width: 1px;
+    //     height: 180px;
+    //     border-radius: 100px;
+    //     background-color: rgba(255, 255, 255, 0);
+    //     overflow: hidden;
+    //     margin-left: 2rem;
+    //     transform: translateY(60px);
+    // }
+
+    // .grow-div .line {
+    //     width: 1px;
+    //     height: 0;
+    //     background-color: yellow;
+    //     transition: width 0.5s;
+    //     z-index: 2;
+    //     display: inline-block;
+    // }
+
+
+    .sticky-wrap {
+        height: 100vh;
+    }
+
+    .sticky {
+        position: sticky;
+        top: 0;
+    }
+
+    .sticky-side {
+        width: 100%;
+
+        display: inline-block;
+
+        position: sticky;
+        position: -webkit-sticky;
+        top: 10rem;
+
+        @media(min-width:$lg) {
+            max-width: 300px;
+        }
+    }

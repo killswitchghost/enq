@@ -1,0 +1,109 @@
+@use '../../../assets/scss/abstracts' as *;
+
+.horizontal-menu {
+
+    position: sticky;
+    z-index: 99;
+    background: var(--ui-emphasis-alt);
+    color: var(--ui-emphasis-alt);
+    letter-spacing: 0;
+    width: 100%;
+
+
+    .dropdown-toggle,
+    .dropdown-toggle:hover,
+    .dropdown-toggle:active {
+        padding: 17px;
+        width: 100%;
+        background: var(--ui-emphasis-alt);
+        border-color: var(--ui-emphasis-alt);
+        color: var(--ui-emphasis);
+
+        &:after {
+            display: none;
+        }
+
+        .bi-chevron-down {
+            transition: all .3s ease;
+            margin-left: auto;
+        }
+
+        &.show {
+            .bi-chevron-down {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+
+    .dropdown-menu {
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+        background: var(--ui-emphasis-alt);
+        border-color: var(--ui-emphasis-alt);
+        color: var(--ui-emphasis);
+        transform: translate3d(0px, 42px, 0px) !important;
+        overflow-x: auto;
+
+        a {
+            background: none;
+            display: flex;
+            align-items: center;
+            padding: 14px;
+            min-height: 60px;
+
+            span {
+                border-bottom: 1px solid rgba(var(--bs-body-color-rgb), 0);
+            }
+
+            &:hover {
+                color: var(--ui-emphasis);
+            }
+        }
+
+        a.active {
+            color: #f3c;
+        }
+    }
+}
+
+.nav-header-hidden {
+    .horizontal-menu {
+        top: 0;
+    }
+}
+
+.nav-header-visible {
+    .horizontal-menu {
+        top: 80px;
+    }
+}
+
+@media (min-width:$lg) {
+    .horizontal-menu {
+        display: flex;
+        flex-direction: row;
+
+        .dropdown-toggle {
+            width: initial;
+            pointer-events: none;
+            border-right: 1px solid rgba(var(--ui-emphasis-rbg), .1);
+
+            .bi-chevron-down {
+                display: none;
+            }
+        }
+
+        .dropdown-menu {
+            display: flex;
+            position: relative;
+            width: initial;
+            transform: translate3d(0px, 0, 0px) !important;
+        }
+    }
+}
+
+#menu-center {
+    display: flex;
+    position: relative;
+}

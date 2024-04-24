@@ -1,0 +1,308 @@
+@use 'variables'as *;
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+
+
+
+
+.bi-icon {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+// .bi.up-right {
+//     &:before {
+//         transform: rotate(312deg);
+//     }
+// }
+.feather {
+    color: var(--bs-body-color);
+
+    circle {
+        stroke: var(--bs-body-color);
+    }
+}
+
+.feather-16 {
+    width: 16px;
+    height: 16px;
+
+
+}
+
+.feather-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.feather-32 {
+    width: 32px;
+    height: 32px;
+}
+
+
+// .mt-n1 {
+//     margin-top: -0.25rem !important;
+// }
+
+// .mt-n2 {
+//     margin-top: -0.5rem !important;
+// }
+
+// .mt-n3 {
+//     margin-top: -1rem !important;
+// }
+
+// .mt-n4 {
+//     margin-top: -1.5rem !important;
+// }
+
+// .mt-n5 {
+//     margin-top: -3rem !important;
+// }
+
+
+
+
+
+.listreset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.text-orange {
+    color: var(--bs-orange);
+}
+
+
+
+.text-gradient {
+    background: linear-gradient(90deg, rgba(0, 224, 255, 1) 0%, rgba(146, 0, 255, 1) 20%, rgba(230, 0, 255, 1) 40%, rgba(255, 153, 0, 1) 60%, rgba(250, 255, 0, 1) 80%, rgba(33, 171, 139, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.bg-gradient,
+.grad-0 {
+    background: rgb(0, 224, 255);
+    background: linear-gradient(90deg, rgba(0, 224, 255, 1) 0%, rgba(146, 0, 255, 1) 20%, rgba(230, 0, 255, 1) 40%, rgba(255, 153, 0, 1) 60%, rgba(250, 255, 0, 1) 80%, rgba(33, 171, 139, 1) 100%);
+}
+
+.grad-vert {
+    background: rgb(0, 224, 255);
+    background: linear-gradient(0deg, rgba(0, 224, 255, 1) 0%, rgba(146, 0, 255, 1) 20%, rgba(230, 0, 255, 1) 40%, rgba(255, 153, 0, 1) 60%, rgba(250, 255, 0, 1) 80%, rgba(33, 171, 139, 1) 100%);
+}
+
+.grad-1 {
+    background: linear-gradient(to right, #00e0ff 0%, #9200ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad-2 {
+    background: linear-gradient(to right, #e600ff 0%, #ff9900 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad-3 {
+    background: linear-gradient(to right, #faff00 0%, #21ab8b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// .grad-vert-1 {
+//     background: rgb(0, 255, 209);
+//     background: linear-gradient(0deg, rgba(0, 255, 209, 1) 0%, rgba(189, 255, 0, 1) 100%);
+// }
+
+// .grad-vert-2 {
+//     background: rgb(189, 255, 0);
+//     background: linear-gradient(0deg, rgba(189, 255, 0, 1) 0%, rgba(0, 255, 209, 1) 100%);
+// }
+
+// .grad-vert-3 {
+//     background: rgb(0, 224, 255);
+//     background: linear-gradient(0deg, rgba(0, 224, 255, 1) 0%, rgba(112, 0, 255, 1) 100%);
+// }
+
+// .grad-vert-4 {
+//     background: rgb(66, 255, 0);
+//     background: linear-gradient(0deg, rgba(66, 255, 0, 1) 0%, rgba(255, 0, 245, 1) 100%);
+// }
+
+// .grad-vert-5 {
+//     background: rgb(235, 255, 0);
+//     background: linear-gradient(0deg, rgba(235, 255, 0, 1) 0%, rgba(255, 0, 0, 1) 100%);
+// }
+
+// .grad-vert-6 {
+//     background: rgb(255, 184, 0);
+//     background: linear-gradient(0deg, rgba(255, 184, 0, 1) 0%, rgba(0, 224, 255, 1) 100%);
+// }
+
+
+
+
+$colors: ("sky": rgb(0, 224, 255),
+    "purple": rgba(146, 0, 255, 1),
+    "pink": rgba(230, 0, 255, 1),
+    "red": rgba(255, 0, 0, 1),
+    "orange": rgba(255, 153, 0, 1),
+    "yellow": rgba(250, 255, 0, 1),
+    "green": rgba(33, 171, 139, 1),
+    "lime": rgba(189, 255, 0, 1));
+
+
+@function color($colorName) {
+    @return map-get($colors, $colorName);
+}
+
+
+@mixin grad-vert($startColorName, $endColorName) {
+    $startColor: color($startColorName);
+    $endColor: color($endColorName);
+    background: $startColor;
+    background: linear-gradient(0deg, $endColor 0%, $startColor 100%);
+}
+
+
+
+.grad-vert-purple-blue {
+    @include grad-vert("purple", "blue");
+}
+
+.grad-vert-lime-yellow {
+    @include grad-vert("lime", "yellow");
+}
+
+.grad-vert-lime-green {
+    @include grad-vert("lime", "green");
+}
+
+.grad-vert-purple-blue {
+    @include grad-vert("purple", "blue");
+}
+
+.grad-vert-pink-green {
+    @include grad-vert("pink", "green");
+}
+
+.grad-vert-red-yellow {
+    @include grad-vert("red", "yellow");
+}
+
+.grad-vert-pink-lime {
+    @include grad-vert("pink", "lime");
+}
+
+.grad-vert-blue-yellow {
+    @include grad-vert("blue", "yellow");
+}
+
+.grad-vert-purple-sky {
+    @include grad-vert("purple", "sky");
+}
+
+.grad-vert-purple-red {
+    @include grad-vert("purple", "red");
+}
+
+.grad-vert-green-blue {
+    @include grad-vert("green", "sky");
+}
+
+
+$spacer: .5rem;
+
+@mixin size-utilities {
+    @for $i from 6 through 10 {
+        .m-#{$i} {
+            margin: $spacer * $i !important;
+        }
+
+        .mt-#{$i},
+        .my-#{$i} {
+            margin-top: $spacer * $i !important;
+        }
+
+        .mb-#{$i},
+        .my-#{$i} {
+            margin-bottom: $spacer * $i !important;
+        }
+
+        .ml-#{$i},
+        .mx-#{$i} {
+            margin-left: $spacer * $i !important;
+        }
+
+        .mr-#{$i},
+        .mx-#{$i} {
+            margin-right: $spacer * $i !important;
+        }
+
+        .p-#{$i} {
+            padding: $spacer * $i !important;
+        }
+
+        .pt-#{$i},
+        .py-#{$i} {
+            padding-top: $spacer * $i !important;
+        }
+
+        .pb-#{$i},
+        .py-#{$i} {
+            padding-bottom: $spacer * $i !important;
+        }
+
+        .pl-#{$i},
+        .px-#{$i} {
+            padding-left: $spacer * $i !important;
+        }
+
+        .pr-#{$i},
+        .px-#{$i} {
+            padding-right: $spacer * $i !important;
+        }
+    }
+}
+
+// Usage:
+@include size-utilities;
+
+
+
+.full-height {
+    min-height: 100vh;
+
+    .container,
+    .row {
+        height: 100%;
+
+        >div {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

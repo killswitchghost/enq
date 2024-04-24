@@ -1,0 +1,37 @@
+@use '../abstracts'as *;
+
+.testimonials-wrap {
+    width: 100%;
+
+    .quote {
+        padding: 0;
+
+        >* {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 400ms;
+        }
+    }
+
+    .swiper-slide-active {
+        .quote {
+            >* {
+                opacity: 1;
+                transform: none;
+
+                @for $i from 0 to 15 {
+                    &:nth-child(#{$i + 1}) {
+                        transition-delay: $i * 0.1 + 0.3s;
+                    }
+                }
+            }
+        }
+
+        .quote-img,
+        .quote-text,
+        .quote-author {
+            opacity: 1;
+            transition-delay: 300ms;
+        }
+    }
+}

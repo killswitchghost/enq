@@ -1,0 +1,101 @@
+@use '../abstracts'as *;
+
+
+html,
+body {
+    width: 100%;
+    overscroll-behavior: none;
+    min-height: 100%;
+
+    // font-weight: normal;
+    // scroll-behavior: smooth;
+
+    //letter-spacing: .25px;
+    font-family: Manrope, sans-serif;
+    // line-height: 180%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+body[data-bs-theme="light"],
+html[data-bs-theme="light"] {
+    background-color: rgba(241, 245, 249, 1);
+}
+
+body[data-bs-theme="dark"],
+html[data-bs-theme="dark"] {
+    // background-color: var(--bs-body-bg);
+    // background: var(--ui-gray-20);
+}
+
+[data-bs-theme="dark"] {
+    body {
+        // background-color: rgba(241, 245, 249, 0.3);
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+section {
+    // OVERFLOW EFFECTS STICKY
+    // overflow: hidden;
+}
+
+a:link,
+a:visited {
+    transition: all .3s ease;
+    text-decoration: none;
+    color: var(--ui-emphasis);
+}
+
+
+
+
+
+
+
+
+
+main {
+
+
+
+    ol.custom {
+        li {
+            counter-increment: list;
+            list-style-type: none;
+            position: relative;
+
+            &::before {
+                color: var(--masb-cobalt);
+                content: counter(list) ".";
+                left: -32px;
+                position: absolute;
+                text-align: right;
+                width: 26px;
+            }
+        }
+    }
+
+
+
+
+    ul.custom {
+        list-style: none;
+
+        li {
+            position: relative;
+
+            &::before {
+                content: "•";
+                position: absolute;
+                left: -1em;
+                color: var(--masb-cobalt);
+            }
+        }
+
+    }
+}

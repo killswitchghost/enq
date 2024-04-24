@@ -1,0 +1,112 @@
+@use '../../../assets/scss/abstracts' as *;
+
+
+
+$colors: (
+    "sky": rgb(0, 224, 255),
+    "purple": rgba(146, 0, 255, 1),
+    "pink": rgba(230, 0, 255, 1),
+    "red": rgba(255, 0, 0, 1),
+    "orange": rgba(255, 153, 0, 1),
+    "yellow": rgba(250, 255, 0, 1),
+    "green": rgba(33, 171, 139, 1),
+    "lime": rgba(189, 255, 0, 1)
+);
+
+
+@function color($colorName) {
+    @return map-get($colors, $colorName);
+}
+
+
+@mixin grad-vert($startColorName, $endColorName) {
+    $startColor: color($startColorName);
+    $endColor: color($endColorName);
+    background: $startColor;
+    background: linear-gradient(0deg, $endColor 0%, $startColor 100%);
+}
+
+
+.grad-vert-purple-blue {
+    @include grad-vert("purple", "blue");
+}
+
+.grad-vert-lime-yellow {
+    @include grad-vert("lime", "yellow");
+}
+
+.grad-vert-lime-green {
+    @include grad-vert("lime", "green");
+}
+
+.grad-vert-purple-blue {
+    @include grad-vert("purple", "blue");
+}
+
+.grad-vert-pink-green {
+    @include grad-vert("pink", "green");
+}
+
+.grad-vert-red-yellow {
+    @include grad-vert("red", "yellow");
+}
+
+.grad-vert-pink-lime {
+    @include grad-vert("pink", "lime");
+}
+
+.grad-vert-blue-yellow {
+    @include grad-vert("blue", "yellow");
+}
+
+.grad-vert-purple-sky {
+    @include grad-vert("purple", "sky");
+}
+
+.grad-vert-purple-red {
+    @include grad-vert("purple", "red");
+}
+
+.grad-vert-green-blue {
+    @include grad-vert("green", "sky");
+}
+
+
+
+
+
+
+
+
+
+.grow-div {
+    position: absolute;
+    transform: translateY(-130px);
+    width: 1px;
+    height: 0;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-left: 1.5rem;
+
+    @media(min-width: $lg) {
+        margin-left: 2rem;
+    }
+}
+
+
+
+[data-aos="grow-animation"] {
+    height: 0px;
+    transition-property: height;
+
+    &.aos-animate {
+        height: 150px;
+    }
+
+    @media(min-width: $lg) {
+        &.aos-animate {
+            height: 180px;
+        }
+    }
+
+}

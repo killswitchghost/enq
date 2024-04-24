@@ -1,0 +1,96 @@
+@use '../abstracts'as *;
+
+.blob {
+    position: relative;
+    overflow: hidden;
+
+
+    @media(min-width:$lg) {
+        overflow: initial;
+    }
+
+
+    &:after {
+        content: "";
+        position: absolute;
+        overflow: hidden;
+        height: 423px;
+        width: 423px;
+        border-radius: 50%;
+        opacity: 0.2;
+        filter: blur(90px);
+        z-index: -1;
+    }
+
+    &.top {
+        &:after {
+            top: 75px;
+        }
+    }
+
+    &.middle {
+        &:after {
+            top: 50%;
+        }
+    }
+
+    &.bottom {
+        &:after {
+            bottom: 75px;
+        }
+    }
+
+    &.left {
+        &:after {
+            left: -233px;
+        }
+    }
+
+    &.center {
+        &:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &.right {
+        &:after {
+            right: -233px;
+        }
+    }
+
+    &.yellow-red,
+    &.red-yellow {
+        &:after {
+            background: linear-gradient(208deg, #FF2828 19.19%, #FFF855 70.68%);
+        }
+    }
+
+    &.blue-yellow,
+    &.yellow-blue {
+        &:after {
+            background: linear-gradient(208deg, #FFF855 19.19%, #00E3F2 70.68%);
+        }
+    }
+
+    &.red-purple,
+    &.purple-red {
+        &:after {
+            background: linear-gradient(180deg, #6243FF 0%, #FF2828 100%);
+        }
+    }
+
+    &.blue-purple,
+    &.purple-blue {
+        &:after {
+            background: linear-gradient(180deg, #6243FF 0%, #00E3F2 100%);
+        }
+    }
+
+    &.blue-green,
+    &.green-blue {
+        &:after {
+            background: linear-gradient(180deg, #479B80 0%, #00E3F2 100%);
+        }
+    }
+}

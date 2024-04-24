@@ -1,0 +1,215 @@
+@use '../abstracts'as *;
+
+.sparkle-container,
+.sparkles {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+
+.star-sky path {
+    fill: var(--ui-sky);
+}
+
+.star-purple path {
+    fill: var(--ui-purple);
+}
+
+.star-pink path {
+    fill: var(--ui-pink);
+}
+
+.star-orange path {
+    fill: var(--ui-orange);
+}
+
+.star-yellow path {
+    fill: var(--ui-yellow);
+}
+
+.star-green path {
+    fill: var(--ui-green);
+}
+
+.star-lime path {
+    fill: var(--ui-lime);
+}
+
+.star-ghost path {
+    fill: var(--ui-ghost);
+}
+
+///////////////////////////////////////////////////////
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        //opacity: 0;
+        transform: scale(0) rotate(0deg);
+    }
+
+    10%,
+    90% {
+        //opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        //opacity: 1;
+    }
+
+    100% {
+        transform: scale(0) rotate(360deg);
+    }
+}
+
+
+
+.sparkle {
+    z-index: 9999;
+    transform-origin: center;
+
+    /* Ensure rotation is around the center */
+    &.sky svg {
+        fill: var(--ui-sky);
+    }
+
+    &.purple svg {
+        fill: var(--ui-purple);
+    }
+
+    &.pink svg {
+        fill: var(--ui-pink);
+    }
+
+    &.red svg {
+        fill: var(--ui-red);
+    }
+
+    &.orange svg {
+        fill: var(--ui-orange);
+    }
+
+    &.yellow svg {
+        fill: var(--ui-yellow);
+    }
+
+    &.green svg {
+        fill: var(--ui-green);
+    }
+
+    &.lime svg {
+        fill: var(--ui-lime);
+    }
+
+    &.ghost svg {
+        fill: var(--ui-ghost);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @-moz-keyframes my-sparkle {
+//     0% {
+//         //opacity: 0;
+//         -moz-transform: rotate(0deg) scale(0);
+//     }
+
+//     50% {
+//         //opacity: 1;
+//         -moz-transform: rotate(360deg) scale(1);
+//     }
+
+//     100% {
+//         //opacity: 0;
+//         -moz-transform: rotate(720deg) scale(0);
+//     }
+// }
+
+// @-webkit-keyframes my-sparkle {
+//     0% {
+//         //opacity: 0;
+//         -webkit-transform: rotate(0deg) scale(0);
+//     }
+
+//     50% {
+//         //opacity: 1;
+//         -webkit-transform: rotate(360deg) scale(1);
+//     }
+
+//     100% {
+//         //opacity: 0;
+//         -webkit-transform: rotate(720deg) scale(0);
+//     }
+// }
+
+// @keyframes my-sparkle {
+//     0% {
+//         //opacity: 0;
+//         transform: rotate(0deg) scale(0);
+//     }
+
+//     50% {
+//         //opacity: 1;
+//         transform: rotate(360deg) scale(1);
+//     }
+
+//     100% {
+//         //opacity: 0;
+//         transform: rotate(720deg) scale(0);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.my-sparkle {
+    position: absolute;
+    animation: spin 2s linear infinite, fadeInOut 3s ease-in-out infinite;
+}

@@ -1,0 +1,19 @@
+// pages/about.tsx
+import Layout from '../components/layouts/Layout';
+import Link from 'next/link';
+
+const AboutPage = () => {
+  return (
+    <div>
+
+    <Layout>
+      <p>About us</p>
+      <Link href="/">
+        Go to the Homepage
+      </Link>
+    </Layout>
+    </div>
+  );
+}
+
+export default AboutPage;

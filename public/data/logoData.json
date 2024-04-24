@@ -1,0 +1,100 @@
+{
+  "logoImages": [
+    {
+      "logoId": 1,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 1",
+      "className": "logo"
+    },
+    {
+      "logoId": 2,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 2",
+      "className": "logo"
+    },
+    {
+      "logoId": 3,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 4,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 5,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 6,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 2",
+      "className": "logo"
+    },
+    {
+      "logoId": 7,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 8,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 9,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 10,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 2",
+      "className": "logo"
+    },
+    {
+      "logoId": 11,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 12,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 13,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 14,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 15,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    },
+    {
+      "logoId": 16,
+      "src": "https://assets-global.website-files.com/5f8dd056c51c1d04c3eaa497/623807cc5031d43292f87ea4_freewill.svg",
+      "alt": "Description of logo 3",
+      "className": "logo"
+    }
+  ]
+}

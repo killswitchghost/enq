@@ -1,0 +1,63 @@
+@use '../abstracts'as *;
+
+.expbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.exp-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.exp-active .exp-panel {
+    padding: 15px 10px 10px 10px;
+    opacity: 1;
+    max-height: 500px;
+}
+
+.exp-panel {
+    width: 100%;
+    color: #262626;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0px 10px;
+}
+
+.exp-btn>span {
+    margin-left: auto;
+    transition: all .3s ease-in-out;
+
+    transform: rotate(0deg);
+}
+
+.exp-active .exp-btn>span {
+    transform: rotate(45deg);
+}
+
+.exp-btn {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+@media (min-width: $md) {
+    .exp-btn {
+        pointer-events: none;
+        cursor: default;
+
+        >span {
+
+            display: none;
+        }
+    }
+}

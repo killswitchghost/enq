@@ -1,0 +1,137 @@
+@use '../../../assets/scss/abstracts' as *;
+
+
+
+.progressContainer {
+
+    display: inline-flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+}
+
+// .progressBar {
+//     position: absolute;
+//     display: inline-flex;
+//     height: 2px;
+//     background: yellow;
+// }
+
+#back-top {
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    width: 60px;
+    height: 60px;
+    //background: rgba(var(--ui-emphasis-alt), 1);
+    border-radius: 100px;
+    border: none;
+    transition: all .5s ease;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background: rgba(var(--ui-emphasis-alt), .8);
+
+    color: var(--bs-body-color);
+
+    &.showUp {
+        bottom: -30px;
+    }
+
+    >span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        i {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 24px;
+        }
+    }
+
+    .bi-chevron-up {
+        margin-top: -27px;
+    }
+
+    svg {
+        position: sticky;
+        transform: rotate(-90deg);
+    }
+
+
+    &:hover {
+
+        >span {
+            i {
+                color: var(--secondary);
+                -webkit-animation-timing-function: cubic-bezier(.125, .98, .565, 1.17);
+                animation-timing-function: cubic-bezier(.125, .98, .565, 1.17);
+                -webkit-animation-duration: .5s;
+                animation-duration: .5s;
+                -webkit-animation-name: in-out-bottom-top;
+                animation-name: in-out-bottom-top;
+                animation-name: in-out-bottom-top;
+            }
+        }
+
+
+    }
+
+    svg circle {
+        stroke: rgba(0, 0, 0, 0.1);
+        stroke-width: 2px;
+        stroke-linecap: round;
+        fill: transparent;
+    }
+
+    svg .progress-bar {
+        stroke: rgba(var(--secondary-rgb), 1);
+        transition: stroke-dashoffset 0 ease-in-out;
+    }
+
+    .pct {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-feature-settings: "tnum";
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+@keyframes in-out-bottom-top {
+    0% {
+        transform: translateZ(0)
+    }
+
+    49% {
+        transform: translate3d(0, -35%, 0);
+        opacity: 0
+    }
+
+    50% {
+        transform: translate3d(0, 35%, 0)
+    }
+
+    to {
+        transform: translateZ(0);
+        opacity: 1
+    }
+}
+
+.scroll-active {
+    #back-top {
+        right: 1rem;
+    }
+}

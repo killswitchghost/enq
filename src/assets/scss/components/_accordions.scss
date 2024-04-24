@@ -1,0 +1,122 @@
+@use '../abstracts'as *;
+
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-body-color);
+}
+
+.accordion-item {
+    border: none;
+    border-bottom: 1px solid rgba(var(--bs-body-color-rgb), .1);
+    background: none;
+
+
+
+    &:last-child {
+        border: none;
+    }
+
+
+
+    .accordion-button:focus,
+    .accordion-button:not(.collapsed) {
+        background: none;
+        box-shadow: none;
+    }
+
+    .accordion-button::after {
+        background: none;
+        display: flex;
+        border-radius: 500px;
+        width: 32px;
+        height: 32px;
+        align-items: center;
+        justify-content: center;
+        @extend .bi-icon;
+        content: "\F63B";
+        //background: rgba(var(--bs-body-color-rgb), .05);
+        background-color: none;
+        font-size: 21px;
+        transition: all .5s ease;
+        background: none;
+        font-weight: 100;
+    }
+
+    .accordion-button.collapsed::after {
+        content: "\F64D";
+    }
+
+    .accordion-button:hover {
+        &:after {
+            //background: rgba(var(--bs-body-bg-rgb), 1);
+            //color: rgba(var(--bs-body-color-rgb), 1);
+        }
+    }
+
+    .accordion-button {
+        font-size: 18px;
+        background: none;
+
+    }
+
+    .accordion-button[aria-expanded="true"] {
+
+        &:after {
+            background: rgba(var(--bs-body-bg-rgb), 1);
+            color: rgba(var(--bs-body-color-rgb), 1);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+#accordionCustom {
+
+    color: #fff;
+
+    .accordion-item {
+        background: none;
+        border: none;
+    }
+
+    .accordion-body {
+        border: 1px solid #fff;
+    }
+
+    .accordion-button {
+        background: none;
+        color: #fff;
+        font-size: inherit;
+    }
+
+    .accordion-button:not(.collapsed) {
+        // pointer-events: none;
+    }
+}
+
+/* The Magic */
+#accordionCustom:hover .accordion-item:hover .accordion-item-content,
+#accordionCustom .accordion-item--default .accordion-item-content {
+    //height: 6em;
+    height: 300px;
+}
+
+#accordionCustom .accordion-item-content,
+#accordionCustom:hover .accordion-item-content {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
+}
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////

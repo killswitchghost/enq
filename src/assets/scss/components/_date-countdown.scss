@@ -1,0 +1,83 @@
+@use '../abstracts'as *;
+
+#timer {
+    margin: -1rem 0 2rem 1rem;
+    position: relative;
+    background: var(--masb-navy);
+    border-radius: 12px;
+    color: #fff;
+    padding: 1rem 0 1rem 0;
+
+    @media (min-width: $md) {
+        margin-left: 0;
+    }
+
+    @media (min-width: $lg) {
+
+        position: absolute;
+        left: 0;
+        min-width: 60vw;
+    }
+
+
+
+    @media (min-width: $lg) {
+        margin-left: .751rem;
+        margin-top: -1rem;
+    }
+
+    @media (min-width: $xl) {
+        margin-top: -4rem;
+    }
+
+    @media (min-width: $xxl) {
+        margin-top: -10rem;
+        min-width: 50vw;
+    }
+
+    .counter-title {
+        color: var(--masb-sky);
+        font-weight: 500;
+        letter-spacing: .04rem;
+        text-align: center;
+        font-size: rem(15);
+    }
+
+
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+
+        li {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, .3);
+
+            &:last-child {
+                border: none;
+            }
+
+            span {
+                font-weight: 500;
+                @include font-size(42, 42);
+            }
+
+            em {
+                font-style: normal;
+                font-weight: 500;
+                color: var(--masb-sky);
+                text-transform: uppercase;
+                letter-spacing: .04rem;
+                font-size: rem(15);
+            }
+        }
+    }
+
+
+}
