@@ -1,4 +1,4 @@
-import Head from 'next/head';
+
 import Layout from '../components/layouts/Layout';
 import HomeWelcome from '../components/sections/HomeWelcome';
 

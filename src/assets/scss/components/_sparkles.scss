@@ -1,4 +1,4 @@
-@use '../abstracts'as *;
+@use '../abstracts' as *;
 
 .sparkle-container,
 .sparkles {
@@ -41,24 +41,24 @@
     fill: var(--ui-ghost);
 }
 
-///////////////////////////////////////////////////////
+
 
 @keyframes sparkle {
 
     0%,
     100% {
-        //opacity: 0;
+
         transform: scale(0) rotate(0deg);
     }
 
     10%,
     90% {
-        //opacity: 1;
+
     }
 
     50% {
         transform: scale(1.2) rotate(180deg);
-        //opacity: 1;
+
     }
 
     100% {
@@ -72,7 +72,7 @@
     z-index: 9999;
     transform-origin: center;
 
-    /* Ensure rotation is around the center */
+
     &.sky svg {
         fill: var(--ui-sky);
     }
@@ -115,67 +115,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// @-moz-keyframes my-sparkle {
-//     0% {
-//         //opacity: 0;
-//         -moz-transform: rotate(0deg) scale(0);
-//     }
-
-//     50% {
-//         //opacity: 1;
-//         -moz-transform: rotate(360deg) scale(1);
-//     }
-
-//     100% {
-//         //opacity: 0;
-//         -moz-transform: rotate(720deg) scale(0);
-//     }
-// }
-
-// @-webkit-keyframes my-sparkle {
-//     0% {
-//         //opacity: 0;
-//         -webkit-transform: rotate(0deg) scale(0);
-//     }
-
-//     50% {
-//         //opacity: 1;
-//         -webkit-transform: rotate(360deg) scale(1);
-//     }
-
-//     100% {
-//         //opacity: 0;
-//         -webkit-transform: rotate(720deg) scale(0);
-//     }
-// }
-
-// @keyframes my-sparkle {
-//     0% {
-//         //opacity: 0;
-//         transform: rotate(0deg) scale(0);
-//     }
-
-//     50% {
-//         //opacity: 1;
-//         transform: rotate(360deg) scale(1);
-//     }
-
-//     100% {
-//         //opacity: 0;
-//         transform: rotate(720deg) scale(0);
-//     }
-// }
 
 
 

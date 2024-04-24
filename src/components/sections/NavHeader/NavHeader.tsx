@@ -139,11 +139,7 @@ const inputRef = useRef<HTMLInputElement>(null);
 
 <Dropdown>
 <Dropdown.Toggle className="btn-nav btn-nav-menu" onClick={toggleMenuDropdown} aria-label="menu">
-  {/* <div className="hamburger-icon">
-    <span className={menuDropdownOpen ? "line line1 open" : "line line1"}></span>
-    <span className={menuDropdownOpen ? "line line2 open" : "line line2"}></span>
-    <span className={menuDropdownOpen ? "line line3 open" : "line line3"}></span>
-  </div> */}
+
 {menuDropdownOpen ? <X /> :<div className="hamburger-icon">
     <span className={menuDropdownOpen ? "line line1 open" : "line line1"}></span>
     <span className={menuDropdownOpen ? "line line2 open" : "line line2"}></span>

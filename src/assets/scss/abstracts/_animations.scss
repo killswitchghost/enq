@@ -42,7 +42,7 @@
     }
 }
 
-// <h1 class="animate" data-animation="fadeInUp">An animated element</h1>
+
 @media (prefers-reduced-motion: no-preference) {
     .fadeIn {
         animation: fadeIn 1s 1;
@@ -105,9 +105,9 @@
     width: 2px;
     height: 0;
 
-    // transition: height 10s ease-out;
+
     overflow: hidden;
-    //transition-delay: 250ms;
+
 
     &.aos-animate {
         height: 300px;
@@ -157,45 +157,6 @@
 }
 
 
-
-// [data-aos="bg-reveal"] {
-
-//     .card-bg {
-//         content: "";
-//         position: absolute;
-//         display: block;
-//         width: 0;
-//         height: 100%;
-//         transition-property: width;
-//         transition-duration: 1s;
-
-//     }
-
-//     &.aos-animate {
-
-//         .card-bg {
-//             width: 100%;
-//         }
-
-//         .card-title {
-//             animation: fadeInUp 1s 1;
-//         }
-//     }
-// }
-
-
-// [data-aos="card-reveal"] {
-//     background: rgba(var(--bs-body-color-rgb), .0);
-//     transition-delay: 500ms;
-//     opacity: 0;
-
-//     &.aos-animate {
-//         background: rgba(var(--bs-body-color-rgb), .02);
-//         opacity: 1;
-
-//     }
-// }
-// Text
 
 
 
@@ -253,7 +214,7 @@
     animation-range: cover 35% cover 100%;
 }
 
-///////////////////////////////////////////////////////////
+
 
 [data-aos="scale-up"] {
     width: 100%;
@@ -269,14 +230,11 @@
 @keyframes scaleUp {
     from {
         transform: scale(0.5);
-        /* Start from half the size */
         opacity: 0.5;
-        /* Optionally start with lower opacity */
     }
 
     to {
         transform: scale(1);
-        /* Scale to full size */
         opacity: 1;
     }
 }

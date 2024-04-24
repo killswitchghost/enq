@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import useGrowLine from '../../hooks/useGrowLine_DELETE';
 import Sparkle from '../../utils/Sparkle';
 import FadeInText from '../shared/FadeInText/FadeInText';
 import GrowLine from '../shared/GrowLine/GrowLine';
@@ -20,7 +19,6 @@ interface PlaceholderData {
 
 const HomeWelcome = () => {
   const [data, setData] = useState<PlaceholderData | null>(null);
-  useGrowLine();
 
   useEffect(() => {
     const fetchData = async () => {

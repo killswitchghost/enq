@@ -11,9 +11,8 @@ const ExpandBox: React.FC<ExpandBoxProps> = ({ title, children }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      const mobileBreakpoint = 768; // Define your mobile breakpoint
+      const mobileBreakpoint = 768;
       setIsMobile(window.innerWidth < mobileBreakpoint);
-      // On desktop, always keep it open. Adjust according to your needs.
       setIsOpen(window.innerWidth >= mobileBreakpoint);
     };
 

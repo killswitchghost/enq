@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import useGrowLine from '../../../hooks/useGrowLine_DELETE';
 import Sparkle from '../../../utils/Sparkle';
 import GrowLine from '../../shared/GrowLine/GrowLine';
 import './_CardsColumns.scss';
@@ -9,7 +8,7 @@ import './_CardsColumns.scss';
 const CardsColumns = () => {
 
 
-  useGrowLine();
+
 
 
 

@@ -1,28 +1,3 @@
-// import React from 'react';
-// import './_HorizontalMenu.scss';
-
-// const HorizontalMenu: React.FC = () => {
-//   return (
-
-    // <div className="dropdown horizontal-menu">
-    //   <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    //     Explore this section <i className="bi bi-chevron-down"></i>
-    //   </button>
-    //   <ul className="dropdown-menu">
-    //     <li><a className="dropdown-item" href="#section1"><span className="underline"><span>Action</span></span></a></li>
-    //     <li><a className="dropdown-item" href="#section2"><span className="underline"><span>Another Action</span></span></a></li>
-    //     <li><a className="dropdown-item" href="#section3"><span className="underline"><span>Something else here</span></span></a></li>
-    //   </ul>
-
-    // </div>
-
-//   );
-// };
-
-// export default HorizontalMenu;
-
-
-
 import React, { useEffect } from 'react';
 import './_HorizontalMenu.scss';
 
@@ -53,7 +28,6 @@ const HorizontalMenu: React.FC = () => {
 
   useEffect(() => {
     document.addEventListener('scroll', onScroll);
-    // Trigger onScroll at component mount to set the initial active link
     onScroll();
     return () => {
       document.removeEventListener('scroll', onScroll);

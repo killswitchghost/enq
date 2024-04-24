@@ -1,4 +1,4 @@
-// useWindowSize.tsx
+
 import { useEffect } from 'react';
 
 type ViewSize = 'xxxl' | 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
@@ -24,7 +24,7 @@ const useWindowSize = (): void => {
 
 const getWindowViewSize = (): ViewSize => {
   if (typeof window === 'undefined') {
-    return 'xs'; // Default to 'xs' or any other default value for non-browser environments
+    return 'xs';
   }
 
   if (window.innerWidth >= 1600) return 'xxxl';

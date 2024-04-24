@@ -27,11 +27,7 @@ h6 {}
 
 
 
-// .bi.up-right {
-//     &:before {
-//         transform: rotate(312deg);
-//     }
-// }
+
 .feather {
     color: var(--bs-body-color);
 
@@ -58,25 +54,7 @@ h6 {}
 }
 
 
-// .mt-n1 {
-//     margin-top: -0.25rem !important;
-// }
 
-// .mt-n2 {
-//     margin-top: -0.5rem !important;
-// }
-
-// .mt-n3 {
-//     margin-top: -1rem !important;
-// }
-
-// .mt-n4 {
-//     margin-top: -1.5rem !important;
-// }
-
-// .mt-n5 {
-//     margin-top: -3rem !important;
-// }
 
 
 
@@ -132,35 +110,7 @@ h6 {}
     -webkit-text-fill-color: transparent;
 }
 
-// .grad-vert-1 {
-//     background: rgb(0, 255, 209);
-//     background: linear-gradient(0deg, rgba(0, 255, 209, 1) 0%, rgba(189, 255, 0, 1) 100%);
-// }
 
-// .grad-vert-2 {
-//     background: rgb(189, 255, 0);
-//     background: linear-gradient(0deg, rgba(189, 255, 0, 1) 0%, rgba(0, 255, 209, 1) 100%);
-// }
-
-// .grad-vert-3 {
-//     background: rgb(0, 224, 255);
-//     background: linear-gradient(0deg, rgba(0, 224, 255, 1) 0%, rgba(112, 0, 255, 1) 100%);
-// }
-
-// .grad-vert-4 {
-//     background: rgb(66, 255, 0);
-//     background: linear-gradient(0deg, rgba(66, 255, 0, 1) 0%, rgba(255, 0, 245, 1) 100%);
-// }
-
-// .grad-vert-5 {
-//     background: rgb(235, 255, 0);
-//     background: linear-gradient(0deg, rgba(235, 255, 0, 1) 0%, rgba(255, 0, 0, 1) 100%);
-// }
-
-// .grad-vert-6 {
-//     background: rgb(255, 184, 0);
-//     background: linear-gradient(0deg, rgba(255, 184, 0, 1) 0%, rgba(0, 224, 255, 1) 100%);
-// }
 
 
 
@@ -288,7 +238,7 @@ $spacer: .5rem;
     }
 }
 
-// Usage:
+
 @include size-utilities;
 
 

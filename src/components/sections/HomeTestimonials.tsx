@@ -33,7 +33,7 @@ interface HomeQuotesData {
 }
 
 
-// Correctly type the imported JSON data
+
   const data: HomeQuotesData = homeQuotesData as HomeQuotesData;
 
 const HomeTestimonials = () => {

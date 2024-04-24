@@ -1,7 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import Sparkle from '../../utils/Sparkle';
-// import GrowLine from '../shared/GrowLine/GrowLine';
-
 
 import React, { useEffect, useState } from 'react';
 import Sparkle from '../../utils/Sparkle';

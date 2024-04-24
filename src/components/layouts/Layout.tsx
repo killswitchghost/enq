@@ -7,7 +7,6 @@ import '../../assets/scss/style.scss';
 import NavHeader from '@/src/components/sections/NavHeader/NavHeader';
 import Footer from '@/src/components/sections/Footer/Footer';
 
-import Test from '@components/Test';
 
 import BackTop from '../shared/BackTop/BackTop';
 import Cursor from '@/src/components/shared/Cursor/Cursor';
@@ -33,10 +32,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
 
 <div>
-         {/* <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-        /> */}
 
       <NavHeader />
       <div className="content-wrapper">

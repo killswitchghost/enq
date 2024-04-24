@@ -12,7 +12,7 @@ const Sparkle: React.FC<SparkleProps> = ({
   className = "default-star"
 }) => {
   const [style, setStyle] = useState<React.CSSProperties>({});
-  const sparkleRef = useRef<SVGSVGElement>(null); // Ref for the sparkle SVG
+  const sparkleRef = useRef<SVGSVGElement>(null);
 
   const updateSparklePosition = () => {
     const newLeft = `${Math.random() * 100}%`;
@@ -25,8 +25,8 @@ const Sparkle: React.FC<SparkleProps> = ({
   };
 
   useEffect(() => {
-    const duration = Math.random() * 3000 + 2000; // Duration between 2s and 5s
-    const delay = Math.random() * 1000; // Delay up to 1s
+    const duration = Math.random() * 3000 + 2000;
+    const delay = Math.random() * 1000;
 
     setStyle({
       position: 'absolute',
@@ -35,10 +35,10 @@ const Sparkle: React.FC<SparkleProps> = ({
       zIndex: 9999,
       animation: `spin ${duration}ms linear infinite, fadeInOut ${duration}ms ease-in-out ${delay}ms infinite`,
       transformOrigin: 'center',
-      // opacity is initially set to 0 and will be handled by the fadeInOut animation
+
     });
 
-    // Update the position after each animation iteration
+
     const sparkleElement = sparkleRef.current;
     const handleAnimationIteration = () => {
       updateSparklePosition();
@@ -48,16 +48,16 @@ const Sparkle: React.FC<SparkleProps> = ({
       sparkleElement.addEventListener('animationiteration', handleAnimationIteration);
     }
 
-    // First position update (optional, could also set initial left/top in setStyle above)
+
     updateSparklePosition();
 
-    // Cleanup: Remove event listener
+
     return () => {
       if (sparkleElement) {
         sparkleElement.removeEventListener('animationiteration', handleAnimationIteration);
       }
     };
-  }, [size]); // Re-run effect if 'size' prop changes
+  }, [size]);
 
   return (
     <svg

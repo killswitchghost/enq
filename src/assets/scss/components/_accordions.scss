@@ -1,4 +1,4 @@
-@use '../abstracts'as *;
+@use '../abstracts' as *;
 
 
 .accordion {
@@ -38,7 +38,6 @@
         justify-content: center;
         @extend .bi-icon;
         content: "\F63B";
-        //background: rgba(var(--bs-body-color-rgb), .05);
         background-color: none;
         font-size: 21px;
         transition: all .5s ease;
@@ -50,12 +49,7 @@
         content: "\F64D";
     }
 
-    .accordion-button:hover {
-        &:after {
-            //background: rgba(var(--bs-body-bg-rgb), 1);
-            //color: rgba(var(--bs-body-color-rgb), 1);
-        }
-    }
+
 
     .accordion-button {
         font-size: 18px;
@@ -98,15 +92,13 @@
         font-size: inherit;
     }
 
-    .accordion-button:not(.collapsed) {
-        // pointer-events: none;
-    }
+    .accordion-button:not(.collapsed) {}
 }
 
-/* The Magic */
+
 #accordionCustom:hover .accordion-item:hover .accordion-item-content,
 #accordionCustom .accordion-item--default .accordion-item-content {
-    //height: 6em;
+
     height: 300px;
 }
 
@@ -116,7 +108,3 @@
     overflow: hidden;
     transition: height .5s;
 }
-
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////

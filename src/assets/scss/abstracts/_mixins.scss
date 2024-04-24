@@ -41,8 +41,6 @@ html {
 
 
         .mx-#{$i + 5} {
-            //#{$property}: $spacing * $size;
-            //@include margin(0, $spacing * $size, 0, $spacing * $size);
             margin-left: $spacing * $size;
             margin-right: $spacing * $size;
         }

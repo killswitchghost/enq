@@ -33,7 +33,7 @@ const Accordion: React.FC<AccordionProps> = ({ url }) => {
     };
 
     fetchData();
-  }, [url]); // Depend on the URL so if it changes, fetchData runs again
+  }, [url]);
 
   if (!data) {
     return <div>Loading...</div>;

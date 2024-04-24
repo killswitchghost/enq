@@ -55,7 +55,7 @@ handleScroll();
   return (
     <div>
 
-{/* <GrowLine className="grad-vert-purple-sky" /> */}
+
 
       {bgImageGrowData.page.map(({ pageId, title, content }) => (
        <div key={pageId} dangerouslySetInnerHTML={{ __html: content }} />

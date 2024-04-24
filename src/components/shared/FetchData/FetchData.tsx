@@ -1,4 +1,4 @@
-// fetchData.tsx
+
 import { useEffect, useState } from 'react';
 
 interface Author {

@@ -7,7 +7,6 @@ section.contacts {
 .card-contact {
     display: flex;
     padding: 2rem;
-    // background-color: rgba(var(--ui-emphasis-alt-rbg), 0.6);
     backdrop-filter: blur(10px);
     background-color: rgba(var(--bs-emphasis-color-alt-rgb), 0.3);
     transition: all .3s ease;

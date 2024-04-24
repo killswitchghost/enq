@@ -64,42 +64,6 @@ const HomeInsights = () => {
   <SwiperSlide><Link href="#" className="card" data-work-id="4" data-cursor="pointer2"><figure className="card-img aos-init" data-aos="img-reveal"><Image src="https://picsum.photos/350/350?random=4" alt="overlay-image" className="card-img-top" data-cursor="pointer2" width="350" height="350" /></figure><div className="card-body px-0"><h4 className="card-title"><span className="underline"><span>Placeholder Title</span></span></h4></div></Link></SwiperSlide>
 </CustomSwiper>
 
-
-
-
-
-
-
-
-
-{/* <Swiper
-  modules={[Navigation, Pagination, Scrollbar, A11y]}
-  spaceBetween={60}
-  slidesPerView={3.5}
-  slidesOffsetAfter={0}
-  slidesOffsetBefore={0}
-  loop={true}
-  navigation
-  pagination={{ clickable: true }}
-  scrollbar={{ draggable: true }}
-  onSwiper={(swiper) => console.log(swiper)}
-  onSlideChange={() => console.log('slide change')}
-  className="swiper-container my-custom-id"
->
-
-    <SwiperSlide>
-<Link href="#" className="card" data-work-id="4" data-cursor="pointer2"><figure className="card-img aos-init" data-aos="img-reveal"><Image src="https://picsum.photos/350/350?random=1" alt="overlay-image" className="card-img-top" data-cursor="pointer2" /></figure><div className="card-body px-0"><h4 className="card-title"><span className="underline"><span>Placeholder Title</span></span></h4><p className="card-meta">This is some placeholder content for the first post.</p><div className="card-meta">test, test</div></div></Link>
-    </SwiperSlide>
-    <SwiperSlide>
-<Link href="#" className="card" data-work-id="4" data-cursor="pointer2"><figure className="card-img aos-init" data-aos="img-reveal"><Image src="https://picsum.photos/350/350?random=2" alt="overlay-image" className="card-img-top" data-cursor="pointer2" /></figure><div className="card-body px-0"><h4 className="card-title"><span className="underline"><span>Placeholder Title</span></span></h4><p className="card-meta">This is some placeholder content for the first post.</p><div className="card-meta">test, test</div></div></Link>
-              </SwiperSlide>
-                  <SwiperSlide>
-<Link href="#" className="card" data-work-id="4" data-cursor="pointer3"><figure className="card-img aos-init" data-aos="img-reveal"><Image src="https://picsum.photos/350/350?random=3" alt="overlay-image" className="card-img-top" data-cursor="pointer2" /></figure><div className="card-body px-0"><h4 className="card-title"><span className="underline"><span>Placeholder Title</span></span></h4><p className="card-meta">This is some placeholder content for the first post.</p><div className="card-meta">test, test</div></div></Link>
-              </SwiperSlide>
-                                <SwiperSlide>
-<Link href="#" className="card" data-work-id="4" data-cursor="pointer4"><figure className="card-img aos-init" data-aos="img-reveal"><Image src="https://picsum.photos/350/350?random=3" alt="overlay-image" className="card-img-top" data-cursor="pointer2" /></figure><div className="card-body px-0"><h4 className="card-title"><span className="underline"><span>Placeholder Title</span></span></h4><p className="card-meta">This is some placeholder content for the first post.</p><div className="card-meta">test, test</div></div></Link>
-    </SwiperSlide>
-</Swiper> */}
           </div>
         </div>
       </div>

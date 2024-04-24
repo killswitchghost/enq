@@ -13,7 +13,6 @@
     z-index: 999;
     display: flex;
     width: 100%;
-    // background: var(--ui-gray-20);
     min-height: 30px;
     justify-content: space-between;
     color: var(--ui-gray-11);
@@ -30,11 +29,6 @@
     .btn-nav-wrap {
         display: flex;
         position: static;
-
-        >a,
-        >div {
-            // border-left: 1px solid rgba(255, 255, 255, .2) !important;
-        }
     }
 
     h1,
@@ -48,10 +42,7 @@
 
 
 
-    // a:link,
-    // a:visited {
-    //     color: var(--ui-gray-11);
-    // }
+
 
     a:hover,
     a:active,
@@ -79,12 +70,6 @@
             display: none;
         }
 
-
-
-
-        // &:hover {
-        //     background: var(--ui-gray-18);
-        // }
 
         &:after {
             display: none;
@@ -177,11 +162,7 @@
     min-width: 28px;
     height: 28px;
     cursor: pointer;
-    // transform: scale(.6);
 
-    @media (min-width:$lg) {
-        // transform: scale(.9);
-    }
 
     .line {
         display: block;
@@ -196,34 +177,13 @@
         width: 70%;
     }
 
-    // .line1.open {
-    //     transform: rotate(45deg) translate(6px, 6px);
-    //     width: 26px;
-    // }
 
-    // .line2.open {
-    //     opacity: 0;
-    //     width: 26px;
-    // }
-
-    // .line3.open {
-    //     width: 26px;
-    //     transform: rotate(-45deg) translate(7px, -7px);
-    // }
 
 
 }
 
-// affecting buttons
-.btn-contact,
-.btn-nav-search,
-.btn-nav-menu {
-    // transform: scale(.8);
 
-    @media(min-width:$lg) {
-        // transform: scale(1);
-    }
-}
+
 
 
 .btn-nav-search {
@@ -259,49 +219,8 @@
 
     }
 
-    // @media (min-width:$lg) {
-    //     min-width: 130px;
-    // }http://localhost:3000/#
 }
 
-// .btn-contact {
-//     padding: 8px 16px;
-//     background-color: var(--bs-body-bg);
-//     color: var(--ui-emphasis);
-//     border: 0 solid #000;
-//     position: relative;
-
-//     &:before {
-//         border: 2px solid transparent !important;
-//     }
-
-//     svg {
-//         margin-right: 6px;
-//     }
-
-//     span {
-//         display: none;
-
-//         @media(min-width: $lg) {
-//             display: inline-flex;
-//         }
-//     }
-
-//     &:hover,
-//     &:active,
-//     &:focus {
-//         &:before {
-//             ontent: "";
-//             border: 2px solid var(--ui-emphasis);
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             display: flex;
-//             width: 100%;
-//             height: 100%;
-//         }
-//     }
-// }
 
 
 .btn-contact {
