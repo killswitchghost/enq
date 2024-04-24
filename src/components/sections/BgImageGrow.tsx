@@ -23,7 +23,7 @@ const BgImageGrow: React.FC = () => {
       const windowHeight = window.innerHeight;
       const divPosition = scaleDiv.getBoundingClientRect();
       const percentageVisible = (windowHeight - divPosition.top) / windowHeight;
-      const newWidth = Math.min(percentageVisible * 100, 100); // Width in percentage
+      const newWidth = Math.min(percentageVisible * 100, 100);
       const opacityValue = Math.min(percentageVisible, 1);
 
       (scaleDiv as HTMLElement).style.width = `${newWidth}%`;
