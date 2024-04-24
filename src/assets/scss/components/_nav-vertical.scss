@@ -96,9 +96,7 @@
             }
 
             >ul {
-                @media (min-width:$lg) {
-                    //display: block !important;
-                }
+                @media (min-width:$lg) {}
 
             }
         }

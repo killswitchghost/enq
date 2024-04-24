@@ -217,56 +217,9 @@
 
 
 
-// .btn {
-//     position: relative;
-// }
-
-// .btn:before {
-//     content: '';
-//     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     background-size: 400%;
-//     z-index: -1;
-//     width: calc(100% + 0px);
-//     height: calc(100% + 0px);
-//     animation: glowing 20s linear infinite;
-//     opacity: 0;
-//     transition: opacity .3s ease-in-out;
-// }
-
-// .btn:hover:before {
-//     opacity: 1;
-// }
-
-// .btn:after {
-//     z-index: -1;
-//     content: '';
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     color: rgba(var(--bs-body-color-rgb), 1);
-//     background: var(--bs-body-bg);
-//     left: 0;
-//     top: 0;
-// }
 
 
 
-// @keyframes glowing {
-//     0% {
-//         background-position: 0 0;
-//     }
-
-//     50% {
-//         background-position: 400% 0;
-//     }
-
-//     100% {
-//         background-position: 0 0;
-//     }
-// }
 
 
 
@@ -368,23 +321,7 @@ button {
 
 
 
-// .btn-contact {
-//     display: none;
-//     margin: 2rem 0;
-//     background: rgba(var(--ui-bg-rgb), 1);
-//     border: 1px solid rgba(var(--ui-color-rgb), .1);
-//     transition: all .3s ease;
-//     width: 100%;
-//     border: 1px solid #f3c;
 
-
-//     @media (min-width:$lg) {
-//         width: initial;
-//         margin: 0;
-//         display: inline-flex;
-
-//     }
-// }
 
 .mobile-nav-open .btn-contact {
     display: block;
@@ -392,38 +329,10 @@ button {
 
 
 
-// .btn-contact,
-// .btn-contact:link,
-// .btn-contact:hover,
-// .btn-contact:active,
-// .btn-contact:focus {
-//     display: inline-flex !important;
-//     align-items: center !important;
-//     padding: 0.75rem 1.25rem !important;
-//     background: #121212;
 
-//     svg {
-//         opacity: 1;
-//         margin-right: 12px;
-//     }
-// }
 
-// [data-bs-theme="light"] {
 
-//     .btn-contact,
-//     .btn-contact:link,
-//     .btn-contact:hover,
-//     .btn-contact:active,
-//     .btn-contact:focus {
-//         background: #fff;
-//         color: var(--ui-bg-color) !important;
-//         border: 1px solid rgba(var(--ui-color-rgb), .2) !important;
 
-//         svg {
-//             stroke: var(--ui-color);
-//         }
-//     }
-// }
 
 .btn-link {
     position: relative;
@@ -469,7 +378,7 @@ button {
     margin-right: 12px;
     transition: all .3s ease-in-out;
     height: 40px;
-   width: 40px;
+    width: 40px;
     background: var(--bs-body-color);
 }
 
