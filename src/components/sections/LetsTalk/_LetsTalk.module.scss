@@ -1,0 +1,7 @@
+@use '../../../assets/scss/variables' as *;
+
+.letsTalkSection {
+  background: rgba(var(--ui-inverse-light-rgb), 0.3);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}

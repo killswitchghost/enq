@@ -1,9 +1,0 @@
-{
-  "page": [
-    {
-      "pageId": 1,
-      "title": "Next Steps",
-      "content": "<div class='sticky-container'><div class='sticky-background'><div class='width-scroll' style='overflow:hidden;background:url(/img/laptop.jpg) no-repeat center center;background-size:cover; height:100%;'></div></div><div class='text-content'><div class='grow-div grad-vert' data-aos='grow-animation' data-aos-delay='10' data-aos-duration='1000'></div><h1>We are Enqbator</h1><p class='w-50'>Discover who we are and what drives us. Learn more about our mission, values, and the passionate team behind our success.</p><a href='#' class='btn btn-lg btn-primary'>Learn More</a</div></div>"
-    }
-  ]
-}

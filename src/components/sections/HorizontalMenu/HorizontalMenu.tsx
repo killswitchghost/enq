@@ -1,7 +1,16 @@
 import React, { useEffect } from 'react';
-import './_HorizontalMenu.scss';
+import './_HorizontalMenu.module.scss';
 
-const HorizontalMenu: React.FC = () => {
+type MenuItem = {
+  title: string;
+  href: string;
+};
+
+type HorizontalMenuProps = {
+  menuItems: MenuItem[];
+};
+
+const HorizontalMenu: React.FC<HorizontalMenuProps> = ({ menuItems }) => {
   const onScroll = () => {
     const scrollPos = window.pageYOffset;
     const links = document.querySelectorAll('#menu-center a');
@@ -11,7 +20,8 @@ const HorizontalMenu: React.FC = () => {
       const refElement = href ? document.querySelector(href) : null;
 
       if (refElement && refElement instanceof HTMLElement) {
-        const isActive = refElement.offsetTop <= scrollPos &&
+        const isActive =
+          refElement.offsetTop <= scrollPos &&
           refElement.offsetTop + refElement.clientHeight > scrollPos;
 
         if (isActive) {
@@ -34,28 +44,45 @@ const HorizontalMenu: React.FC = () => {
     };
   }, []);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, anchor: string) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    anchor: string
+  ) => {
     e.preventDefault();
     const target = document.querySelector(anchor) as HTMLElement | null;
     if (target) {
       window.scrollTo({
         top: target.offsetTop,
-        behavior: 'smooth',
+        behavior: 'smooth'
       });
     }
   };
 
   return (
-    <div className="dropdown horizontal-menu">
-      <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Explore this section <i className="bi bi-chevron-down"></i>
+    <div className='dropdown horizontal-menu'>
+      <button
+        className='dropdown-toggle'
+        type='button'
+        data-bs-toggle='dropdown'
+        aria-expanded='false'
+      >
+        Explore this section <i className='bi bi-chevron-down'></i>
       </button>
-      <nav id="menu-center">
-        <ul className="dropdown-menu">
-          <li><a href="#section1" onClick={(e) => handleClick(e, '#section1')} className="dropdown-item"><span className="underline"><span>Section 1</span></span></a></li>
-          <li><a href="#section2" onClick={(e) => handleClick(e, '#section2')} className="dropdown-item"><span className="underline"><span>Section 2</span></span></a></li>
-          <li><a href="#section3" onClick={(e) => handleClick(e, '#section3')} className="dropdown-item"><span className="underline"><span>Section 3</span></span></a></li>
-          {/* Add more nav items here */}
+      <nav id='menu-center'>
+        <ul className='dropdown-menu'>
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.href}
+                onClick={(e) => handleClick(e, item.href)}
+                className='dropdown-item'
+              >
+                <span className='underline'>
+                  <span>{item.title}</span>
+                </span>
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>

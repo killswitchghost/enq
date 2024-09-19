@@ -1,36 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import './_BackTop.scss';
+import React, { useEffect, useState } from "react";
+import styles from "./_BackTop.module.scss";
 
 const BackTop = () => {
-  const [progress, setProgress] = useState(0);
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const currentScroll = window.scrollY;
 
-      setShowButton(currentScroll / totalScroll > .95);
-      setProgress(Math.round((currentScroll / totalScroll) * 100));
+      // Show the button after scrolling down 300px (adjust as needed)
+      setShowButton(currentScroll > 1080);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <>
       <button
-        id="back-top"
-        className={`backTop ${showButton ? 'showUp' : ''}`}
+        className={`${styles.backTop} ${showButton ? styles.showUp : ""}`}
         onClick={scrollToTop}
-aria-label="Back to top"
+        aria-label="Back to top"
       >
-<i className="bi bi-chevron-up"></i>
+        <i className="bi bi-chevron-up"></i>
       </button>
     </>
   );

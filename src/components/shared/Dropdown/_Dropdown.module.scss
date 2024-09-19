@@ -1,0 +1,33 @@
+@use '../../../assets/scss/variables' as *;
+
+.collapseContainer {
+  // padding: 0 54px;
+}
+
+.cardBody {
+  border-top: 1px solid rgba(var(--ui-inverse-dark-rgb), 0.15);
+  border-bottom: 1px solid rgba(var(--ui-inverse-dark-rgb), 0.15);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.btnClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  width: 40px;
+  height: 40px;
+  color: rgba(var(--ui-inverse-dark-rgb), 1);
+  transition: color 0.15s ease-in-out;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.badges {
+  display: flex;
+  padding: 1rem 0;
+}

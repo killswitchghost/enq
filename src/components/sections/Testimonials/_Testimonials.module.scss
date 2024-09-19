@@ -1,0 +1,94 @@
+@use '../../../assets/scss/variables' as *;
+
+.testimonialSection {
+  // padding: 6rem 0;
+}
+
+.testimonialsWrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  // background: rgba(var(--bs-emphasis-color-alt-rgb), 0.3);
+
+  // @media (min-width: $lg) {
+  //   padding: 3rem;
+  // }
+
+  .slideActive {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    .quoteLogoImg,
+    .quoteText,
+    .quoteAuthor,
+    .quoteTitle {
+      display: flex;
+      opacity: 0; // Initial state
+      animation: fadeInUp 0.6s ease forwards; // Apply fadeInUp animation
+      animation-delay: 0.2s; // Optional delay if needed
+    }
+    .quoteText {
+      min-height: 300px;
+    }
+    .quoteLogoImg {
+      margin-left: 1rem;
+      animation: fadeIn 0.6s ease forwards;
+      animation-delay: 0.8s;
+    }
+
+    .quoteAuthorImg {
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards;
+      animation-delay: 0.8s;
+    }
+    .quoteText {
+      color: rgba(var(--bs-emphasis-color-rgb), 1);
+      font-size: 1.2rem;
+      font-weight: 100;
+      animation-delay: 0.4s;
+      @media (min-width: $lg) {
+        font-size: 2rem;
+      }
+    }
+
+    .quoteAuthor {
+      display: flex;
+      width: 100%;
+      font-style: normal;
+      font-weight: 500;
+      animation-delay: 0.6s;
+    }
+    .quoteTitle {
+      font-size: 14px;
+      font-weight: 300;
+      animation-delay: 0.8s;
+    }
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .quoteAuthorWrap {
+    display: flex;
+    flex-direction: row;
+  }
+  .quoteAuthorImg {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+
+  :global {
+    .swiper {
+      padding-bottom: 90px;
+    }
+    .swiper-slide-active {
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+
+//////////////////////////////////////////////////

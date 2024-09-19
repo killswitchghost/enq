@@ -1,0 +1,89 @@
+@use '../../../assets/scss/variables' as *;
+
+.expandBox {
+  @media (min-width: $lg) {
+    margin-bottom: 10px;
+  }
+}
+
+.expandBoxTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  color: rgba(var(--bs-emphasis-color-rgb), 1);
+  cursor: pointer;
+  padding: 1rem 0;
+  border-bottom: rgba(var(--bs-emphasis-color-rgb), 0.1) 1px solid;
+  &:after {
+    background: none;
+    display: flex;
+    border-radius: 500px;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    background: rgba(var(--bs-emphasis-color-rgb), 0.05);
+    content: '\f64d';
+    //transform: rotate(45deg);
+  }
+}
+.expanded {
+  .expandBoxTitle {
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}
+.collapsed {
+}
+.expandBoxContent {
+  font-size: 14px;
+
+  :global {
+    ul {
+      li {
+        padding: 0.5rem 0;
+
+        a:link,
+        a:visited {
+          display: flex;
+          color: var(--bs-body-color);
+        }
+
+        a:hover,
+        a:active,
+        a:focus {
+          color: var(--bs-emphasis-color);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .expandBoxTitle {
+    cursor: default;
+  }
+
+  .expandBoxContent {
+    display: block;
+  }
+}
+@media (min-width: $md) {
+  .expandBoxTitle {
+    border-bottom: none;
+    &:after {
+      display: none;
+    }
+  }
+}

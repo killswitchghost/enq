@@ -1,0 +1,98 @@
+@use '../../../assets/scss/variables' as *;
+
+.footerSection {
+  //color: var(--ui-gray-11);
+  //padding: 4rem 0 0 0;
+
+  [data-bs-theme='dark'] & {
+    background: rgba(0, 0, 0, 0.5); // Example: dark mode background
+  }
+
+  [data-bs-theme='light'] & {
+    background: rgba(255, 255, 255, 0.5); // Example: dark mode background
+  }
+}
+
+// .footerLogo {
+//   display: flex;
+//   align-items: center;
+//   padding: 1rem 0;
+//   width: 100px;
+//   a {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     line-height: 0;
+//     svg {
+//       width: 24px;
+//     }
+//     span:last-child {
+//       font-size: 16px;
+//       color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+//     }
+//   }
+// }
+
+.footerBottomRow {
+  display: flex;
+  //border-top: rgba(var(--bs-emphasis-color-rgb), 0.1) 1px solid;
+  padding: 2rem 0;
+  font-size: 12px;
+}
+
+.footerSocialLink {
+  display: inline-flex;
+  padding: 0;
+  max-width: 48px;
+  width: 48px;
+  height: 48px;
+  max-height: 48px;
+
+  //
+  //
+  max-width: 32px;
+  width: 32px;
+  height: 32px;
+  max-height: 32px;
+
+
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  line-height: 0;
+
+  [data-bs-theme='dark'] & {
+    background: rgba(0, 0, 0, 0.8);
+
+    img {
+      filter: invert(1) brightness(2);
+    }
+  }
+
+  [data-bs-theme='light'] & {
+    background: rgba(255, 255, 255, 1);
+
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &:hover {
+    background: #000;
+    transition: all 0.3s ease;
+  }
+
+  img {
+    width: 14px;
+    height: 14px;
+  }
+
+  // Invert icon color (from black to white)
+}
+
+.footerSocialLinks {
+  display: inline-flex;
+  align-items: center;
+}

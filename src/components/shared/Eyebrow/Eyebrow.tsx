@@ -1,7 +1,5 @@
-
-
 import React, { ReactNode } from 'react';
-import './_Eyebrow.scss';
+import './_Eyebrow.module.scss';
 
 interface SectionProps {
   children: ReactNode;
@@ -9,10 +7,7 @@ interface SectionProps {
 }
 
 const Eyebrow: React.FC<SectionProps> = ({ children, className }) => {
-  return (
-    <p className={`eyebrow ${className}`}>{children}</p>
-
-  );
+  return <p className={`eyebrow ${className}`}>{children}</p>;
 };
 
 export default Eyebrow;

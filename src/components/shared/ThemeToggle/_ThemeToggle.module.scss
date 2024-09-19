@@ -1,0 +1,62 @@
+/* _ThemeToggle.module.scss */
+.themeToggle {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  border-radius: 50px;
+  transition: background-color 0.3s, color 0.3s;
+  width: 60px;
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    color: #fff;
+  }
+  &.dark {
+    background: rgba(var(--bs-emphasis-color-rgb), 0.1);
+    color: #fff;
+
+    &:after {
+      left: 2px;
+      background: rgba(var(--bs-emphasis-color-rgb), 0.1);
+    }
+  }
+
+  &.light {
+    background: rgba(var(--bs-emphasis-color-alt-rgb), 0.8);
+    color: #000;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 2px;
+      color: #000;
+      background: rgba(var(--bs-emphasis-color-rgb), 0.1);
+    }
+  }
+  .moon,
+  .sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    border-radius: 100px;
+    position: relative;
+    z-index: 2;
+  }
+  .moon {
+    margin-left: 2px;
+  }
+  .sun {
+    margin-right: 2px;
+  }
+}

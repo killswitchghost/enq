@@ -1,14 +1,12 @@
-import { ReactLenis } from "@studio-freight/react-lenis";
-import './_Lenis.scss';
-
+import { ReactLenis } from '@studio-freight/react-lenis';
+import './_Lenis.module.scss';
 
 function UseLenis({ children }: { children: React.ReactNode }) {
-
   const lenisOptions = {
-  lerp: 0.075,
-  smooth: true,
-  smoothTouch: false,
-  duration: 1,
+    lerp: 0.075,
+    smooth: true,
+    smoothTouch: false,
+    duration: 1
   };
 
   return (
@@ -18,4 +16,3 @@ function UseLenis({ children }: { children: React.ReactNode }) {
   );
 }
 export default UseLenis;
-

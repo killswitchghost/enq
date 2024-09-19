@@ -1,0 +1,131 @@
+@use '../../../assets/scss/variables' as *;
+
+.hoverExpandContainer {
+  display: flex;
+  width: 100%;
+
+  @media (min-width: $lg) {
+    height: 100%;
+    max-height: 400px;
+  }
+}
+
+.hoverItem {
+  display: flex;
+  flex-direction: column;
+  /* Stack content vertically */
+  flex-basis: 100px;
+  /* Set an initial width for each item */
+  flex-grow: 1;
+  transition: flex 0.8s ease;
+  min-width: 150px;
+  /* Ensure items don't get too narrow */
+
+  /* Hide expanding content */
+  border-bottom: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.2);
+
+  @media (min-width: $lg) {
+    cursor: pointer;
+    overflow: hidden;
+    border-bottom: none;
+    border-right: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.2);
+  }
+
+  &:last-child {
+    border-right: none;
+    /* Remove border for the last item */
+  }
+
+  .labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Spread content vertically */
+    padding: 20px;
+    height: 100%;
+
+    @media (min-width: $lg) {
+      height: 300px;
+    }
+  }
+
+  .number {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 100px;
+    font-size: 14px;
+    color: rgba(var(--bs-emphasis-color-rgb), 0.5);
+    border: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.1);
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-top: auto;
+    /* Pushes the title to the bottom */
+    margin-bottom: 0;
+    color: rgba(var(--bs-emphasis-color-rgb), 1);
+  }
+
+  .content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    padding: 0 20px 20px 20px;
+
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media (min-width: $lg) {
+      padding: 20px;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &:hover {
+    flex-grow: 5;
+    /* Expand the hovered item significantly */
+  }
+
+  &:hover .content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover .number {
+    color: rgba(var(--bs-emphasis-color-rgb), 0.9);
+    border: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.3);
+  }
+}
+
+@media (max-width: $lg) {
+  .hoverExpandContainer {
+    flex-direction: column;
+  }
+
+  .hoverItem {
+    flex-direction: column;
+    min-width: 100%;
+
+    &:hover {
+      flex-grow: 1;
+    }
+
+    .content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@use '../../../assets/scss/variables' as *;
+
+.accordionSolutions {
+  width: 100%;
+}
+
+.accordionItem {
+  border: none;
+  border-bottom: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.1);
+  background: none;
+
+  &:last-child {
+    //border: none;
+  }
+
+  .accordionButton {
+    font-size: 32px;
+    font-weight: 300;
+    transition: all 0.5s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 100;
+    padding: 16px 20px;
+
+    &[aria-expanded='false'] {
+      color: rgba(var(--bs-emphasis-color-rgb), 0.91);
+    }
+
+    &[aria-expanded='true'] {
+      color: rgba(var(--bs-emphasis-color-rgb), 1);
+    }
+
+    &:hover {
+      color: rgba(var(--bs-emphasis-color-rgb), 1);
+    }
+
+    &.underline {
+      > span {
+        border: none;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  &:hover {
+    border-bottom: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.6);
+    transition: all 1s ease;
+  }
+}
+
+.accordionButton {
+  font-size: 18px;
+  background: none;
+  box-shadow: none;
+  text-align: left;
+  &:focus,
+  &:not(.collapsed) {
+    background: none;
+  }
+
+  &::after {
+    background: none;
+    display: flex;
+    border-radius: 500px;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    background: rgba(var(--bs-emphasis-color-rgb), 0.05);
+  }
+
+  &[aria-expanded='false'] {
+    &:after {
+      content: '\F64D';
+    }
+  }
+  &[aria-expanded='true'] {
+    &:after {
+      //content: '\F63B';
+      content: '\F64D';
+      transform: rotate(45deg);
+    }
+  }
+}
+
+// Staggered animation for accordion items
+.accordionItem:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.accordionItem:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.accordionItem:nth-child(3) {
+  animation-delay: 1s;
+}
+.accordionBody {
+  padding: 2rem;
+}

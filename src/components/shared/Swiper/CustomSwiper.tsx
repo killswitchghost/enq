@@ -1,8 +1,10 @@
 import React, { ReactNode } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import './_CustomSwiper.scss';
-
+import { Swiper, SwiperProps } from 'swiper/react'; // Import SwiperProps for breakpoints typing
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import styles from './_CustomSwiper.module.scss';
 
 interface CustomSwiperProps {
   spaceBetween?: number;
@@ -11,18 +13,21 @@ interface CustomSwiperProps {
   navigationEnabled?: boolean;
   paginationClickable?: boolean;
   scrollbarDraggable?: boolean;
+  className?: string;
   children: ReactNode;
+  breakpoints?: { [width: number]: SwiperProps }; // Use SwiperProps for breakpoints
 }
 
 const CustomSwiper: React.FC<CustomSwiperProps> = ({
   children,
-  spaceBetween = 20,
+  spaceBetween = 30,
   slidesPerView = 2.5,
   loop = false,
   navigationEnabled = true,
   paginationClickable = true,
   scrollbarDraggable = true,
-
+  className = '', // Default empty string for className
+  breakpoints = {} // Default to empty object for breakpoints
 }) => {
   return (
     <Swiper
@@ -33,16 +38,8 @@ const CustomSwiper: React.FC<CustomSwiperProps> = ({
       navigation={navigationEnabled ? {} : false}
       pagination={{ clickable: paginationClickable }}
       scrollbar={{ draggable: scrollbarDraggable }}
-      className="swiper-container my-custom-id"
-breakpoints={{
-  639: {
-    slidesPerView: 1.5,
-  },
-  640: {
-    slidesPerView: slidesPerView,
-  },
-}}
-
+      className={`${styles.customSwiper} swiper-container ${className}`} // Combine passed className and styles
+      breakpoints={breakpoints} // Pass breakpoints with SwiperProps type
     >
       {children}
     </Swiper>

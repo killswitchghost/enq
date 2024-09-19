@@ -1,0 +1,182 @@
+
+
+/aboutus
+Image animation
+
+
+
+https://lilosocial.com/
+
+
+@use '../../../assets/scss/variables' as *;
+
+
+
+
+_clip or truncate
+
+
+_Insights Swiper? add swiper to a different page styles.cardTitle messed up
+
+_ALL elements on Homepage
+_Pagination
+_News
+_Footer mobile
+
+_Main Navigation
+_if sub nav is empty
+_HomeTestimonials - make slide only
+_cleanup sections
+
+_sf-classes
+_CircleArrow
+_Expand box mobile
+_horizontal-menu: blur background
+_breadcrumb
+
+_curor arrow in megamenu
+_ lineClass="grad-vert-pink-green"
+
+
+      <TitleLine
+        title="Who we are"
+        description="This is some placeholder content for this section."
+        lineClass="grad-vert-pink-green"
+        aosDelay="0"
+        aosDuration="1000"
+      />
+
+
+
+
+
+
+
+
+
+.testimonialsWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // Apply to active slide elements
+  .slideActive {
+    .quoteLogoImg,
+    .quoteText,
+    .quoteAuthor,
+    .quoteTitle {
+      display: flex;
+      opacity: 0; // Initial state
+      animation: fadeInUp 0.6s ease forwards; // Apply fadeInUp animation
+      animation-delay: 0.2s; // Optional delay if needed
+    }
+    .quoteLogoImg {
+      animation: fadeIn 0.6s ease forwards;
+      animation-delay: 0.8s;
+      border-radius: 6px;
+      margin-left: 1rem;
+    }
+
+    .quoteAuthorImg {
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards;
+      animation-delay: 0.8s;
+    }
+    .quoteText {
+      color: rgba(var(--bs-emphasis-color-rgb), 1);
+      font-size: 1.2rem;
+      font-weight: 100;
+      animation-delay: 0.4s;
+      @media (min-width: $lg) {
+        font-size: 2rem;
+      }
+    }
+
+    .quoteAuthor {
+      display: flex;
+      width: 100%;
+      font-style: normal;
+      font-weight: 500;
+      animation-delay: 0.6s;
+    }
+    .quoteTitle {
+      font-size: 14px;
+      font-weight: 300;
+      animation-delay: 0.8s;
+    }
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .quoteAuthorWrap {
+    display: flex;
+    flex-direction: row;
+  }
+  .quoteAuthorImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 300px;
+    margin-right: 0.5rem;
+  }
+  :global {
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px); // Moves the element down initially
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); // Moves it to its final position
+      }
+    }
+    .swiper {
+      padding-bottom: 80px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      transition: all 0.3s ease;
+      display: flex;
+      border-radius: 300px;
+      width: 48px;
+      height: 48px;
+      font-size: 14px;
+      color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+      background: rgba(var(--bs-emphasis-color-rgb), 0.1);
+      &:after {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        background: rgba(var(--bs-emphasis-color-rgb), 0.15);
+      }
+    }
+    .swiper-button-prev {
+      left: 0;
+      top: auto;
+      bottom: 0;
+    }
+    .swiper-button-next {
+      left: 60px;
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+
+//////////////////////////////////////////////////
+<figure class='card-img aos-init aos-animate' data-aos='img-reveal'><Image src='https://picsum.photos/320/480?random=1' alt='overlay-image' class'card-img-top' data-cursor='pointer2' width='320' height='480' /></figure>

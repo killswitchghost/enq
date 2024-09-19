@@ -1,0 +1,15 @@
+@use '../../../assets/scss/variables' as *;
+
+.counterStat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .counterStatValue {
+    color: rgba(var(--bs-emphasis-color-rgb), 1);
+    font-size: 3rem;
+    font-weight: 300;
+  }
+}

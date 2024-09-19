@@ -1,56 +1,54 @@
-import React, { ReactNode, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import '../../assets/scss/style.scss';
+import React, { ReactNode, useEffect } from "react";
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
+// import '../../assets/scss/style.scss';
 
+import NavHeader from "@/src/components/sections/NavHeader/NavHeader";
+import Footer from "@/src/components/sections/Footer/Footer";
+import LetsTalk from "@components/sections/LetsTalk/LetsTalk";
 
-import NavHeader from '@/src/components/sections/NavHeader/NavHeader';
-import Footer from '@/src/components/sections/Footer/Footer';
-
-
-import BackTop from '../shared/BackTop/BackTop';
-import Cursor from '@/src/components/shared/Cursor/Cursor';
-
-import Lenis from '../shared/Lenis/Lenis';
-
+import BackTop from "../shared/BackTop/BackTop";
+import Cursor from "@/src/components/shared/Cursor/Cursor";
+import GradientSpheres from "@components/shared/GradientSpheres/GradientSpheres";
+import SparkleContainer from "@components/shared/Sparkle/Sparkle";
+import Testimonials from "@components/sections/Testimonials/Testimonials";
+import TitleLine from "@shared/TitleLine/TitleLine";
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-
-
-  useEffect(() => {
-    AOS.init({
-      initClassName: 'aos-init',
-      easing: 'ease-out-quart',
-      once: false,
-      mirror: true,
-    });
-  }, []);
-
   return (
-
-<div>
-
-      <NavHeader />
-      <div className="content-wrapper">
-
-        {children}
-
-      </div>
-      <Footer />
+    <div>
+      {/* <SparkleContainer amount={3} /> */}
+      <GradientSpheres />
+      <Cursor />
       <BackTop />
-
- <Cursor />
-</div>
-
-
-
+      <NavHeader />
+      <div className="content-wrapper">{children}</div>
+      <hr />
+      <section className="section-py">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4">
+              <TitleLine
+                title="Testimonials"
+                description="This is some placeholder content for this section."
+                lineClass="grad-vert-pink-green"
+                aosDelay="0"
+                aosDuration="1000"
+              />
+            </div>
+            <div className="col-lg-8">
+              <Testimonials />
+            </div>
+          </div>
+        </div>
+      </section>
+      <LetsTalk />
+      <Footer />
+    </div>
   );
 };
 
 export default Layout;
-
-
-

@@ -13,16 +13,21 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-     "baseUrl": ".",
+    "baseUrl": ".", // Set the base URL to the root directory
+    "paths": {
+      "@/*": ["./*"], // Alias for everything at the root level
+      "@components/*": ["src/components/*"], // Alias for components
+      "@hooks/*": ["src/hooks/*"], // Alias for utils
+      "@utils/*": ["src/utils/*"], // Alias for utils
+      "@styles/*": ["src/styles/*"], // Alias for styles
+      "@assets/*": ["src/assets/*"], // Alias for assets
+      "@shared/*": ["src/components/shared/*"] // Alias for shared components
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./*"],
-       "@components/*": ["src/components/*"]
-    }
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

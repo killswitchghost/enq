@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './_Accordion.scss';
+import styles from './_Accordion.module.scss';
 
 interface AccordionItem {
   id: number;
@@ -40,23 +40,28 @@ const Accordion: React.FC<AccordionProps> = ({ url }) => {
   }
 
   return (
-    <div className="accordion" id="accordionSolutions">
+    <div className={`${styles.accordionSolutions} accordion`}>
       {data.accordionItems.map((item) => (
-        <div className="accordion-item" key={item.id}>
-          <h2 className="accordion-header">
+        <div className={styles.accordionItem} key={item.id}>
+          <h2 className={styles.accordionHeader}>
             <button
-              className="accordion-button collapsed underline"
-              type="button"
-              data-bs-toggle="collapse"
+              className={`${styles.accordionButton} collapsed underline`}
+              type='button'
+              data-bs-toggle='collapse'
               data-bs-target={`#collapse${item.id}`}
-              aria-expanded="false"
+              aria-expanded='false'
               aria-controls={`collapse${item.id}`}
             >
               {item.title}
             </button>
           </h2>
-          <div id={`collapse${item.id}`} className="accordion-collapse collapse" aria-labelledby={`heading${item.id}`} data-bs-parent="#accordionSolutions">
-            <div className="accordion-body">
+          <div
+            id={`collapse${item.id}`}
+            className='accordion-collapse collapse'
+            aria-labelledby={`heading${item.id}`}
+            data-bs-parent='#accordionSolutions'
+          >
+            <div className={`${styles.accordionBody} accordion-body`}>
               <div dangerouslySetInnerHTML={{ __html: item.content }} />
             </div>
           </div>

@@ -1,36 +1,61 @@
 import React, { useState, useEffect } from 'react';
-import './_ExpandBox.scss';
+import styles from './_ExpandBox.module.scss'; // Assuming you're using CSS Modules
+import classNames from 'classnames'; // Optional: for easier className management
+
 interface ExpandBoxProps {
-  title: string;
-  children: React.ReactNode;
+  title: string; // Dynamic title
+  content: string; // Dynamic HTML content
 }
 
-const ExpandBox: React.FC<ExpandBoxProps> = ({ title, children }) => {
+const ExpandBox: React.FC<ExpandBoxProps> = ({ title, content }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(true);
 
+  // Detect screen size changes
   useEffect(() => {
     const handleResize = () => {
-      const mobileBreakpoint = 768;
-      setIsMobile(window.innerWidth < mobileBreakpoint);
-      setIsOpen(window.innerWidth >= mobileBreakpoint);
+      if (window.innerWidth <= 768) {
+        setIsMobile(true);
+        setIsExpanded(false); // Collapse by default on mobile
+      } else {
+        setIsMobile(false);
+        setIsExpanded(true); // Always expanded on desktop
+      }
     };
 
+    // Run on initial load
     handleResize();
+
+    // Add event listener for resize
     window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const toggleOpen = () => {
+  // Toggle expand/collapse on mobile
+  const toggleExpand = () => {
     if (isMobile) {
-      setIsOpen(!isOpen);
+      setIsExpanded(!isExpanded);
     }
   };
 
   return (
-    <div className="expand-box" onClick={toggleOpen}>
-      <div className="expand-box-title"><h3 className="h6">{title}</h3></div>
-      {isOpen && <div className="expand-content">{children}</div>}
+    <div
+      className={classNames(styles.expandBox, {
+        [styles.expanded]: isExpanded, // Add 'expanded' class when box is expanded
+        [styles.collapsed]: !isExpanded // Add 'collapsed' class when box is collapsed
+      })}
+    >
+      <div className={styles.expandBoxTitle} onClick={toggleExpand}>
+        {title} {/* Dynamic title */}
+      </div>
+      {isExpanded && (
+        <div
+          className={styles.expandBoxContent}
+          dangerouslySetInnerHTML={{ __html: content }} // Render dynamic HTML content
+        />
+      )}
     </div>
   );
 };

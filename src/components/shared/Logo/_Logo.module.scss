@@ -1,0 +1,38 @@
+.st0 {
+  fill: url(#SVGID_1_);
+}
+
+.st1 {
+  fill: #ffffff;
+}
+
+.btnBrand {
+  display: flex;
+  align-items: center;
+  transform: scale(0.8);
+  margin-left: -16px;
+  div {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    color: #fff;
+    height: 100%;
+  }
+
+  span:first-child {
+    width: 36px;
+    margin-right: 9px;
+  }
+
+  span:last-child {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.logoSvg {
+  width: 36px;
+  /* Customize size */
+  height: auto;
+}

@@ -1,0 +1,707 @@
+@use '../../../assets/scss/variables' as *;
+
+.navHeader {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.9);
+  height: 60px;
+  justify-content: space-between;
+  color: #8996a0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  color: #8996a0;
+  padding-left: 1rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {}
+
+  a:hover,
+  a:active,
+  a:focus {
+    color: #fff;
+  }
+
+  .btn-nav {
+    padding: 16px;
+    display: inline-flex;
+    height: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 0.03em;
+    position: static;
+    border: none !important;
+
+    @media (min-width: $lg) {
+      padding: 20px;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    // &:hover {
+    //     background: var(--ui-gray-18);
+    // }
+
+    &:after {
+      display: none;
+    }
+
+    .underline {
+      display: none;
+
+      @media (min-width: $md) {
+        display: inline-block;
+      }
+    }
+  }
+
+  a.btn-nav-contact {
+    color: #fff;
+  }
+
+  .btn-nav-contact svg {
+    display: none;
+    width: 50px;
+  }
+
+  &.searchOpen,
+  &.menuOpen {
+    background: #0e0e0e;
+
+    .btn-nav-contact {
+      opacity: 0.3;
+    }
+  }
+
+  .btnNavWrap .dropDown {
+    position: static !important;
+  }
+
+  .dropdown-toggle {
+    position: static !important;
+  }
+
+  .dropdownMenu {
+    position: absolute !important;
+    left: 0 !important;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .dropdownMenu {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 0;
+    padding: 0 !important;
+    transition: all 0.5s ease;
+    display: flex !important;
+    border: none;
+    background: #0e0e0e;
+
+    .dropdownInner {
+      width: 100%;
+      height: calc(100% - 18px);
+      padding: 0;
+
+      @media (min-width: $lg) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  .dropdownMenu.show {
+    height: calc(100vh - 60px);
+    top: 60px;
+    transform: none !important;
+
+    // @media (min-width: $lg) {
+    //   height: calc(100vh - 60px);
+    //   top: 60px;
+    // }
+  }
+}
+
+.btnNavWrap {
+  display: flex;
+  position: static;
+
+  >a,
+  >div {
+    // border-left: 1px solid rgba(255, 255, 255, .2) !important;
+  }
+}
+
+// Hamburger
+.hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  cursor: pointer;
+  // transform: scale(.6);
+
+  @media (min-width: $lg) {
+    // transform: scale(.9);
+  }
+
+  .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 100px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .line3 {
+    width: 70%;
+  }
+}
+
+// affecting buttons
+.btn-contact,
+.btnNavSearch,
+.btnNavMenu {
+  height: 100%;
+  border-radius: 0;
+
+  @media (min-width: $lg) {
+    // transform: scale(1);
+  }
+}
+
+.btnNavSearch {
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.btnContact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 100%;
+
+  span {
+    display: none;
+  }
+}
+
+.btnContactIcon {
+  font-size: 26px;
+  color: #fff;
+}
+
+.btnNavSearch,
+.btnNavMenu {
+  background: none !important;
+  display: inline-flex;
+  align-items: center;
+  width: 56px;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    display: none;
+
+    // @media (min-width: $md) {
+    //   display: inline-flex;
+    //   width: 56px;
+    //   text-align: left;
+    //   padding-left: 10px;
+    // }
+  }
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  &:after {
+    display: none;
+  }
+
+  &:hover {
+    .line3:not(.open) {
+      width: 100%;
+    }
+  }
+
+  // @media (min-width:$lg) {
+  //     min-width: 130px;
+  // }http://localhost:3000/#
+}
+
+// .btn-contact {
+//     padding: 8px 16px;
+//     background-color: var(--bs-body-bg);
+//     color: var(--ui-emphasis);
+//     border: 0 solid #000;
+//     position: relative;
+
+//     &:before {
+//         border: 2px solid transparent !important;
+//     }
+
+//     svg {
+//         margin-right: 6px;
+//     }
+
+//     span {
+//         display: none;
+
+//         @media(min-width: $lg) {
+//             display: inline-flex;
+//         }
+//     }
+
+//     &:hover,
+//     &:active,
+//     &:focus {
+//         &:before {
+//             ontent: "";
+//             border: 2px solid var(--ui-emphasis);
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             display: flex;
+//             width: 100%;
+//             height: 100%;
+//         }
+//     }
+// }
+
+.btn-contact {
+  margin-right: 1rem;
+  background: var(--ui-gray-18) !important;
+
+  @media (min-width: $lg) {
+    display: inline-flex;
+  }
+
+  svg {
+    @media (min-width: $lg) {
+      margin-right: 6px;
+    }
+  }
+
+  &:before {
+    border: 2px solid transparent !important;
+  }
+
+  &:after {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: inline-flex;
+    }
+  }
+
+  span {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: inline-flex;
+    }
+  }
+}
+
+.navLeft {
+  width: 100%;
+  display: none;
+
+  @media (min-width: $lg) {
+    display: block;
+  }
+
+  a:link,
+  a:visited,
+  .accordionButton {
+    display: flex;
+    width: 100%;
+    margin: 0.5rem 0;
+    font-size: 30px;
+    font-weight: 300;
+    color: #8996a0;
+    transition: all 0.5s ease !important;
+    background: none;
+    border: none;
+    text-align: left;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .accordionButton[aria-expanded='true'] {
+    color: #fff;
+    pointer-events: none;
+
+    span {
+      color: #fff;
+      background-size: 100% 100%;
+      background-image: linear-gradient(transparent calc(100% - 1px), #fff 1px);
+    }
+  }
+}
+
+@media (max-width: $lg-max) {
+  .accordionButton {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    background: none;
+    box-shadow: none;
+    text-align: left;
+
+    &:focus,
+    &:not(.collapsed) {
+      background: none;
+    }
+
+    &:after {
+      background: none;
+      display: flex;
+      border-radius: 500px;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      font-family: bootstrap-icons !important;
+      font-style: normal;
+      font-weight: 100;
+      line-height: 1;
+      vertical-align: -0.125em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 16px;
+      transition: all 0.5s ease;
+      background: rgba(var(--bs-emphasis-color-rgb), 0.05);
+    }
+
+    &[aria-expanded='false'] {
+      &:after {
+        content: '\F64D';
+      }
+    }
+
+    &[aria-expanded='true'] {
+      &:after {
+        //content: '\F63B';
+        content: '\F64D';
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.btnContactWrap {
+  display: flex;
+  align-items: center;
+}
+
+#menuAccordionWrap {
+  #menuAccordion {
+    position: relative;
+  }
+}
+
+.accordionButton {
+  margin: 1rem 0;
+  font-size: 28px;
+  font-weight: 300;
+  color: #8996a0;
+  transition: all 0.5s ease !important;
+  padding: 8px 0;
+  margin: 8px 0;
+  border: none;
+}
+
+.accordionButton[aria-expanded='true'] {
+  color: #fff;
+
+  span {
+    color: #fff;
+    background-size: 100% 100%;
+    background-image: linear-gradient(transparent calc(100% - 1px), #fff 1px);
+  }
+}
+
+.accordionButton[aria-expanded='true']:after {
+  color: #fff;
+  background: black;
+  font-weight: normal;
+}
+
+.accordionItem {
+  border: none;
+  width: 100%;
+
+  // @media (min-width: $lg) {
+  //   position: absolute;
+  // }
+}
+
+#collapse0 {
+  display: none;
+
+  @media (min-width: $lg) {
+    display: block;
+  }
+}
+
+.navHeader {}
+
+.accordionHeader {
+  display: block;
+
+  @media (min-width: $lg) {
+    display: none;
+  }
+}
+
+.accordionBody {
+  padding: 0;
+}
+
+@media (min-width: $lg) {
+  .accordionItem {
+
+    // Target global `.collapse` class inside a scoped class
+    :global(.collapse) .accordionBody {
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    // Target global `.collapsing` class inside a scoped class
+    :global(.collapsing) .accordionBody {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+
+    // Target global `.collapse.show` class inside a scoped class
+    :global(.collapse.show) .accordionBody {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+.btn-back {
+  display: none;
+
+  @media (min-width: $lg) {
+    display: inline-flex;
+  }
+}
+
+.megamenuContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+
+  .menu-grid {
+    border: 1px solid #fff;
+  }
+}
+
+.btnIconTxt {
+  font-size: 16px !important;
+}
+
+.megaMenuCard {
+  margin-left: auto;
+  display: none;
+  width: 250px;
+  background: none;
+
+  @media (min-width: $lg) {
+    display: inline-flex;
+  }
+
+  :global {
+    .card-title {
+      color: #fff;
+    }
+
+    .card-desc {
+      color: #fff;
+    }
+  }
+}
+
+.navHeader {}
+
+.dropdownInner {
+  width: 100%;
+  position: relative;
+  //background-image: url(https://picsum.photos/1920/1080?random=0);
+  background: #0e0e0e;
+
+  >div {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+  }
+}
+
+.dropdownMenu {
+  :global(.collapse1) {
+    background-image: url(https://picsum.photos/1920/1080?random=1);
+  }
+
+  :global(.collapse2) {
+    background-image: url(https://picsum.photos/1920/1080?random=2);
+  }
+
+  :global(.collapse3) {
+    background-image: url(https://picsum.photos/1920/1080?random=3);
+  }
+
+  :global(.collapse4) {
+    background-image: url(https://picsum.photos/1920/1080?random=4);
+  }
+
+  :global(.collapse5) {
+    background-image: url(https://picsum.photos/1920/1080?random=5);
+  }
+}
+
+.navHeader.searchOpen {
+
+  .btnContactWrap,
+  .btnNavMenu {
+    opacity: 0.3;
+  }
+}
+
+.navHeader.menuOpen {
+
+  .btnContactWrap,
+  .btnNavSearch {
+    opacity: 0.3;
+  }
+}
+
+.searchWrap {
+  margin-top: 60px;
+
+  .navSearchInput,
+  .navSearchInput:hover,
+  .navSearchInput:focus {
+    border: none;
+    background: none;
+    //border-bottom: 1px solid #8996a0;
+    color: #fff;
+    font-weight: 100;
+    box-shadow: none;
+  }
+
+  .navSearchInput::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 100;
+  }
+
+  .navSearchInput::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 100;
+  }
+
+  .navSearchInput:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 100;
+  }
+
+  .navSearchInput::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 100;
+  }
+
+  .inputWrap {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #8996a0;
+  }
+
+  input.btn-search,
+  button.btn-search {
+    position: relative;
+    z-index: initial;
+    background-color: #000;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid transparent;
+    }
+
+    svg {
+      transform: scale(1.5);
+    }
+  }
+
+  .popSearchesLabel {
+    margin: 0 1rem 0 0;
+  }
+
+  .popSearches {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #8996a0;
+
+    :global {
+      .btn {
+        margin: 0.5rem;
+      }
+    }
+  }
+}
+
+// .navSearchInput,
+// .navSearchInput:focus,
+// .navSearchInput:hover {
+//   background: none;
+//   border: none;
+//   border-bottom: 1px solid #fff;
+//   color: #fff;
+// }

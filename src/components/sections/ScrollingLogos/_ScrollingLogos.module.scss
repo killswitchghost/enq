@@ -1,0 +1,39 @@
+@use '../../../assets/scss/variables' as *;
+
+.marqueeInner {
+  padding: 1rem var(--padding-desktop);
+  grid-column-gap: 5rem;
+  background-color: var(--swatch--white);
+  color: var(--swatch--black);
+  flex-direction: row;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  height: 5.25rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.marqueeSpan {
+  grid-column-gap: 5rem;
+  flex: none;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  animation: scroll 45s linear infinite;
+}
+.logo {
+  float: left;
+  margin: 0 2rem;
+  max-height: 50px;
+  width: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 5rem));
+  }
+}

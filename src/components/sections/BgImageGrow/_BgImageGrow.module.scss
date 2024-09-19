@@ -1,0 +1,58 @@
+/* _BgImageGrow.module.scss */
+
+.stickyContainer {
+  position: relative;
+  height: 200vh; /* Making sure it spans more than one viewport height */
+}
+
+.stickyBackground {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.stickyBackground > img {
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.textContent {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.widthScrollContainer {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  height: 100vh;
+}
+
+.widthScroll {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  opacity: 0;
+  transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+.centerHeading {
+  color: #fff;
+  margin-top: 80px;
+}
