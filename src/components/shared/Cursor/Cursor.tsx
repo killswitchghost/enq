@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import styles from "./_Cursor.module.scss";
+import React, { useEffect, useRef } from 'react';
+import styles from './_Cursor.module.scss';
 
 interface Position {
   x: number;
@@ -22,7 +22,7 @@ const Cursor: React.FC = () => {
       }
     };
 
-    document.addEventListener("mousemove", updateCursorPosition);
+    document.addEventListener('mousemove', updateCursorPosition);
 
     const loop = () => {
       const easing = 8;
@@ -41,7 +41,7 @@ const Cursor: React.FC = () => {
     requestAnimationFrame(loop);
 
     return () => {
-      document.removeEventListener("mousemove", updateCursorPosition);
+      document.removeEventListener('mousemove', updateCursorPosition);
     };
   }, []);
 
@@ -51,10 +51,10 @@ const Cursor: React.FC = () => {
       const cursorType = target.dataset.cursor;
 
       if (cursorType && cursorBorderRef.current) {
-        if (cursorType === "pointer") {
-          cursorBorderRef.current.classList.add(styles.cursorPointer); // Scoped class
-        } else if (cursorType === "pointer2") {
-          cursorBorderRef.current.classList.add(styles.cursorPointerHover); // Scoped class
+        if (cursorType === 'pointer') {
+          cursorBorderRef.current.classList.add(styles.cursorPointer);
+        } else if (cursorType === 'pointer2') {
+          cursorBorderRef.current.classList.add(styles.cursorPointerHover);
         }
       }
     };
@@ -64,16 +64,16 @@ const Cursor: React.FC = () => {
       const cursorType = target.dataset.cursor;
 
       if (cursorType && cursorBorderRef.current) {
-        cursorBorderRef.current.classList.remove(styles.cursorPointerHover); // Scoped class
+        cursorBorderRef.current.classList.remove(styles.cursorPointerHover);
       }
     };
 
-    document.addEventListener("mouseover", handleMouseOver);
-    document.addEventListener("mouseout", handleMouseOut);
+    document.addEventListener('mouseover', handleMouseOver);
+    document.addEventListener('mouseout', handleMouseOut);
 
     return () => {
-      document.removeEventListener("mouseover", handleMouseOver);
-      document.removeEventListener("mouseout", handleMouseOut);
+      document.removeEventListener('mouseover', handleMouseOver);
+      document.removeEventListener('mouseout', handleMouseOut);
     };
   }, []);
 

@@ -7,19 +7,18 @@ import {
   Scrollbar,
   A11y,
   Autoplay
-} from 'swiper/modules'; // Import Autoplay module
+} from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import GrowLine from '../../shared/GrowLine/GrowLine';
+
 import styles from './_Testimonials.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
-//import 'swiper/css/pagination';
 
 const quotes = [
   {
     cardId: 1,
-    imageLogo: '/img/logos/crh.png', // Corrected image path
+    imageLogo: '/img/logos/crh.png',
     metaLogo: 'Image description 1',
     content:
       '"...Enqbator is flexible and fast paced. Without a partner who worked in a similar manner, we wouldn’t have been able to complete our project as quickly as we did..." ',
@@ -30,7 +29,7 @@ const quotes = [
   },
   {
     cardId: 2,
-    imageLogo: '/img/logos/crh.png', // Corrected image path
+    imageLogo: '/img/logos/crh.png',
     metaLogo: 'Image description 2',
     content:
       '... Enqbator team for nearly a decade now and I can’t say enough good things about the work they have done to help us build our company websites...',
@@ -41,7 +40,7 @@ const quotes = [
   },
   {
     cardId: 3,
-    imageLogo: '/img/logos/crh.png', // Corrected image path
+    imageLogo: '/img/logos/crh.png',
     metaLogo: 'Image description 3',
     content: 'Highly recommend Enqbator for their expertise.',
     authorImg: '/img/testimonials/author.webp',
@@ -52,7 +51,7 @@ const quotes = [
 ];
 
 const Testimonials = () => {
-  const [activeIndex, setActiveIndex] = useState(0); // Initialize active slide index
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className={styles.testimonialsWrap}>
@@ -64,10 +63,10 @@ const Testimonials = () => {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-        loop={true} // Enable looping
+        loop={true}
         autoplay={{
-          delay: 3000, // Time delay between slides in milliseconds (3 seconds)
-          disableOnInteraction: false // Continue autoplay after user interaction (e.g., swiping)
+          delay: 3000,
+          disableOnInteraction: false
         }}
       >
         {quotes.map((quote, index) => (

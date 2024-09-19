@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from './_Dropdown.module.scss'; // Optional: Your custom styles
+import styles from './_Dropdown.module.scss';
 
 type Category = 'price' | 'brand' | 'color';
 
@@ -22,7 +22,7 @@ const sortOptions: SortOption[] = [
 
 export default function SortingCheckboxes() {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
-  const [isCollapsed, setIsCollapsed] = useState(true); // To track collapse state
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const handleCheckboxChange = (optionId: string) => {
     setSelectedOptions((prev) =>
@@ -36,7 +36,6 @@ export default function SortingCheckboxes() {
     setSelectedOptions((prev) => prev.filter((id) => id !== optionId));
   };
 
-  // Group checkboxes by category and render them in columns
   const renderCheckboxColumns = () => {
     const categories = Array.from(
       new Set(sortOptions.map((option) => option.category))
@@ -68,13 +67,11 @@ export default function SortingCheckboxes() {
     );
   };
 
-  // Toggle collapse state when the button is clicked
   const handleCollapseToggle = () => {
     setIsCollapsed(!isCollapsed);
   };
 
   useEffect(() => {
-    // Add Bootstrap collapse event listeners to handle icon toggle
     const collapseElement = document.getElementById('checkboxCollapse');
     if (collapseElement) {
       collapseElement.addEventListener('shown.bs.collapse', () =>
@@ -88,10 +85,7 @@ export default function SortingCheckboxes() {
 
   return (
     <div className={`container ${styles.collapseContainer}`}>
-      {/* Selected Options as badges */}
-
-      <div className='d-flex justify-content-end'>
-        {/* Collapse Button with Chevron Icon */}
+      <div className='d-flex my-4 justify-content-center'>
         <button
           className='btn btn-outline mb-3'
           type='button'
@@ -110,12 +104,10 @@ export default function SortingCheckboxes() {
         </button>
       </div>
 
-      {/* Collapsible Section */}
       <div className='collapse' id='checkboxCollapse'>
         <div className={`card card-body ${styles.cardBody}`}>
           <div className='d-flex justify-content-between'>
             <h5 className='mb-5'>Filter by Options</h5>
-            {/* Close button inside card-body */}
             <button
               className={`${styles.btnClose} btn btn-primary`}
               type='button'

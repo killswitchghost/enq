@@ -3,7 +3,7 @@ import styles from './_ScrollingLogos.module.scss';
 
 const ScrollingLogos = () => {
   return (
-    <section className={`${styles.scrollingLogosSection} `}>
+    <section className={`${styles.scrollingLogosSection} mb-5`}>
       <div className='container-fluid px-0'>
         <div className='row'>
           <div className='col-lg-8 offset-lg-4'>

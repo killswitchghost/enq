@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import GrowLine from '../../shared/GrowLine/GrowLine';
+
 import styles from './_BgImageGrow.module.scss';
 
 const BgImageGrow: React.FC = () => {
@@ -39,15 +39,17 @@ const BgImageGrow: React.FC = () => {
         ></div>
       </div>
       <div className={styles.textContent}>
-        {/* <div
-          className={`${styles.growDiv} grad-vert`}
-          data-aos='grow-animation'
-          data-aos-delay='10'
-          data-aos-duration='1000'
-        ></div> */}
-        {/* <GrowLine className={`${styles.growDiv} all-colors-gradient`} /> */}
-        <h1 className={styles.centerHeading}>We are Enqbator</h1>
-
+        <div className='grow-line-box center'>
+          <div
+            className='grow-line grad-vert-pink-green mx-auto aos-init aos-animate'
+            data-aos='grow-animation'
+            data-aos-delay='0'
+            data-aos-duration='1000'
+          ></div>
+        </div>
+        <h1 className={`${styles.centerHeading} mt-0`}>
+          Something really cool
+        </h1>
         <p className='w-50'>
           Discover who we are and what drives us. Learn more about our mission,
           values, and the passionate team behind our success.

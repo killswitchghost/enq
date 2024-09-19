@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import styles from "./_BackTop.module.scss";
+import React, { useEffect, useState } from 'react';
+import styles from './_BackTop.module.scss';
 
 const BackTop = () => {
   const [showButton, setShowButton] = useState(false);
@@ -8,26 +8,25 @@ const BackTop = () => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
 
-      // Show the button after scrolling down 300px (adjust as needed)
       setShowButton(currentScroll > 1080);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <>
       <button
-        className={`${styles.backTop} ${showButton ? styles.showUp : ""}`}
+        className={`${styles.backTop} ${showButton ? styles.showUp : ''}`}
         onClick={scrollToTop}
-        aria-label="Back to top"
+        aria-label='Back to top'
       >
-        <i className="bi bi-chevron-up"></i>
+        <i className='bi bi-chevron-up'></i>
       </button>
     </>
   );

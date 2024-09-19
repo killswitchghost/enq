@@ -5,8 +5,8 @@ import styles from './_Counter.module.scss';
 interface StatProps {
   statValue: number;
   statLabel: string;
-  prefix?: string; // Optional prefix
-  suffix?: string; // Optional suffix
+  prefix?: string;
+  suffix?: string;
 }
 
 const Counter: React.FC<StatProps> = ({
@@ -19,7 +19,7 @@ const Counter: React.FC<StatProps> = ({
   const counterRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const currentRef = counterRef.current; // Store the current value of the ref in a local variable
+    const currentRef = counterRef.current;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -29,22 +29,21 @@ const Counter: React.FC<StatProps> = ({
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the element is visible
+      { threshold: 0.5 }
     );
 
     if (currentRef) {
-      observer.observe(currentRef); // Observe the current element
+      observer.observe(currentRef);
     }
 
     return () => {
       if (currentRef) {
-        observer.unobserve(currentRef); // Use the stored ref value in the cleanup
+        observer.unobserve(currentRef);
       }
     };
   }, []);
 
   return (
-    // <div className='stat' ref={counterRef}>
     <div className={`${styles.counterStat} stat`} ref={counterRef}>
       <div className={`${styles.counterStatValue} stat-value`}>
         {inView ? (

@@ -14,7 +14,6 @@ const Sparkle: React.FC<SparkleProps> = ({
   const [style, setStyle] = useState<React.CSSProperties>({});
   const sparkleRef = useRef<SVGSVGElement>(null);
 
-  // Define a set of 9 colors
   const colors = [
     '#ff5733',
     '#33ff57',
@@ -27,19 +26,13 @@ const Sparkle: React.FC<SparkleProps> = ({
     '#57ff33'
   ];
 
-  // Function to get a random color from the array
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
-  // Function to get a random size between minSize and maxSize
-  const getRandomSize = () => {
-    return Math.random() * (maxSize - minSize) + minSize;
-  };
-
   const updateSparklePosition = () => {
-    const newLeft = `${Math.random() * 100}vw`; // Randomize position relative to viewport width
-    const newTop = `${Math.random() * 100}vh`; // Randomize position relative to viewport height
+    const newLeft = `${Math.random() * 100}vw`;
+    const newTop = `${Math.random() * 100}vh`;
     setStyle((prevStyle) => ({
       ...prevStyle,
       left: newLeft,
@@ -48,14 +41,18 @@ const Sparkle: React.FC<SparkleProps> = ({
   };
 
   useEffect(() => {
-    const randomSize = getRandomSize(); // Get random size
-    const duration = Math.random() * 2000 + 1000; // Increase duration between 5000ms and 13000ms for slower appearance
-    const delay = Math.random() * 6000 + 1000; // Add random delay between 2000ms and 6000ms
+    const getRandomSize = () => {
+      return Math.random() * (maxSize - minSize) + minSize;
+    };
+
+    const randomSize = getRandomSize();
+    const duration = Math.random() * 2000 + 1000;
+    const delay = Math.random() * 6000 + 1000;
 
     setStyle({
-      position: 'fixed', // Positioned relative to the viewport
-      width: `${randomSize}px`, // Use random size
-      height: `${randomSize}px`, // Use random size
+      position: 'fixed',
+      width: `${randomSize}px`,
+      height: `${randomSize}px`,
       zIndex: -1,
       animation: `spin ${duration}ms linear infinite, fadeInOutSoft ${duration}ms ease-in-out ${delay}ms infinite`,
       transformOrigin: 'center'
@@ -91,7 +88,7 @@ const Sparkle: React.FC<SparkleProps> = ({
       className={`my-sparkle ${className}`}
       style={style}
       viewBox='0 0 512 512'
-      fill={getRandomColor()} // Use the random color here
+      fill={getRandomColor()}
       xmlns='http://www.w3.org/2000/svg'
     >
       <path

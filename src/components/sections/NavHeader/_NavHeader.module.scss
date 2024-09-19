@@ -7,7 +7,6 @@
   display: flex;
   width: 100%;
 
-  background: rgba(0, 0, 0, 0.9);
   height: 60px;
   justify-content: space-between;
   color: #8996a0;
@@ -16,19 +15,6 @@
   border-bottom: 1px solid transparent;
   color: #8996a0;
   padding-left: 1rem;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {}
-
-  a:hover,
-  a:active,
-  a:focus {
-    color: #fff;
-  }
 
   .btn-nav {
     padding: 16px;
@@ -49,10 +35,6 @@
     &:after {
       display: none;
     }
-
-    // &:hover {
-    //     background: var(--ui-gray-18);
-    // }
 
     &:after {
       display: none;
@@ -126,11 +108,6 @@
     height: calc(100vh - 60px);
     top: 60px;
     transform: none !important;
-
-    // @media (min-width: $lg) {
-    //   height: calc(100vh - 60px);
-    //   top: 60px;
-    // }
   }
 }
 
@@ -138,13 +115,11 @@
   display: flex;
   position: static;
 
-  >a,
-  >div {
-    // border-left: 1px solid rgba(255, 255, 255, .2) !important;
+  > a,
+  > div {
   }
 }
 
-// Hamburger
 .hamburgerIcon {
   display: flex;
   flex-direction: column;
@@ -153,11 +128,6 @@
   min-width: 28px;
   height: 28px;
   cursor: pointer;
-  // transform: scale(.6);
-
-  @media (min-width: $lg) {
-    // transform: scale(.9);
-  }
 
   .line {
     display: block;
@@ -173,16 +143,11 @@
   }
 }
 
-// affecting buttons
 .btn-contact,
 .btnNavSearch,
 .btnNavMenu {
   height: 100%;
   border-radius: 0;
-
-  @media (min-width: $lg) {
-    // transform: scale(1);
-  }
 }
 
 .btnNavSearch {
@@ -206,7 +171,6 @@
 
 .btnContactIcon {
   font-size: 26px;
-  color: #fff;
 }
 
 .btnNavSearch,
@@ -223,13 +187,6 @@
 
   span {
     display: none;
-
-    // @media (min-width: $md) {
-    //   display: inline-flex;
-    //   width: 56px;
-    //   text-align: left;
-    //   padding-left: 10px;
-    // }
   }
 
   svg {
@@ -246,50 +203,7 @@
       width: 100%;
     }
   }
-
-  // @media (min-width:$lg) {
-  //     min-width: 130px;
-  // }http://localhost:3000/#
 }
-
-// .btn-contact {
-//     padding: 8px 16px;
-//     background-color: var(--bs-body-bg);
-//     color: var(--ui-emphasis);
-//     border: 0 solid #000;
-//     position: relative;
-
-//     &:before {
-//         border: 2px solid transparent !important;
-//     }
-
-//     svg {
-//         margin-right: 6px;
-//     }
-
-//     span {
-//         display: none;
-
-//         @media(min-width: $lg) {
-//             display: inline-flex;
-//         }
-//     }
-
-//     &:hover,
-//     &:active,
-//     &:focus {
-//         &:before {
-//             ontent: "";
-//             border: 2px solid var(--ui-emphasis);
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             display: flex;
-//             width: 100%;
-//             height: 100%;
-//         }
-//     }
-// }
 
 .btn-contact {
   margin-right: 1rem;
@@ -458,10 +372,6 @@
 .accordionItem {
   border: none;
   width: 100%;
-
-  // @media (min-width: $lg) {
-  //   position: absolute;
-  // }
 }
 
 #collapse0 {
@@ -472,7 +382,8 @@
   }
 }
 
-.navHeader {}
+.navHeader {
+}
 
 .accordionHeader {
   display: block;
@@ -488,20 +399,16 @@
 
 @media (min-width: $lg) {
   .accordionItem {
-
-    // Target global `.collapse` class inside a scoped class
     :global(.collapse) .accordionBody {
       opacity: 0;
       transition: all 0.5s ease;
     }
 
-    // Target global `.collapsing` class inside a scoped class
     :global(.collapsing) .accordionBody {
       transform: translateX(-10px);
       opacity: 0;
     }
 
-    // Target global `.collapse.show` class inside a scoped class
     :global(.collapse.show) .accordionBody {
       transform: translateX(0);
       opacity: 1;
@@ -552,7 +459,8 @@
   }
 }
 
-.navHeader {}
+.navHeader {
+}
 
 .dropdownInner {
   width: 100%;
@@ -560,7 +468,7 @@
   //background-image: url(https://picsum.photos/1920/1080?random=0);
   background: #0e0e0e;
 
-  >div {
+  > div {
     position: relative;
     z-index: 2;
   }
@@ -601,7 +509,6 @@
 }
 
 .navHeader.searchOpen {
-
   .btnContactWrap,
   .btnNavMenu {
     opacity: 0.3;
@@ -609,7 +516,6 @@
 }
 
 .navHeader.menuOpen {
-
   .btnContactWrap,
   .btnNavSearch {
     opacity: 0.3;
@@ -696,12 +602,3 @@
     }
   }
 }
-
-// .navSearchInput,
-// .navSearchInput:focus,
-// .navSearchInput:hover {
-//   background: none;
-//   border: none;
-//   border-bottom: 1px solid #fff;
-//   color: #fff;
-// }

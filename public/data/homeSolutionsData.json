@@ -1,0 +1,40 @@
+{
+     "accordionItems": [
+       {
+         "id": "item1",
+         "title": "Digital Strategy & Consulting",
+         "content": "<div class='row'><div class='col-lg-8'><p class='lead'>Lead text about this expertise</p><ul><li>Web Development</li><li>User Experience (UX) Design</li><li>Mobile App Development</li><li>Artificial Intelligence & Machine Learning</li><li>Cloud Computing Solutions</li><li>SEO & Digital Marketing</li><li>E-commerce Platforms</li><li>API Integration & Development</li><li>Project Management & Agile Methodologies</li><li>Data Analytics & Business Intelligence</li></ul><a href='Solutions' class='btn btn-primary'>Learn more</a></div><div class='col-lg-4'><img src='https://picsum.photos/226/400' class='img-fluid' /></div></div>"
+       },
+       {
+         "id": "item2",
+         "title": "Experience Design",
+         "content": "This is the second item's accordion body. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the accordion body."
+       },
+       {
+         "id": "item3",
+         "title": "Web & Application Development",
+         "content": "This is the third item's accordion body. Nothing is automatically shown when using the accordion plugin, so you can use the accordion body to contain text, images, or any other content."
+       },
+       {
+         "id": "item4",
+         "title": "Mobile Development",
+         "content": "This is the third item's accordion body. Nothing is automatically shown when using the accordion plugin, so you can use the accordion body to contain text, images, or any other content."
+       },
+   {
+     "id": "item5",
+     "title": "IT Support & Account Management",
+     "content": "This is the third item's accordion body. Nothing is automatically shown when using the accordion plugin, so you can use the accordion body to contain text, images, or any other content."
+   },
+       {
+         "id": "item6",
+         "title": "Sitefinity Expertise",
+         "content": "This is the third item's accordion body. Nothing is automatically shown when using the accordion plugin, so you can use the accordion body to contain text, images, or any other content."
+       },
+       {
+         "id": "item7",
+         "title": "Hosting & Security",
+         "content": "This is the third item's accordion body. Nothing is automatically shown when using the accordion plugin, so you can use the accordion body to contain text, images, or any other content."
+       }
+     ]
+   }
+   

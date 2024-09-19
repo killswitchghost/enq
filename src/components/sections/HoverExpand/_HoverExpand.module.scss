@@ -13,15 +13,13 @@
 .hoverItem {
   display: flex;
   flex-direction: column;
-  /* Stack content vertically */
+
   flex-basis: 100px;
-  /* Set an initial width for each item */
+
   flex-grow: 1;
   transition: flex 0.8s ease;
   min-width: 150px;
-  /* Ensure items don't get too narrow */
 
-  /* Hide expanding content */
   border-bottom: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.2);
 
   @media (min-width: $lg) {
@@ -33,14 +31,12 @@
 
   &:last-child {
     border-right: none;
-    /* Remove border for the last item */
   }
 
   .labels {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Spread content vertically */
     padding: 20px;
     height: 100%;
 
@@ -66,7 +62,7 @@
     font-size: 18px;
     line-height: 1.4;
     margin-top: auto;
-    /* Pushes the title to the bottom */
+
     margin-bottom: 0;
     color: rgba(var(--bs-emphasis-color-rgb), 1);
   }
@@ -96,7 +92,6 @@
 
   &:hover {
     flex-grow: 5;
-    /* Expand the hovered item significantly */
   }
 
   &:hover .content {

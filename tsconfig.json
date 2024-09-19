@@ -13,15 +13,15 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".", // Set the base URL to the root directory
+    "baseUrl": ".", 
     "paths": {
-      "@/*": ["./*"], // Alias for everything at the root level
-      "@components/*": ["src/components/*"], // Alias for components
-      "@hooks/*": ["src/hooks/*"], // Alias for utils
-      "@utils/*": ["src/utils/*"], // Alias for utils
-      "@styles/*": ["src/styles/*"], // Alias for styles
-      "@assets/*": ["src/assets/*"], // Alias for assets
-      "@shared/*": ["src/components/shared/*"] // Alias for shared components
+      "@/*": ["./*"], 
+      "@components/*": ["src/components/*"], 
+      "@hooks/*": ["src/hooks/*"], 
+      "@utils/*": ["src/utils/*"], 
+      "@styles/*": ["src/styles/*"], 
+      "@assets/*": ["src/assets/*"], 
+      "@shared/*": ["src/components/shared/*"] 
     },
     "plugins": [
       {

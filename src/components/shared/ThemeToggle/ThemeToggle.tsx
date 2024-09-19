@@ -21,11 +21,6 @@ const ThemeToggle = () => {
   };
 
   return (
-    // <div
-    //   className={`${styles.themeToggleBtn} ${theme}-theme`}
-    //   onClick={toggleTheme}
-    //   aria-label='Toggle theme'
-    // >
     <div
       className={`${styles.themeToggle} ${styles[theme]}`}
       onClick={toggleTheme}

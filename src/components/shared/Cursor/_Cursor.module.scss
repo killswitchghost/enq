@@ -10,7 +10,6 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 999;
-
 }
 
 .cursorBorder {
@@ -28,13 +27,12 @@
   pointer-events: none;
   transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
     height 0.15s ease-out, background-color 0.15s ease-out;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .cursorPointerHover {
   --size: 48px;
   background: #fff;
-
 
   &:before {
     margin: auto;

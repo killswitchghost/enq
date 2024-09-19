@@ -87,14 +87,12 @@
   }
   &[aria-expanded='true'] {
     &:after {
-      //content: '\F63B';
       content: '\F64D';
       transform: rotate(45deg);
     }
   }
 }
 
-// Staggered animation for accordion items
 .accordionItem:nth-child(1) {
   animation-delay: 0s;
 }

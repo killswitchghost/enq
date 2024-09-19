@@ -2,12 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@components/layouts/Layout';
-import HorizontalMenu from '@components/sections/HorizontalMenu/HorizontalMenu';
 import Counter from '@components/shared/Counter/Counter';
-//import NavInPage from '@components/sections/NavInPage/NavInPage';
-import HomeTestimonials from '@components/sections/Testimonials/Testimonials';
 
-import LetsTalk from '@components/sections/LetsTalk/LetsTalk';
 import HoverExpand from '@components/sections/HoverExpand/HoverExpand';
 import TitleLine from '@shared/TitleLine/TitleLine';
 const menuItems = [
@@ -148,7 +144,6 @@ const HomePage = () => {
                 <TitleLine
                   title='The Goal'
                   description='This is some placeholder content for this section.'
-                  lineClass='grad-vert-pink-green'
                   aosDelay='0'
                   aosDuration='1000'
                 />
@@ -216,7 +211,6 @@ const HomePage = () => {
                   <TitleLine
                     title='The Goal'
                     description='This is some placeholder content for this section.'
-                    lineClass='grad-vert-pink-green'
                     aosDelay='0'
                     aosDuration='1000'
                   />
@@ -245,7 +239,6 @@ const HomePage = () => {
                   <TitleLine
                     title='The Challenge'
                     description='This is some placeholder content for this section.'
-                    lineClass='grad-vert-pink-green'
                     aosDelay='0'
                     aosDuration='1000'
                   />
@@ -306,7 +299,6 @@ const HomePage = () => {
                   <TitleLine
                     title='The Solution'
                     description='This is some placeholder content for this section.'
-                    lineClass='grad-vert-pink-green'
                     aosDelay='0'
                     aosDuration='1000'
                   />
@@ -336,7 +328,6 @@ const HomePage = () => {
                   <TitleLine
                     title='The Result'
                     description='This is some placeholder content for this section.'
-                    lineClass='grad-vert-pink-green'
                     aosDelay='0'
                     aosDuration='1000'
                   />

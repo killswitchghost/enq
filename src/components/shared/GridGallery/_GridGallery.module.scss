@@ -1,6 +1,7 @@
 @use '../../../assets/scss/variables' as *;
 
-.gridGallery {}
+.gridGallery {
+}
 
 .cardsColumns {
   display: flex;
@@ -10,119 +11,25 @@
 
 .cardBox {
   box-sizing: border-box;
-  /* Ensures padding/border don't affect width */
+
   margin-bottom: 60px;
 
   @media screen and (min-width: $sm) {
-    //padding: 2rem;
     padding: 2rem 0;
     flex-basis: calc(50% - 1rem);
-
   }
 }
 
-// Column styles for 1 column layout
 .column1 .cardsColumns {
   flex-direction: column;
 }
 
 @media (min-width: $sm) {
-
-  // Column styles for 2 columns layout
   .column2 .cardBox {
     flex-basis: calc(50% - 2rem);
   }
 
-  // Column styles for 3 columns layout
   .column3 .cardBox {
     flex-basis: calc(33.33% - 2rem);
   }
 }
-
-
-// .recentWorkCard {
-
-//     max-width: 380px;
-// }
-
-// .card-columns {
-//     display: flex;
-//     flex-wrap: wrap;
-// }
-
-// .card-box {
-//     margin-bottom: 3rem;
-// }
-
-// @media screen and (min-width: $sm) {
-//     .card-box {
-//         margin-left: 1rem;
-//         margin-right: 1rem;
-//         width: 100%;
-//     }
-
-//     .columns-2 .card-box {
-//         flex-basis: calc(50% - 2rem);
-//         width: 50%;
-//     }
-
-//     .columns-3 .card-box {
-//         flex-basis: calc(33.33% - 2rem); // 3 columns
-//         width: 33.33%;
-//     }
-
-//     .columns-4 .card-box {
-//         flex-basis: calc(25% - 2rem); // 4 columns
-//         width: 25%;
-//     }
-// }
-
-// @media screen and (min-width: $lg) {
-//     .card-box {
-//         margin-left: 2rem;
-//         margin-right: 2rem;
-//         margin-bottom: 16rem;
-//     }
-
-//     .columns-2 .card-box {
-//         flex-basis: calc(50% - 4rem);
-//     }
-
-//     .columns-3 .card-box {
-//         flex-basis: calc(33.33% - 4rem); // 3 columns
-//     }
-
-//     .columns-4 .card-box {
-//         flex-basis: calc(25% - 4rem); // 4 columns
-//     }
-
-//     .card-box:nth-child(2) {
-//         margin-top: 200px;
-//     }
-
-//     .card-box:nth-child(3) {
-//         margin-top: -200px;
-//     }
-// }
-
-// @media screen and (min-width: $xl) {
-//     .card-box {
-//         // Additional styling for xl screens if necessary
-//     }
-// }
-
-// .gridGallery {
-//     border: 10px solid #f3c;
-// }
-
-// .columns-2 {
-//     // Specific styling for columns-2 if necessary
-// }
-
-// .columns-3 {
-//     // Specific styling for columns-3 if necessary
-// }
-
-// .columns-4 {
-//     // Specific styling for columns-4 if necessary
-// }
