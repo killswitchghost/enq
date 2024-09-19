@@ -430,7 +430,9 @@ const NavHeader = () => {
                                     />
                                   </figure>
                                   <div className='card-body px-0'>
-                                    <h4 className='card-title'>
+                                    <h4
+                                      className={`${styles.cardTitle} card-title`}
+                                    >
                                       <span className='underline'>
                                         <span>Placeholder Title 1</span>
                                       </span>
@@ -548,7 +550,9 @@ const NavHeader = () => {
                                     />
                                   </figure>
                                   <div className='card-body px-0'>
-                                    <h4 className='card-title'>
+                                    <h4
+                                      className={`${styles.cardTitle} card-title`}
+                                    >
                                       <span className='underline'>
                                         <span>Placeholder Title 1</span>
                                       </span>
@@ -732,7 +736,9 @@ const NavHeader = () => {
                                     />
                                   </figure>
                                   <div className='card-body px-0'>
-                                    <h4 className='card-title'>
+                                    <h4
+                                      className={`${styles.cardTitle} card-title`}
+                                    >
                                       <span className='underline'>
                                         <span>Placeholder Title 1</span>
                                       </span>
@@ -865,7 +871,9 @@ const NavHeader = () => {
                                     />
                                   </figure>
                                   <div className='card-body px-0'>
-                                    <h4 className='card-title'>
+                                    <h4
+                                      className={`${styles.cardTitle} card-title`}
+                                    >
                                       <span className='underline'>
                                         <span>Placeholder Title 1</span>
                                       </span>
@@ -1013,7 +1021,9 @@ const NavHeader = () => {
                                     />
                                   </figure>
                                   <div className='card-body px-0'>
-                                    <h4 className='card-title'>
+                                    <h4
+                                      className={`${styles.cardTitle} card-title`}
+                                    >
                                       <span className='underline'>
                                         <span>Placeholder Title 1</span>
                                       </span>
@@ -1162,7 +1172,9 @@ const NavHeader = () => {
                                     />
                                   </figure>
                                   <div className='card-body px-0'>
-                                    <h4 className='card-title'>
+                                    <h4
+                                      className={`${styles.cardTitle} card-title`}
+                                    >
                                       <span className='underline'>
                                         <span>Placeholder Title 1</span>
                                       </span>

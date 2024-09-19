@@ -450,7 +450,7 @@
 
   :global {
     .card-title {
-      color: #fff;
+      color: #fff !important;
     }
 
     .card-desc {
@@ -458,7 +458,9 @@
     }
   }
 }
-
+.cardTitle {
+  color: #fff;
+}
 .navHeader {
 }
 
