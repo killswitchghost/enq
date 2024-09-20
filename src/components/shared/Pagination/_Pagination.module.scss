@@ -1,0 +1,40 @@
+@use '../../../assets/scss/variables' as *;
+
+.navPagination {
+  display: inline-flex;
+}
+.Pagination {
+  margin: 0;
+}
+
+.pageItem {
+  .pageLink:link,
+  .pageLink:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin: 0 8px;
+    color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+    font-size: 14px;
+  }
+  .pageLink:hover,
+  .pageLink:active,
+  .pageLink:focus {
+    border: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.3);
+  }
+}
+
+.active {
+  .pageLink {
+    background: rgba(var(--bs-emphasis-color-rgb), 0.1);
+    pointer-events: none;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

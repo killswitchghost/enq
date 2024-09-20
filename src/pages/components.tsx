@@ -1,10 +1,18 @@
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../components/layouts/Layout';
 import ListImage from '@shared/ListImage/ListImage';
-import Accordion from '@components/shared/Accordion/Accordion';
+import Accordion from '@shared/Accordion/Accordion';
+import Pagination from '@shared/Pagination/Pagination';
 
 const Components = () => {
+  const [currentPage1, setCurrentPage1] = useState(1);
+
+  const handlePageChange1 = (page: number) => {
+    setCurrentPage1(page);
+  };
+
   return (
     <Layout>
       <section className='section-py'>
@@ -27,6 +35,22 @@ const Components = () => {
         </div>
       </section>
       <hr />
+      <section className='section-py'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              <Pagination
+                totalPages={10}
+                currentPage={currentPage1}
+                onPageChange={handlePageChange1}
+                previousLabel='Prev'
+                nextLabel='Next'
+                className='custom-pagination'
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
