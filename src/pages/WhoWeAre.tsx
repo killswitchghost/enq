@@ -45,7 +45,7 @@ const items = [
 const HomePage = () => {
   return (
     <Layout>
-      <section className='hero pt-60'>
+      <section className='hero'>
         <div className='hero-content'>
           <div className='container-fluid'>
             <div className='row'>
@@ -170,8 +170,8 @@ const HomePage = () => {
                     margin: '0'
                   }}
                   src='https://www.canva.com/design/DAFvLq_u3Jo/watch?embed&autoplay=1'
-                  allowFullScreen
-                  allow='fullscreen'
+                  // allow='fullscreen'
+                  // allowFullScreen
                 ></iframe>
               </div>
             </div>

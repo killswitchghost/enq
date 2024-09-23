@@ -6,8 +6,6 @@
   z-index: 999;
   display: flex;
   width: 100%;
-
-  height: 60px;
   justify-content: space-between;
   color: #8996a0;
   transition: all 0.3s ease;
@@ -15,7 +13,7 @@
   border-bottom: 1px solid transparent;
   color: #8996a0;
   padding-left: 1rem;
-
+  min-height: 60px;
   .btn-nav {
     padding: 16px;
     display: inline-flex;
@@ -60,7 +58,7 @@
 
   &.searchOpen,
   &.menuOpen {
-    background: #0e0e0e;
+    background: #0e0e0e !important;
 
     .btn-nav-contact {
       opacity: 0.3;
@@ -105,9 +103,7 @@
   }
 
   .dropdownMenu.show {
-    height: calc(100vh - 60px);
-    top: 60px;
-    transform: none !important;
+    height: 100vh;
   }
 }
 
@@ -178,7 +174,7 @@
   background: none !important;
   display: inline-flex;
   align-items: center;
-  width: 56px;
+  width: 60px;
   padding: 0;
   margin: 0;
   display: inline-flex;
@@ -382,9 +378,6 @@
   }
 }
 
-.navHeader {
-}
-
 .accordionHeader {
   display: block;
 
@@ -460,8 +453,6 @@
 }
 .cardTitle {
   color: #fff;
-}
-.navHeader {
 }
 
 .dropdownInner {

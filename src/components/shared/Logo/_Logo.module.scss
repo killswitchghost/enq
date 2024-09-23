@@ -1,5 +1,6 @@
 .st0 {
-  fill: url(#SVGID_1_);
+  //fill: url(#SVGID_1_);
+  fill: #f3c;
 }
 
 .st1 {
@@ -9,8 +10,7 @@
 .btnBrand {
   display: flex;
   align-items: center;
-  transform: scale(0.8);
-  margin-left: -16px;
+  //transform: scale(0.8);
   div {
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@
   }
 
   span:first-child {
-    width: 36px;
+    // width: 36px;
     margin-right: 9px;
   }
 
@@ -32,6 +32,7 @@
 }
 
 .logoSvg {
-  width: 36px;
-  height: auto;
+  width: 100%;
+  // width: 36px;
+  // height: auto;
 }

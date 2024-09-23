@@ -1,0 +1,13 @@
+
+
+_Breadcrumb
+_solid Main Navigation
+_Logo Size
+_Contrast Text
+_Font ratio Heading
+_circle-arrow color
+
+
+git add .
+git commit -m "Border Changes"
+git push origin master

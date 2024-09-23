@@ -61,18 +61,6 @@
   }
 }
 
-.nav-header-hidden {
-  .horizontal-menu {
-    top: 0;
-  }
-}
-
-.nav-header-visible {
-  .horizontal-menu {
-    top: 80px;
-  }
-}
-
 @media (min-width: $lg) {
   .horizontal-menu {
     display: flex;

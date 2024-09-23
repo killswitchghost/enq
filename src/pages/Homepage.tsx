@@ -5,11 +5,11 @@ import Image from 'next/image';
 import Layout from '@components/layouts/Layout';
 
 import ScrollingLogos from '@components/sections/ScrollingLogos/ScrollingLogos';
-
+import GrowLine from '@shared/GrowLine/GrowLine';
 import { SwiperSlide } from 'swiper/react';
 import CustomSwiper from '@shared/Swiper/CustomSwiper';
 
-import CustomizeExp from '@components/sections/CustomizeExperience/CustomizeExperience';
+// import CustomizeExp from '@components/sections/CustomizeExperience/CustomizeExperience';
 
 import FadeInText from '@shared/FadeInText/FadeInText';
 import TitleLine from '@shared/TitleLine/TitleLine';
@@ -63,42 +63,49 @@ const HomePage = () => {
   ];
   return (
     <Layout>
-      <section className='hero pt-60'>
-        <div className='hero-content'>
-          <div className='container-fluid'>
-            <div className='row'>
-              <div className='col-lg-6 order-lg-2'>
-                <div className='img-animate mb-4 mb-lg-0'>
+      <section className='stretch-image right'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6 col-img'>
+              <div className='set-bg'>
+                <div className='img-animate'>
                   <figure className='figure aos-init' data-aos='img-reveal'>
-                    <Image
-                      src='https://picsum.photos/350/350?random=1'
-                      alt='overlay-image'
-                      width='350'
-                      height='350'
-                    />
+                    <div
+                      className='bg-img'
+                      style={{
+                        backgroundImage:
+                          'url(https://picsum.photos/900/480?random=2)'
+                      }}
+                    ></div>
                   </figure>
                 </div>
               </div>
-              <div className='col-lg-6 d-flex flex-column justify-content-center'>
-                <div>
-                  <h1>Our employees have spoken ... again!</h1>
-                  <p>
-                    We are thrilled that our employees get to be recognized (for
-                    the third year in a row) for the hard work and teamwork
-                    they&apos;ve put in to make Enqbator a rewarding, fun, and
-                    GREAT place to work!
-                  </p>
-                  <a href='#' className='btn btn-primary'>
-                    Learn More
-                  </a>
+            </div>
+            <div className='col-lg-6 col-text'>
+              <div className='p-3'>
+                <div className='grow-line-box'>
+                  <GrowLine aosDelay='500' aosDuration='1500' />
                 </div>
+                <h1>Stretch image outside container sample</h1>
+                <p className='lead'>
+                  Sample Lead Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                  pariatur mollitia ducimus magnam exercitationem quaerat
+                  aliquid animi blanditiis illo ex corporis enim quod, assumenda
+                  obcaecati eveniet, quae quia a natus!
+                </p>
+                <a href='#' className='btn btn-outline'>
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <CustomizeExp />
+      {/* <CustomizeExp /> */}
       <section className='section-py'>
         <div className='container'>
           <div className='row'>

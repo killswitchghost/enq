@@ -23,7 +23,9 @@ const NavHeader = () => {
   };
 
   const getDropdownClass = (isOpen: boolean): string =>
-    isOpen ? `${styles.dropdownMenu} ${styles.show}` : `${styles.dropdownMenu}`;
+    isOpen
+      ? `${styles.dropdownMenu} ${styles.show} dropdown-menu`
+      : `${styles.dropdownMenu} dropdown-menu`;
   const getNavHeaderClass = () => {
     let classes = `${styles.navHeader} nav-header`;
     if (searchDropdownOpen) classes += ` ${styles.searchOpen} search-open`;

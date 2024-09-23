@@ -4,11 +4,11 @@ import styles from './_GradientSpheres.module.scss';
 const GradientSpheres = () => {
   useEffect(() => {
     const gradients: string[] = [
-      'linear-gradient(208deg, rgba(255, 40, 40, 1) 19.19%, rgba(255, 100, 40, 1) 30%, rgba(255, 248, 85, 1) 70.68%)',
-      'linear-gradient(208deg, rgba(255, 248, 85, 1) 19.19%, rgba(128, 227, 242, 1) 40%, rgba(0, 227, 242, 1) 70.68%)',
-      'linear-gradient(180deg, rgba(98, 67, 255, 1) 0%, rgba(150, 67, 255, 1) 50%, rgba(255, 40, 40, 1) 100%)',
-      'linear-gradient(180deg, rgba(98, 67, 255, 1) 0%, rgba(50, 134, 255, 1) 50%, rgba(0, 227, 242, 1) 100%)',
-      'linear-gradient(180deg, rgba(71, 155, 128, 1) 0%, rgba(0, 192, 227, 1) 50%, rgba(0, 227, 242, 1) 100%)'
+      'linear-gradient(208deg, rgba(255, 40, 40, 1) 19.19%, rgba(255, 70, 40, 1) 25%,rgba(255, 100, 40, 1) 30%, rgba(255, 180, 85, 1) 50%, rgba(255, 248, 85, 1) 70.68%',
+      'linear-gradient(208deg, rgba(255, 248, 85, 1) 19.19%, rgba(210, 238, 164, 1) 30%, rgba(128, 227, 242, 1) 40%, rgba(64, 227, 242, 1) 55%, rgba(0, 227, 242, 1) 70.68%',
+      'linear-gradient(180deg, rgba(98, 67, 255, 1) 0%, rgba(120, 67, 255, 1) 25%,   rgba(150, 67, 255, 1) 50%, rgba(200, 53, 120, 1) 75%, rgba(255, 40, 40, 1) 100%',
+      'linear-gradient(180deg, rgba(98, 67, 255, 1) 0%, rgba(74, 101, 255, 1) 25%,  rgba(50, 134, 255, 1) 50%, rgba(25, 180, 248, 1) 75%, rgba(0, 227, 242, 1) 100%',
+      'linear-gradient(180deg, rgba(71, 155, 128, 1) 0%, rgba(35, 174, 177, 1) 25%,   rgba(0, 192, 227, 1) 50%, rgba(0, 209, 234, 1) 75%, rgba(0, 227, 242, 1) 100%'
     ];
 
     function random(min: number, max: number): number {

@@ -16,7 +16,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
+    <div className='next-inner'>
       {/* Maybe? <SparkleContainer amount={3} /> */}
       <GradientSpheres />
       <Cursor />

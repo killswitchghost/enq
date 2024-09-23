@@ -94,11 +94,11 @@ $xxxl-max: 1599px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
 
-  --bs-body-color: #1f4257;
+  --bs-body-color: #1d1d1f;
   --bs-body-color-rgb: 31, 66, 87;
 
-  --bs-body-bg: #f1f5f9;
-  --bs-body-bg-rgb: 241, 245, 249;
+  --bs-body-bg: #fff;
+  --bs-body-bg-rgb: 255, 255, 255;
 
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
@@ -169,8 +169,8 @@ $xxxl-max: 1599px;
 #app[data-bs-theme='dark'] {
   color-scheme: dark;
 
-  --bs-body-color: #94a3b8;
-  --bs-body-color-rgb: 148, 163, 184;
+  --bs-body-color: #fff;
+  --bs-body-color-rgb: 255, 255, 255;
 
   --bs-body-bg: #111022;
   --bs-body-bg-rgb: 33, 37, 41;

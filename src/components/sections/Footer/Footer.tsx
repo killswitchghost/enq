@@ -9,8 +9,11 @@ const Footer = () => {
     <footer className={`${styles.footerSection}`}>
       <div className='container'>
         <div className={`${styles.footerBottomRow} row`}>
-          <div className='col-lg-3'>
-            <p> © {new Date().getFullYear()} Enqbator. All Rights Reserved.</p>
+          <div className='col-lg-3 mb-4'>
+            <p className='mb-2'>
+              {' '}
+              © {new Date().getFullYear()} Enqbator. All Rights Reserved.
+            </p>
             <Link href='#' className='underline'>
               <span>Privacy Policy</span>
             </Link>{' '}
@@ -19,15 +22,15 @@ const Footer = () => {
               <span>Terms of Use</span>
             </Link>
           </div>
-          <div className='col-lg-3'>
-            <p>Preferences </p> <ThemeToggle />
+          <div className='col-lg-3 mb-4'>
+            <p className='mb-2'>Preferences </p> <ThemeToggle />
           </div>
-          <div className='col-lg-3'>
-            <p>Language</p>
+          <div className='col-lg-3 mb-4'>
+            <p className='mb-2'>Language</p>
             <button className='btn btn-sm btn-primary'>US - English</button>
           </div>
-          <div className='col-lg-3'>
-            <p>Stalk us on</p>
+          <div className='col-lg-3 mb-4'>
+            <p className='mb-2'>Stalk us on</p>
             <div className={styles.footerSocialLinks}>
               <Link href='#' className={`${styles.footerSocialLink} btn`}>
                 <Image

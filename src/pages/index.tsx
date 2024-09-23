@@ -49,7 +49,7 @@ const HomePage = () => {
   ];
   return (
     <Layout>
-      <section className='section-py pt-60'>
+      <section className='section-py'>
         <div className='container'>
           <div className='row'>
             <div className='col'>

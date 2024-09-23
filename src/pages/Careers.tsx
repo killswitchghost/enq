@@ -41,7 +41,7 @@ const HomePage = () => {
 
   return (
     <Layout>
-      <section className='hero pt-60'>
+      <section className='hero'>
         <div className='hero-content'>
           <div className='container-fluid'>
             <div className='row'>

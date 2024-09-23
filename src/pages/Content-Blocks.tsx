@@ -2,7 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../components/layouts/Layout';
 import TitleLine from '@shared/TitleLine/TitleLine';
+import GrowLine from '@shared/GrowLine/GrowLine';
 import Counter from '@components/shared/Counter/Counter';
+import VideoScrub from '@shared/VideoScrub/VideoScrub';
 const contentBlockHero1 = `<section class="hero"><div class="container"><div class="row"><div class="col-lg-6 d-flex flex-column justify-content-center">
                 <div>
                   <p class="eyebrow">architecto</p>
@@ -47,7 +49,7 @@ const contentBlockHero2 = `<section class="hero"><div class="container"><div cla
               </div>
             </div></div></div></section>`;
 
-const contentBlockHero3 = `<section id="section1" class="pt-6"><div class="container"><div class="row"><div class="col text-center"><div class="grow-line-box center"><div class="grow-line grad-vert-pink-green mx-auto aos-init aos-animate" data-aos="grow-animation" data-aos-delay="0" data-aos-duration="1000"></div></div><h1>Architecto beatae vitae dicta</h1><p>I've never seen a wild thing feel sorry for itself. A bird will fall frozen dead from a bough without ever having felt sorry for itself.</p></div></div></div></section>`;
+const contentBlockHero3 = `<section id="section1" class="pt-6"><div class="container"><div class="row"><div class="col text-center"><div class="grow-line-box center"><div class="grow-line grad-vert-blue-yellow mx-auto aos-init aos-animate" data-aos="grow-animation" data-aos-delay="0" data-aos-duration="1000"></div></div><h1>Architecto beatae vitae dicta</h1><p>I've never seen a wild thing feel sorry for itself. A bird will fall frozen dead from a bough without ever having felt sorry for itself.</p></div></div></div></section>`;
 
 const contentBlockTypography = `
 <h1>Heading 1</h1>
@@ -74,25 +76,28 @@ const contentBlockButtons = `
 <a href="/components/" class="underline link-circle-arrow" aria-label="Components">
         
         <div class="circle-arrow me-2">
-          <svg
-            fill="none"
-            aria-hidden="true"
-            focusable="false"
-            class="svg-arrow"
-          >
-            <path
-              fill="currentColor"
-              class="svg-caret"
-              d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
-            ></path>
-            <path
-              class="svg-stem"
-              stroke="currentColor"
-              d="M1.75 8H13"
-              stroke-width="1.2"
-              stroke-linecap="round"
-            ></path>
-          </svg>
+                <svg
+          class="svg-arrow"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            fill="currentColor"
+            class="svg-caret"
+            d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
+          ></path>
+          <path
+            class="svg-stem"
+            stroke="currentColor"
+            d="M1.75 8H11"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          ></path>
+        </svg>
         </div>
         <span class="txt">Learn more</span>
       </a><br /><a href="/components/" class="btn-icon-txt">
@@ -135,7 +140,7 @@ const contentBlockCSample1 = `
             <div class="col">
               <div class="row my-5">
                 <div class="col-6 col-md-4">
-                  <div class="img-animate">
+                  <div class="img-animate mb-3"">
                     <figure class="figure aos-init" data-aos="img-reveal">
                       <Image
                         src="https://picsum.photos/185/246?random=1"
@@ -145,11 +150,11 @@ const contentBlockCSample1 = `
                       />
                     </figure>
                   </div>
-                  <h3 class="mb-0">Lorem Ipsum</h3>
+                  <h3>Sample 3 column Lorem Ipsum</h3>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
                 </div>
                 <div class="col-6 col-md-4">
-                  <div class="img-animate">
+                  <div class="img-animate mb-3"">
                     <figure class="figure aos-init" data-aos="img-reveal">
                       <Image
                         src="https://picsum.photos/185/246?random=2"
@@ -159,11 +164,11 @@ const contentBlockCSample1 = `
                       />
                     </figure>
                   </div>
-                       <h3 class="mb-0">Lorem Ipsum</h3>
+                     <h3>Sample 3 column Lorem Ipsum</h3>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
                 </div>
                 <div class="col-6 col-md-4">
-                  <div class="img-animate">
+                  <div class="img-animate mb-3">
                     <figure class="figure aos-init" data-aos="img-reveal">
                       <Image
                         src="https://picsum.photos/185/246?random=3"
@@ -173,7 +178,7 @@ const contentBlockCSample1 = `
                       />
                     </figure>
                   </div>
-                    <h3 class="mb-0">Lorem Ipsum</h3>
+                  <h3>Sample 3 column Lorem Ipsum</h3>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
                 </div>
               </div>
@@ -279,12 +284,112 @@ const contentBlockCSample4 = `
 const Components = () => {
   return (
     <Layout>
+      <section className='stretch-image left'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6 col-img'>
+              <div className='set-bg'>
+                <div className='img-animate'>
+                  <figure className='figure aos-init' data-aos='img-reveal'>
+                    <div
+                      className='bg-img'
+                      style={{
+                        backgroundImage:
+                          'url(https://picsum.photos/900/480?random=1)'
+                      }}
+                    ></div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6 col-text'>
+              <div className='p-3'>
+                <div className='grow-line-box'>
+                  <GrowLine
+                    aosDelay='500'
+                    aosDuration='1500'
+                    alignmentClass='text-left'
+                  />
+                </div>
+                <h1>Stretch image outside container sample</h1>
+                <p className='lead'>
+                  Sample Lead Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                  pariatur mollitia ducimus magnam exercitationem quaerat
+                  aliquid animi blanditiis illo ex corporis enim quod, assumenda
+                  obcaecati eveniet, quae quia a natus!
+                </p>
+                <a href='#' className='btn btn-outline'>
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /> <br />
+      <hr />
+      <br /> <br />
+      <section className='stretch-image right'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6 col-img'>
+              <div className='set-bg'>
+                <div className='img-animate'>
+                  <figure className='figure aos-init' data-aos='img-reveal'>
+                    <div
+                      className='bg-img'
+                      style={{
+                        backgroundImage:
+                          'url(https://picsum.photos/900/480?random=2)'
+                      }}
+                    ></div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6 col-text'>
+              <div className='p-3'>
+                <div className='grow-line-box'>
+                  <GrowLine aosDelay='500' aosDuration='1500' />
+                </div>
+                <h1>Stretch image outside container sample</h1>
+                <p className='lead'>
+                  Sample Lead Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                  pariatur mollitia ducimus magnam exercitationem quaerat
+                  aliquid animi blanditiis illo ex corporis enim quod, assumenda
+                  obcaecati eveniet, quae quia a natus!
+                </p>
+                <a href='#' className='btn btn-outline'>
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /> <br />
+      <hr />
+      <br /> <br />
       <div dangerouslySetInnerHTML={{ __html: contentBlockHero1 }} />
+      <br /> <br />
       <hr />
+      <br /> <br />
       <div dangerouslySetInnerHTML={{ __html: contentBlockHero2 }} />
+      <br /> <br />
       <hr />
+      <br /> <br />
       <div dangerouslySetInnerHTML={{ __html: contentBlockHero3 }} />
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section className='section-py'>
         <div className='container'>
           <div className='row'>
@@ -305,7 +410,9 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section className='section-py'>
         <div className='container'>
           <div className='row'>
@@ -324,15 +431,25 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <div dangerouslySetInnerHTML={{ __html: contentBlockCSample1 }} />
+      <br /> <br />
       <hr />
+      <br /> <br />
       <div dangerouslySetInnerHTML={{ __html: contentBlockCSample2 }} />
+      <br /> <br />
       <hr />
+      <br /> <br />
       <div dangerouslySetInnerHTML={{ __html: contentBlockCSample3 }} />
+      <br /> <br />
       <hr />
+      <br /> <br />
       <div dangerouslySetInnerHTML={{ __html: contentBlockCSample4 }} />
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section className='section-py'>
         <div className='container'>
           <div className='row'>
@@ -488,7 +605,9 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section className='section-py'>
         <div className='container'>
           <div className='row'>
@@ -644,7 +763,9 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section className='section-py'>
         <div className='container'>
           <div className='row'>
@@ -685,7 +806,9 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section className='section-py'>
         <div className='container'>
           <div className='row'>
@@ -699,8 +822,7 @@ const Components = () => {
                 ></div>
               </div>
               <p className='h3'>
-                Sample Section Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit
+                Sample Section Title. Grow line can be applied in content area.
               </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -715,7 +837,9 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section className='section-py'>
         <div className='container'>
           <div className='row'>
@@ -756,7 +880,9 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section
         className='parallax-section'
         style={{ backgroundImage: 'url("https://picsum.photos/1920/1080")' }}
@@ -772,16 +898,20 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section
-        className='section-py'
-        style={{ backgroundImage: 'url("https://picsum.photos/1920/1080")' }}
+        className='section-py overlay-bg'
+        style={{
+          backgroundImage: 'url("https://picsum.photos/1920/1080?random=4")'
+        }}
       >
         <div className='hero-content'>
           <div className='container'>
             <div className='row'>
               <div className='col-lg-6 offset-lg-6'>
-                <h2>Section Background image</h2>
+                <h2>Section Background image .overlay-bg</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -797,8 +927,9 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
-
+      <br /> <br />
       <section className='section-py'>
         <div className='hero-content'>
           <div className='container'>
@@ -833,8 +964,8 @@ const Components = () => {
                       margin: 0
                     }}
                     src='https://www.canva.com/design/DAFvLq_u3Jo/watch?embed&autoplay=1'
-                    allowFullScreen
-                    allow='fullscreen'
+                    // allow='fullscreen'
+                    // allowFullScreen
                   ></iframe>
                 </div>
               </div>
@@ -842,7 +973,9 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section className='section-py'>
         <div className='container'>
           <div className='row'>
@@ -895,7 +1028,9 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
       <hr />
+      <br /> <br />
       <section className='section-py'>
         <div className='container'>
           <div className='row my-4'>
@@ -948,6 +1083,35 @@ const Components = () => {
           </div>
         </div>
       </section>
+      <br /> <br />
+      <hr />
+      <br /> <br />
+      <div className='sticky'>
+        <VideoScrub
+          videoSrc='/video/forrest.mp4'
+          videoWidth='100%'
+          className='fullscreen-video'
+        />
+      </div>
+      <section className='section-py over-video' style={{ height: '600vh' }}>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              <h2>Scroll down to see the effect!</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /> <br /> <br /> <br /> <br /> <br />
     </Layout>
   );
 };
