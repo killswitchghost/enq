@@ -8,13 +8,15 @@ interface PaginationProps {
   previousLabel?: React.ReactNode;
   nextLabel?: React.ReactNode;
   disabled?: boolean;
+  className?: string;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
   totalPages,
   currentPage,
   onPageChange,
-  disabled = false
+  disabled = false,
+  className
 }) => {
   const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
 

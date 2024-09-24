@@ -24,7 +24,7 @@ const throttle = (func: (...args: any[]) => void, limit: number) => {
 const VideoScrub: React.FC<VideoScrubProps> = ({
   videoSrc,
   videoWidth = '100%',
-  className = '' // Default to empty string if no className is passed
+  className = ''
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoDuration, setVideoDuration] = useState(0);
@@ -46,7 +46,7 @@ const VideoScrub: React.FC<VideoScrubProps> = ({
         const videoTime = scrollFraction * videoDuration;
         videoRef.current.currentTime = videoTime;
       }
-    }, 100);
+    }, 10);
 
     lenis.on('scroll', handleScroll);
 
@@ -83,5 +83,4 @@ const VideoScrub: React.FC<VideoScrubProps> = ({
     </div>
   );
 };
-
 export default VideoScrub;

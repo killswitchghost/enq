@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../components/layouts/Layout';
@@ -5,6 +6,9 @@ import TitleLine from '@shared/TitleLine/TitleLine';
 import GrowLine from '@shared/GrowLine/GrowLine';
 import Counter from '@components/shared/Counter/Counter';
 import VideoScrub from '@shared/VideoScrub/VideoScrub';
+import AutoPlayVideo from '@components/sections/AutoPlayVideo/AutoPlayVideo';
+import BgImageGrow from '@components/sections/BgImageGrow/BgImageGrow';
+
 const contentBlockHero1 = `<section class="hero"><div class="container"><div class="row"><div class="col-lg-6 d-flex flex-column justify-content-center">
                 <div>
                   <p class="eyebrow">architecto</p>
@@ -59,6 +63,14 @@ const contentBlockTypography = `
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#" class="underline"><span>Learn more</span></a></p>
+`;
+const contentBlockDisplay = `
+<h1 class="display-1">Heading 1</h1>
+<h2 class="display-2">Heading 2</h2>
+<h3 class="display-3">Heading 3</h3>
+<h4 class="display-4">Heading 4</h4>
+<h5 class="display-5">Heading 5</h5>
+<h6 class="display-6">Heading 6</h6>
 `;
 const contentBlockButtons = `
 <a href="/" class="btn btn-lg btn-primary">Primary</a>
@@ -284,6 +296,7 @@ const contentBlockCSample4 = `
 const Components = () => {
   return (
     <Layout>
+      <i className='bi bi-chevron-right'></i>
       <section className='stretch-image left'>
         <div className='container'>
           <div className='row'>
@@ -401,11 +414,15 @@ const Components = () => {
                 aosDuration='1000'
               />
             </div>
-            <div className='col-lg-8'>
+            <div className='col-lg-4'>
               {' '}
               <div
                 dangerouslySetInnerHTML={{ __html: contentBlockTypography }}
               />
+            </div>
+            <div className='col-lg-4'>
+              {' '}
+              <div dangerouslySetInnerHTML={{ __html: contentBlockDisplay }} />
             </div>
           </div>
         </div>
@@ -822,7 +839,7 @@ const Components = () => {
                 ></div>
               </div>
               <p className='h3'>
-                Sample Section Title. Grow line can be applied in content area.
+                Sample Section Title. Grow line can be applied in content area
               </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -911,8 +928,10 @@ const Components = () => {
           <div className='container'>
             <div className='row'>
               <div className='col-lg-6 offset-lg-6'>
-                <h2>Section Background image .overlay-bg</h2>
-                <p>
+                <h2 className='text-white'>
+                  Section Background image .overlay-bg
+                </h2>
+                <p className='text-white'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -1086,19 +1105,39 @@ const Components = () => {
       <br /> <br />
       <hr />
       <br /> <br />
-      <div className='sticky'>
+      {/* <div className='sticky'>
         <VideoScrub
           videoSrc='/video/forrest.mp4'
           videoWidth='100%'
           className='fullscreen-video'
         />
+      </div> */}
+      <div className='sticky'>
+        <AutoPlayVideo
+          videoSrc='/video/sample.mp4'
+          videoWidth='100%'
+          className='fullscreen-video'
+        />
       </div>
-      <section className='section-py over-video' style={{ height: '600vh' }}>
+      <section className='section-py over-video' style={{ height: '400vh' }}>
         <div className='container'>
           <div className='row'>
-            <div className='col'>
-              <h2>Scroll down to see the effect!</h2>
-              <p>
+            <div className='col text-center'>
+              <div className='grow-line-box center'>
+                <GrowLine
+                  aosDelay='500'
+                  aosDuration='1500'
+                  alignmentClass='text-left'
+                />
+              </div>
+              <h2 className='text-white text-center display-3'>
+                Scrolling effect for optional section
+              </h2>
+              <p className='text-white text-center lead'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <p className='text-white'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -1107,11 +1146,15 @@ const Components = () => {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
+              <a href='#' className='btn btn-primary my-4'>
+                Learn More
+              </a>
             </div>
           </div>
         </div>
       </section>
       <br /> <br /> <br /> <br /> <br /> <br />
+      <BgImageGrow />
     </Layout>
   );
 };

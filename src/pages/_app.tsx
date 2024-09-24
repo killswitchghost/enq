@@ -11,7 +11,7 @@ import useWindowSize from '@hooks/useWindowSize';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   useWindowSize();
-  const [lenisReady, setLenisReady] = useState(false); // State to track Lenis initialization
+  const [lenisReady, setLenisReady] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -22,7 +22,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       mirror: true
     });
 
-    // Extend Lenis with custom methods (if needed)
     interface ExtendedLenis extends Lenis {
       raf: (time: DOMHighResTimeStamp) => void;
       destroy: () => void;
@@ -38,7 +37,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       smooth: true
     }) as unknown as ExtendedLenis;
 
-    // Expose Lenis instance globally
     (window as any).lenis = lenis;
 
     function raf(time: DOMHighResTimeStamp) {
@@ -48,8 +46,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
     requestAnimationFrame(raf);
 
-    // Set Lenis as ready
-    setLenisReady(true); // Now Lenis is ready
+    setLenisReady(true);
 
     const handleAnchorClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement;

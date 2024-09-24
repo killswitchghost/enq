@@ -10,7 +10,6 @@
 .btnBrand {
   display: flex;
   align-items: center;
-  //transform: scale(0.8);
   div {
     display: flex;
     align-items: center;
@@ -20,7 +19,6 @@
   }
 
   span:first-child {
-    // width: 36px;
     margin-right: 9px;
   }
 
@@ -33,6 +31,4 @@
 
 .logoSvg {
   width: 100%;
-  // width: 36px;
-  // height: auto;
 }

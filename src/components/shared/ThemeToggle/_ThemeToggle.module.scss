@@ -18,7 +18,7 @@
     color: #fff;
   }
   &.dark {
-    background: rgba(var(--bs-emphasis-color-rgb), 0.1);
+    background: rgba(var(--bs-emphasis-color-rgb), 0.05);
     color: #fff;
 
     &:after {
@@ -28,7 +28,7 @@
   }
 
   &.light {
-    background: rgba(var(--bs-emphasis-color-alt-rgb), 0.8);
+    background: rgba(var(--bs-emphasis-color-rgb), 0.05);
     color: #000;
 
     &:after {

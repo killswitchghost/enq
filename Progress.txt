@@ -6,6 +6,15 @@ _Logo Size
 _Contrast Text
 _Font ratio Heading
 _circle-arrow color
+_modal
+
+
+
+
+
+
+
+
 
 
 git add .

@@ -94,7 +94,7 @@ $xxxl-max: 1599px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
 
-  --bs-body-color: #1d1d1f;
+  --bs-body-color: #1f4257;
   --bs-body-color-rgb: 31, 66, 87;
 
   --bs-body-bg: #fff;
@@ -159,8 +159,8 @@ $xxxl-max: 1599px;
   --ui-lime: rgb(189, 255, 0);
   --ui-ghost: rgb(241, 245, 249);
 
-  --ui-inverse-dark: #000;
-  --ui-inverse-dark-rgb: 0, 0, 0;
+  --ui-inverse-dark: #1d1d1f;
+  --ui-inverse-dark-rgb: 29, 29, 31;
 
   --ui-inverse-light: #fff;
   --ui-inverse-light-rgb: 255, 255, 255;
@@ -169,11 +169,11 @@ $xxxl-max: 1599px;
 #app[data-bs-theme='dark'] {
   color-scheme: dark;
 
-  --bs-body-color: #fff;
-  --bs-body-color-rgb: 255, 255, 255;
+  --bs-body-color: #bcc6ce;
+  --bs-body-color-rgb: 188, 198, 206;
 
   --bs-body-bg: #111022;
-  --bs-body-bg-rgb: 33, 37, 41;
+  --bs-body-bg-rgb: 17, 16, 34;
 
   --bs-heading-color: #fff;
   --bs-heading-color-rgb: 255, 255, 255;

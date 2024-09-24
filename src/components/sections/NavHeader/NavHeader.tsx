@@ -104,7 +104,7 @@ const NavHeader = () => {
                 <div className='row'>
                   <div className='col'>
                     <div className={styles.searchWrap}>
-                      <div className='small'>
+                      <div className={`${styles.searchLabelSml} small`}>
                         <i className='bi bi-stars'></i> Powered by Enqbator AI
                       </div>
 
@@ -314,7 +314,7 @@ const NavHeader = () => {
                                     href='CaseStudies'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -325,12 +325,15 @@ const NavHeader = () => {
                                     <SvgArrow />
                                   </Link>
                                   <br />
-                                  <p className='eyebrow'>View by Market</p>
+
+                                  <p className={`${styles.eyeBrow} eyebrow`}>
+                                    View by Market
+                                  </p>
                                   <Link
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -344,7 +347,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -358,7 +361,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -372,7 +375,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -386,7 +389,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -400,7 +403,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -474,7 +477,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -485,12 +488,15 @@ const NavHeader = () => {
                                     <SvgArrow />
                                   </Link>
                                   <br />
-                                  <p className='eyebrow'>Sample Heading</p>
+
+                                  <p className={`${styles.eyeBrow} eyebrow`}>
+                                    Sample Heading
+                                  </p>
                                   <Link
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -505,7 +511,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -520,7 +526,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -594,7 +600,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -605,12 +611,14 @@ const NavHeader = () => {
                                     <SvgArrow />
                                   </Link>
                                   <br />
-                                  <p className='eyebrow'>Sample Heading</p>
+                                  <p className={`${styles.eyeBrow} eyebrow`}>
+                                    Sample Heading
+                                  </p>
                                   <Link
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -627,7 +635,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -642,7 +650,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -659,7 +667,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -674,7 +682,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -691,7 +699,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -706,7 +714,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -780,7 +788,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -791,12 +799,14 @@ const NavHeader = () => {
                                     <SvgArrow />
                                   </Link>
                                   <br />
-                                  <p className='eyebrow'>Sample Heading</p>
+                                  <p className={`${styles.eyeBrow} eyebrow`}>
+                                    Sample Heading
+                                  </p>
                                   <Link
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -811,7 +821,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -826,7 +836,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -841,7 +851,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -915,7 +925,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -926,12 +936,14 @@ const NavHeader = () => {
                                     <SvgArrow />
                                   </Link>
                                   <br />
-                                  <p className='eyebrow'>Sample Heading</p>
+                                  <p className={`${styles.eyeBrow} eyebrow`}>
+                                    Sample Heading
+                                  </p>
                                   <Link
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -946,7 +958,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -961,7 +973,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -976,7 +988,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -991,7 +1003,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -1066,7 +1078,7 @@ const NavHeader = () => {
                                     href='#'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -1077,12 +1089,14 @@ const NavHeader = () => {
                                     <SvgArrow />
                                   </Link>
                                   <br />
-                                  <p className='eyebrow'>Sample Heading</p>
+                                  <p className={`${styles.eyeBrow} eyebrow`}>
+                                    Sample Heading
+                                  </p>
                                   <Link
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -1097,7 +1111,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -1112,7 +1126,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -1127,7 +1141,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>
@@ -1142,7 +1156,7 @@ const NavHeader = () => {
                                     href='/components/'
                                     className={`${styles.btnIconTxt} btn-icon-txt`}
                                   >
-                                    <div className='icon'>
+                                    <div className={`${styles.icon} icon`}>
                                       <i className='bi bi-database-lock'></i>
                                     </div>
                                     <div className='txt'>

@@ -1,7 +1,12 @@
+
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es6", // Updated to a more modern target
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,17 +16,31 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "preserve", // Updated to 'react' for better compatibility
     "incremental": true,
-    "baseUrl": ".", 
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"], 
-      "@components/*": ["src/components/*"], 
-      "@hooks/*": ["src/hooks/*"], 
-      "@utils/*": ["src/utils/*"], 
-      "@styles/*": ["src/styles/*"], 
-      "@assets/*": ["src/assets/*"], 
-      "@shared/*": ["src/components/shared/*"] 
+      "@/*": [
+        "./*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@shared/*": [
+        "src/components/shared/*"
+      ]
     },
     "plugins": [
       {
@@ -29,6 +48,13 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

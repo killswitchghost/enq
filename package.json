@@ -23,6 +23,7 @@
     "bootstrap-icons": "^1.11.3",
     "dompurify": "^3.0.8",
     "feather-icons": "^4.29.1",
+    "gsap": "^3.12.5",
     "jsdom": "^24.0.0",
     "lenis": "^1.1.13",
     "next": "^14.0.4",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@types/aos": "^3.0.7",
     "@types/dompurify": "^3.0.5",
+    "@types/gsap": "^1.20.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

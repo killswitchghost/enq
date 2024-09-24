@@ -150,6 +150,7 @@
   svg {
     width: 28px;
     height: 28px;
+    stroke-width: 1.4;
   }
 }
 
@@ -427,8 +428,27 @@
   }
 }
 
-.btnIconTxt {
+.btnIconTxt:link,
+.btnIconTxt:visited {
   font-size: 16px !important;
+  color: #fff;
+  svg {
+    color: #8996a0;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    svg {
+      color: #8996a0;
+    }
+    span > span {
+      background-image: linear-gradient(
+        transparent calc(100% - 1px),
+        rgba(255, 255, 255, 1)
+      );
+    }
+  }
 }
 
 .megaMenuCard {
@@ -515,6 +535,11 @@
   }
 }
 
+.eyeBrow,
+.searchLabelSml,
+.icon {
+  color: #8996a0;
+}
 .searchWrap {
   margin-top: 60px;
 

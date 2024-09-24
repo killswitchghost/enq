@@ -10,13 +10,13 @@ import { SwiperSlide } from 'swiper/react';
 import CustomSwiper from '@shared/Swiper/CustomSwiper';
 
 // import CustomizeExp from '@components/sections/CustomizeExperience/CustomizeExperience';
-
+import AutoPlayVideo from '@components/sections/AutoPlayVideo/AutoPlayVideo';
 import FadeInText from '@shared/FadeInText/FadeInText';
 import TitleLine from '@shared/TitleLine/TitleLine';
 import GridGallery from '@components/shared/GridGallery/GridGallery';
 import Accordion from '@components/shared/Accordion/Accordion';
 
-import BgImageGrow from '@components/sections/BgImageGrow/BgImageGrow';
+//import BgImageGrow from '@components/sections/BgImageGrow/BgImageGrow';
 
 const HomePage = () => {
   const fadeinText =
@@ -112,17 +112,43 @@ const HomePage = () => {
             <div className='col-lg-4'>
               <TitleLine
                 title='Who we are'
-                description='This is some placeholder content for this section.'
+                description='<p>This is some placeholder content for this section.</p>'
                 aosDelay='0'
                 aosDuration='1000'
               />
             </div>
             <div className='col-lg-8'>
               <FadeInText htmlContent={fadeinText} />
-              <a href='#' className='link-circle my-5' aria-label='Components'>
-                <span className='underline'>
-                  <span>Learn More</span>
-                </span>
+              <a
+                href='/components/'
+                className='underline link-circle-arrow my-4'
+                aria-label='Components'
+              >
+                <div className='circle-arrow me-2'>
+                  <svg
+                    className='svg-arrow'
+                    width='16'
+                    height='16'
+                    viewBox='0 0 16 16'
+                    fill='none'
+                    aria-hidden='true'
+                    focusable='false'
+                  >
+                    <path
+                      fill='currentColor'
+                      className='svg-caret'
+                      d='M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z'
+                    ></path>
+                    <path
+                      className='svg-stem'
+                      stroke='currentColor'
+                      d='M1.75 8H11'
+                      stroke-width='1.5'
+                      stroke-linecap='round'
+                    ></path>
+                  </svg>
+                </div>
+                <span className='txt'>Learn more</span>
               </a>
             </div>
           </div>
@@ -151,7 +177,6 @@ const HomePage = () => {
         <div className='container'>
           <div className='row'>
             <div className='col-lg-4'>
-              {' '}
               <TitleLine
                 title='Recent Work'
                 description='<p>This is some placeholder content for this section.</p><a href="CaseStudies" class="underline"><span>View All</span></a>'
@@ -192,7 +217,7 @@ const HomePage = () => {
             <div className='col-lg-4'>
               <TitleLine
                 title='Insights'
-                description='This is some placeholder content for this section.'
+                description='<p>This is some placeholder content for this section.</p><a href="CaseStudies" class="underline"><span>View All</span></a>'
                 aosDelay='0'
                 aosDuration='1000'
               />
@@ -385,7 +410,48 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <BgImageGrow />
+      {/* <BgImageGrow /> */}
+      <div className='sticky'>
+        <AutoPlayVideo
+          videoSrc='/video/sample.mp4'
+          videoWidth='100%'
+          className='fullscreen-video'
+        />
+      </div>
+      <section className='section-py over-video' style={{ height: '400vh' }}>
+        <div className='container'>
+          <div className='row'>
+            <div className='col text-center'>
+              <div className='grow-line-box center'>
+                <GrowLine
+                  aosDelay='500'
+                  aosDuration='1500'
+                  alignmentClass='text-left'
+                />
+              </div>
+              <h2 className='text-white text-center display-3'>
+                Scrolling effect for optional section
+              </h2>
+              <p className='text-white text-center lead'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <p className='text-white'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <a href='#' className='btn btn-primary my-4'>
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
