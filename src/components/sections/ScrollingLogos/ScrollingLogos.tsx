@@ -15,91 +15,91 @@ const ScrollingLogos = () => {
             <div className={styles.marqueeInner}>
               <span className={styles.marqueeSpan}>
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
 
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CapMetro_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/HSI_Forum_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
               </span>
               <span className={styles.marqueeSpan}>
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
                 <Image
-                  src='/img/logos/crh.png'
+                  src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} invert`}
+                  className={`${styles.logo} `}
                 />
               </span>
             </div>

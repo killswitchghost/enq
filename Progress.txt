@@ -17,5 +17,5 @@ _modal
 
 
 git add .
-git commit -m "Border Changes"
+git commit -m "Global Changes"
 git push origin master

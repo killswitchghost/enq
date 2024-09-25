@@ -1,20 +1,23 @@
 import React from 'react';
-import styles from './_Breadcrumb.module.scss'; // Import your custom styles
+import Link from 'next/link';
+import styles from './_Breadcrumb.module.scss';
 
-// Define the functional component
 const Breadcrumb: React.FC = () => {
   return (
     <nav aria-label='breadcrumb'>
       <ol className={styles.breadcrumb}>
         <li className={styles.breadcrumbItem}>
-          <a href='/' className={`${styles.breadcrumbLink} underline`}>
+          <Link href='/' className={`${styles.breadcrumbLink} underline`}>
             <span>Home</span>
-          </a>
+          </Link>
         </li>
         <li className={styles.breadcrumbItem}>
-          <a href='/category' className={`${styles.breadcrumbLink} underline`}>
+          <Link
+            href='/category'
+            className={`${styles.breadcrumbLink} underline`}
+          >
             <span>Category</span>
-          </a>
+          </Link>
         </li>
         <li
           className={`${styles.breadcrumbItem} ${styles.active}`}
