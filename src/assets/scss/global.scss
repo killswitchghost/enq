@@ -22,7 +22,7 @@ html.lenis body {
 .next-inner {
   margin-top: 60px;
   @media (min-width: $lg) {
-    margin-top: 90px;
+    margin-top: 80px;
   }
 }
 .gradient-sphere {
@@ -396,7 +396,8 @@ body[data-bs-theme='dark'] {
     fill: rgba(var(--ui-inverse-dark-rgb), 1);
   }
 }
-.menu-open {
+.menu-open,
+.search-open {
   .type {
     fill: #fff !important;
   }
@@ -1592,7 +1593,7 @@ $spacer: 1rem;
       //top: 0 !important;
       transform: none !important;
       background: none !important;
-      border-bottom: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.1);
+      border-bottom: 1px solid rgba(var(--bs-emphasis-color-rgb), 0.03);
     }
   }
 
@@ -1799,7 +1800,7 @@ $spacer: 1rem;
 
   @media (min-width: $lg) {
     font-size: 42px;
-    height: 90px;
+    height: 80px;
   }
 }
 
@@ -2405,29 +2406,36 @@ $spacer: 1rem;
 .nav-header,
 .horizontal-menu,
 .dropdown-menu {
-  top: 60px;
+  top: 80px;
 }
-
+.nav-header {
+  height: 80px;
+}
 .navHeaderHidden {
   .nav-header {
     height: 60px;
   }
-
+  .dropdown-menu {
+    top: 60px;
+  }
   .btn-brand svg {
     transition: all 0.5s ease;
     width: 140px;
     height: auto;
   }
+  .horizontal-menu {
+    top: 60px;
+  }
 }
 
 .navHeaderVisible {
   .nav-header {
-    height: 90px;
+    height: 80px;
   }
 
   .horizontal-menu,
   .dropdown-menu {
-    top: 90px;
+    top: 80px;
   }
 }
 

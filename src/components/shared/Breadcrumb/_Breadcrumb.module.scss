@@ -1,0 +1,33 @@
+@use '../../../assets/scss/variables' as *;
+
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  padding: 1rem 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.breadcrumbItem {
+  margin-right: 10px;
+}
+
+.breadcrumbItem a {
+}
+.breadcrumbLink:link,
+.breadcrumbLink:visited {
+  text-decoration: none;
+}
+.breadcrumbItem a:hover {
+  text-decoration: none;
+}
+
+.breadcrumbItem + .breadcrumbItem:before {
+  content: '/';
+  margin-right: 10px;
+  //color: #6c757d;
+}
+
+.active {
+  //color: #6c757d;
+}

@@ -47,7 +47,7 @@ const HomePage = () => {
     <Layout>
       <section className='hero'>
         <div className='hero-content'>
-          <div className='container-fluid'>
+          <div className='container'>
             <div className='row'>
               <div className='col-lg-6 order-lg-2'>
                 <div className='img-animate'>
