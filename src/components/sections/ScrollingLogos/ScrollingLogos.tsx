@@ -65,7 +65,7 @@ const ScrollingLogos = () => {
                   className={`${styles.logo} logo`}
                 />
                 <Image
-                  src='/img/logos/36th-District-Court-Logo.svg'
+                  src='/img/logos/ASAM-Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
@@ -78,66 +78,186 @@ const ScrollingLogos = () => {
                   height={73}
                   className={`${styles.logo} logo`}
                 />
+                <Image
+                  src='/img/logos/Wayne-Pediatrics-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/tHF-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/HCIC-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Corewell-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Tenet-Healthcare-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Greystone-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Childrens-National-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/The-Innovation-Project-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
               </span>
-              {/* <Image
-                  src='/img/logos/CRH_Logo.svg'
+              {/* <!-- Add more logos here --> */}
+              <span className={`${styles.marqueeSpan} marquee-span`}>
+                <Image
+                  src='/img/logos/CRH-Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} `}
+                  className={`${styles.logo} logo`}
+                />
+
+                <Image
+                  src='/img/logos/CapMetro-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
                 />
                 <Image
-                  src='/img/logos/CRH_Logo.svg'
+                  src='/img/logos/HSI-Forum-Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} `}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Sturgis-Bank-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/3rd-Circuit-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/MASB-Logo-hor.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/36th-District-Court-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/ASAM-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Mortgage-Center-logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Wayne-Pediatrics-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/tHF-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/HCIC-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Corewell-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Tenet-Healthcare-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Greystone-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Childrens-National-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/The-Innovation-Project-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
                 />
               </span>
-              <span className={styles.marqueeSpan}>
-                <Image
-                  src='/img/logos/CRH_Logo.svg'
-                  alt='Placeholder Image'
-                  width={64}
-                  height={73}
-                  className={`${styles.logo} `}
-                />
-                <Image
-                  src='/img/logos/CRH_Logo.svg'
-                  alt='Placeholder Image'
-                  width={64}
-                  height={73}
-                  className={`${styles.logo} `}
-                />
-                <Image
-                  src='/img/logos/CRH_Logo.svg'
-                  alt='Placeholder Image'
-                  width={64}
-                  height={73}
-                  className={`${styles.logo} `}
-                />
-                <Image
-                  src='/img/logos/CRH_Logo.svg'
-                  alt='Placeholder Image'
-                  width={64}
-                  height={73}
-                  className={`${styles.logo} `}
-                />
-                <Image
-                  src='/img/logos/CRH_Logo.svg'
-                  alt='Placeholder Image'
-                  width={64}
-                  height={73}
-                  className={`${styles.logo} `}
-                />
-                <Image
-                  src='/img/logos/CRH_Logo.svg'
-                  alt='Placeholder Image'
-                  width={64}
-                  height={73}
-                  className={`${styles.logo} `}
-                />
-              </span> */}
             </div>
           </div>
         </div>
