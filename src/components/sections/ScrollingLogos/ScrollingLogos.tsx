@@ -13,37 +13,73 @@ const ScrollingLogos = () => {
         <div className='row'>
           <div className={styles.marquee}>
             <div className={styles.marqueeInner}>
-              <span className={styles.marqueeSpan}>
+              <span className={`${styles.marqueeSpan} marquee-span`}>
                 <Image
-                  src='/img/logos/CRH_Logo.svg'
+                  src='/img/logos/CRH-Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} `}
+                  className={`${styles.logo} logo`}
                 />
 
                 <Image
-                  src='/img/logos/CapMetro_Logo.svg'
+                  src='/img/logos/CapMetro-Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} `}
+                  className={`${styles.logo} logo`}
                 />
                 <Image
-                  src='/img/logos/HSI_Forum_Logo.svg'
+                  src='/img/logos/HSI-Forum-Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} `}
+                  className={`${styles.logo} logo`}
                 />
                 <Image
-                  src='/img/logos/CRH_Logo.svg'
+                  src='/img/logos/Sturgis-Bank-Logo.svg'
                   alt='Placeholder Image'
                   width={64}
                   height={73}
-                  className={`${styles.logo} `}
+                  className={`${styles.logo} logo`}
                 />
                 <Image
+                  src='/img/logos/3rd-Circuit-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/MASB-Logo-hor.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/36th-District-Court-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/36th-District-Court-Logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+                <Image
+                  src='/img/logos/Mortgage-Center-logo.svg'
+                  alt='Placeholder Image'
+                  width={64}
+                  height={73}
+                  className={`${styles.logo} logo`}
+                />
+              </span>
+              {/* <Image
                   src='/img/logos/CRH_Logo.svg'
                   alt='Placeholder Image'
                   width={64}
@@ -101,7 +137,7 @@ const ScrollingLogos = () => {
                   height={73}
                   className={`${styles.logo} `}
                 />
-              </span>
+              </span> */}
             </div>
           </div>
         </div>

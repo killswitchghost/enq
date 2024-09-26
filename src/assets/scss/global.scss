@@ -2491,3 +2491,9 @@ section.vh-100 {
   display: flex;
   align-items: center;
 }
+#app[data-bs-theme='dark'] {
+  .logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+  }
+}

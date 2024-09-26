@@ -25,10 +25,12 @@
 .logo {
   float: left;
   margin: 0 2rem;
-  max-height: 50px;
-  width: auto;
+  max-height: 80px;
+  width: 160px;
+  img {
+    object-fit: contain;
+  }
 }
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
