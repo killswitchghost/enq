@@ -62,7 +62,7 @@ const contentBlockTypography = `
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#" class="underline"><span>Learn more</span></a></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#" className="underline"><span>Learn more</span></a></p>
 `;
 const contentBlockDisplay = `
 <h1 class="display-1">Heading 1</h1>
@@ -85,64 +85,37 @@ const contentBlockButtons = `
 <a href="/" class="btn btn btn-outline">Secondary</a>
 <a href="/" class="btn btn-sm btn-outline">Secondary</a>
 <br /><br />
-<a href="/components/" class="underline link-circle-arrow" aria-label="Components">
-        
-        <div class="circle-arrow me-2">
-                <svg
-          class="svg-arrow"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path
-            fill="currentColor"
-            class="svg-caret"
-            d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
-          ></path>
-          <path
-            class="svg-stem"
-            stroke="currentColor"
-            d="M1.75 8H11"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          ></path>
-        </svg>
-        </div>
-        <span class="txt">Learn more</span>
-      </a><br /><a href="/components/" class="btn-icon-txt">
-        <div class="icon">
-          <i class="bi bi-database-lock"></i>
-        </div>
-        <div class="txt">
-          <span class="underline">
-            <span>Who we are</span>
-          </span>
-        </div>
-        <svg
-          class="svg-arrow"
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path
-            fill="currentColor"
-            d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
-          ></path>
-          <path
-            class="svg-arrow-stem"
-            stroke="currentColor"
-            d="M1.75 8H11"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          ></path>
-        </svg>
-      </a>
+      <a href='#' class='button-arrow underline'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    version='1.1'
+                    viewBox='0 0 6 9'
+                    class='arrow-icon me-2'
+                  >
+                    <g
+                      id='Layer_1-2'
+                      class='arrow-head'
+                      data-name='Layer_1'
+                    >
+                      <polyline
+                        points='1.1 .8 4.9 4.5 1.1 8.2'
+                        fill='none'
+                        stroke='#000'
+                        stroke-linejoin='round'
+                        stroke-width='.8'
+                      />
+                    </g>
+                    <g class='arrow-body'>
+                      <path
+                        d='M3.5,4.5H0'
+                        fill='none'
+                        stroke='#000'
+                        stroke-width='.8'
+                      />
+                    </g>
+                  </svg>
+                  <span>Learn more</span>
+                </a >
 `;
 
 const contentBlockCSample1 = `
@@ -296,7 +269,6 @@ const contentBlockCSample4 = `
 const Components = () => {
   return (
     <Layout>
-      <i className='bi bi-chevron-right'></i>
       <section className='stretch-image left'>
         <div className='container'>
           <div className='row'>
@@ -318,11 +290,13 @@ const Components = () => {
             <div className='col-lg-6 col-text'>
               <div className='p-3'>
                 <div className='grow-line-box'>
-                  <GrowLine
+                  {/* <GrowLine
                     aosDelay='500'
                     aosDuration='1500'
-                    alignmentClass='text-left'
-                  />
+                    alignmen
+                    className='text-left'
+                  /> */}
+                  <GrowLine aosDelay='500' aosDuration='1500' />
                 </div>
                 <h1>Stretch image outside container sample</h1>
                 <p className='lead'>
@@ -1112,6 +1086,693 @@ const Components = () => {
           className='fullscreen-video'
         />
       </div> */}
+      <section className='section-py'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              <div className='cards-grid'>
+                <a href='#' className='card'>
+                  <div className='card-header h5'>
+                    <div className='card-title'>
+                      <span data-hover='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'>
+                        AI Solutions
+                      </span>
+                    </div>
+                  </div>
+                  <div className='card-footer'>
+                    <Image
+                      src='https://picsum.photos/48/48?random=1'
+                      width='48'
+                      height='48'
+                      alt='AI'
+                    />
+                    <div className='arrow'>
+                      <i className='bi bi-arrow-right-short'></i>
+                    </div>
+                  </div>
+                </a>
+                <a href='#' className='card'>
+                  <div className='card-header h5'>
+                    <div className='card-title'>
+                      <span data-hover='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'>
+                        Websites
+                      </span>
+                    </div>
+                  </div>
+                  <div className='card-footer'>
+                    <Image
+                      src='https://picsum.photos/48/48?random=1'
+                      width='48'
+                      height='48'
+                      alt='AI'
+                    />
+                    <div className='arrow'>
+                      <i className='bi bi-arrow-right-short'></i>
+                    </div>
+                  </div>
+                </a>
+                <a href='#' className='card'>
+                  <div className='card-header h5'>
+                    <div className='card-title'>
+                      <span data-hover='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'>
+                        Intranets
+                      </span>
+                    </div>
+                  </div>
+                  <div className='card-footer'>
+                    <Image
+                      src='https://picsum.photos/48/48?random=1'
+                      width='48'
+                      height='48'
+                      alt='AI'
+                    />
+                    <div className='arrow'>
+                      <i className='bi bi-arrow-right-short'></i>
+                    </div>
+                  </div>
+                </a>
+                <a href='#' className='card'>
+                  <div className='card-header'>
+                    <div className='card-title h5'>
+                      <span data-hover='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'>
+                        Mobile Applications
+                      </span>
+                    </div>
+                  </div>
+                  <div className='card-footer'>
+                    <Image
+                      src='https://picsum.photos/48/48?random=1'
+                      width='48'
+                      height='48'
+                      alt='AI'
+                    />
+                    <div className='arrow'>
+                      <i className='bi bi-arrow-right-short'></i>
+                    </div>
+                  </div>
+                </a>
+                <a href='#' className='card'>
+                  <div className='card-header'>
+                    <div className='card-title h5'>
+                      <span data-hover='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'>
+                        CMS & E-Commerce
+                      </span>
+                    </div>
+                  </div>
+                  <div className='card-footer'>
+                    <Image
+                      src='https://picsum.photos/48/48?random=1'
+                      width='48'
+                      height='48'
+                      alt='AI'
+                    />
+                    <div className='arrow'>
+                      <i className='bi bi-arrow-right-short'></i>
+                    </div>
+                  </div>
+                </a>
+                <a href='#' className='card'>
+                  <div className='card-header'>
+                    <div className='card-title h5'>
+                      <span data-hover='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'>
+                        Integrations
+                      </span>
+                    </div>
+                  </div>
+                  <div className='card-footer'>
+                    <Image
+                      src='https://picsum.photos/48/48?random=1'
+                      width='48'
+                      height='48'
+                      alt='AI'
+                    />
+                    <div className='arrow'>
+                      <i className='bi bi-arrow-right-short'></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /> <br />
+      <hr />
+      <br /> <br />
+      <section className='section-py'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-4'>
+              <TitleLine
+                title='Sitefinity FAQ'
+                description='Optional This is some placeholder content for this section.'
+                aosDelay='0'
+                aosDuration='1000'
+              />
+            </div>
+            <div className='col-lg-8'>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-6'>
+                  <h4>
+                    What makes Sitefinity better than other CMS platforms?
+                  </h4>
+                </div>
+                <div className='col-lg-6'>
+                  Sitefinity is simple, yet powerful, easy to use and highly
+                  customizable. Its robust capabilities are matched only by its
+                  renowned ease of use. Sitefinity equips developers for
+                  productivity and marketers for agility.
+                </div>
+              </div>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-6'>
+                  <h4>Can Sitefinity pull in my external data?</h4>
+                </div>
+                <div className='col-lg-6'>
+                  Yes and with ease. Sitefinity is superbly equipped for
+                  enterprise-grade performance, scalability and growth. A rich,
+                  contemporary toolset to build, automate and extend. A
+                  flexible, API-driven platform built for speed and
+                  productivity.
+                </div>
+              </div>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-6'>
+                  <h4>How easy is it to migrate to Sitefinity?</h4>
+                </div>
+                <div className='col-lg-6'>
+                  Sitefinity&apos;s powerful set of features makes it easy to
+                  move any site from their previous content management system to
+                  Sitefinity&apos;s extremely adaptive Digital Experience
+                  Platform. Whatever your past CMS experiences are, you&apos;ll
+                  find the move to Sitefinity to be a smooth, user-friendly
+                  process.
+                </div>
+              </div>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-6'>
+                  {' '}
+                  <h4>Is Sitefinity easy to use?</h4>
+                </div>
+                <div className='col-lg-6'>
+                  Absolutely! Consistently praised for its outstanding ease of
+                  use, Sitefinity puts the right tools in the right hands.
+                  Whether you&apos;re writing content or code, it&apos;s a
+                  platform that fosters collaboration and creativity. With an
+                  intuitive and feature-rich user interface, Sitefinity empowers
+                  marketing teams to independently create and manage content
+                  that delivers engaging digital experiences.
+                </div>
+              </div>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-6'>
+                  <h4>Why should I choose Enqbator as my digital agency?</h4>
+                </div>
+                <div className='col-lg-6'>
+                  Enqbator is a proven Progress Sitefinity Premium Partner. That
+                  means that our developers and designers have the experience
+                  and training to make any Sitefinity project a success.
+                  Enqbator has also earned a Digital Experience Partner
+                  Specialty from Progress Sitefinity - a designation awarded for
+                  our expertise, experience, and proven successes for our
+                  clients. Enqbator gets the most out of every aspect of
+                  Sitefinity&apos;s many features, in order to find the best
+                  possible solution for each client&apos;s needs.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /> <br />
+      <hr />
+      <br /> <br />
+      <section className='section-py'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-4'>
+              <TitleLine
+                title='Case Studies'
+                description='Optional This is some placeholder content for this section. <a href="#" class="btn btn-sm btn-primary mt-3">View more</a>'
+                aosDelay='0'
+                aosDuration='1000'
+              />
+            </div>
+            <div className='col-lg-8'>
+              <div className='row'>
+                <div className='col-lg-4'>
+                  <a href='#' className='card'>
+                    <figure
+                      className='card-img aos-init aos-animate'
+                      data-aos='img-reveal'
+                    >
+                      <Image
+                        src='https://picsum.photos/682/682?random=4'
+                        alt='Alt Text'
+                        className={``}
+                        width={292}
+                        height={390}
+                        layout='responsive'
+                        data-cursor='pointer2'
+                      />
+                    </figure>
+                    <div className='card-body px-0'>
+                      <h4 className='card-title'>
+                        <span className='underline'>
+                          <span>Beaumont Accountable Care Organization</span>
+                        </span>
+                      </h4>
+                      <p className='card-desc'>
+                        Beaumont Accountable Care Organization Utilizes New
+                        Mobile App
+                      </p>
+                      <div className='card-meta'>healthcare</div>
+                    </div>
+                  </a>
+                </div>
+                <div className='col-lg-4'>
+                  {' '}
+                  <a href='#' className='card'>
+                    <figure
+                      className='card-img aos-init aos-animate'
+                      data-aos='img-reveal'
+                    >
+                      <Image
+                        src='https://picsum.photos/682/682?random=5'
+                        alt='Alt Text'
+                        className={``}
+                        width={292}
+                        height={390}
+                        layout='responsive'
+                        data-cursor='pointer2'
+                      />
+                    </figure>
+                    <div className='card-body px-0'>
+                      <h4 className='card-title'>
+                        <span className='underline'>
+                          <span>The Henry Ford</span>
+                        </span>
+                      </h4>
+                      <p className='card-desc'>
+                        Enqbator brings life to inHub, The Henry Ford’s
+                        revolutionary educational platform
+                      </p>
+                      <div className='card-meta'>healthcare</div>
+                    </div>
+                  </a>
+                </div>
+                <div className='col-lg-4'>
+                  {' '}
+                  <a href='#' className='card'>
+                    <figure
+                      className='card-img aos-init aos-animate'
+                      data-aos='img-reveal'
+                    >
+                      <Image
+                        src='https://picsum.photos/682/682?random=6'
+                        alt='Alt Text'
+                        className={``}
+                        width={292}
+                        height={390}
+                        layout='responsive'
+                        data-cursor='pointer2'
+                      />
+                    </figure>
+                    <div className='card-body px-0'>
+                      <h4 className='card-title'>
+                        <span className='underline'>
+                          <span>
+                            The American Society of Addiction Medicine
+                          </span>
+                        </span>
+                      </h4>
+                      <p className='card-desc'>
+                        The American Society of Addiction Medicine&apos;s
+                        Reimagined Online Presence
+                      </p>
+                      <div className='card-meta'>healthcare</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /> <br />
+      <hr />
+      <br /> <br />
+      <section className='section-py'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-4'>
+              <TitleLine
+                title='Insights'
+                description='Optional This is some placeholder content for this section. <a href="#" class="btn btn-sm btn-primary mt-3">View more</a>'
+                aosDelay='0'
+                aosDuration='1000'
+              />
+            </div>
+            <div className='col-lg-8'>
+              <div className='row'>
+                <div className='col-lg-4'>
+                  <a href='#' className='card'>
+                    <figure
+                      className='card-img aos-init aos-animate'
+                      data-aos='img-reveal'
+                    >
+                      <Image
+                        src='https://picsum.photos/682/682?random=1'
+                        alt='Alt Text'
+                        className={``}
+                        width={292}
+                        height={390}
+                        layout='responsive'
+                        data-cursor='pointer2'
+                      />
+                    </figure>
+                    <div className='card-body px-0'>
+                      <h4 className='card-title'>
+                        <span className='underline'>
+                          <span>
+                            Enqbator wins 2022 Sitefinity Website of the Year
+                            Award!
+                          </span>
+                        </span>
+                      </h4>
+                      <p className='card-desc'>
+                        inHub, an online education platform from The Henry Ford,
+                        has been named the 2022 Progress® Sitefinity® Website of
+                        the Year Awards winner in the Headless/Multichannel
+                        category.{' '}
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div className='col-lg-4'>
+                  {' '}
+                  <a href='#' className='card'>
+                    <figure
+                      className='card-img aos-init aos-animate'
+                      data-aos='img-reveal'
+                    >
+                      <Image
+                        src='https://picsum.photos/682/682?random=2'
+                        alt='Alt Text'
+                        className={``}
+                        width={292}
+                        height={390}
+                        layout='responsive'
+                        data-cursor='pointer2'
+                      />
+                    </figure>
+                    <div className='card-body px-0'>
+                      <h4 className='card-title'>
+                        <span className='underline'>
+                          <span>
+                            Enqbator Improves Page Speed and Increases New Users
+                            by Over 300% with Sitefinity
+                          </span>
+                        </span>
+                      </h4>
+                      <p className='card-desc'>
+                        When Enqbator looked to redesign its website to better
+                        reflect its branding evolution, it looked to make the
+                        site not only more visually appealing, but more
+                        functional as well.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div className='col-lg-4'>
+                  {' '}
+                  <a href='#' className='card'>
+                    <figure
+                      className='card-img aos-init aos-animate'
+                      data-aos='img-reveal'
+                    >
+                      <Image
+                        src='https://picsum.photos/682/682?random=3'
+                        alt='Alt Text'
+                        className={``}
+                        width={292}
+                        height={390}
+                        layout='responsive'
+                        data-cursor='pointer2'
+                      />
+                    </figure>
+                    <div className='card-body px-0'>
+                      <h4 className='card-title'>
+                        <span className='underline'>
+                          <span>
+                            Enqbator and Spectrum Health Lakeland team up to win
+                            2020 Sitefinity Website of the Year Award!
+                          </span>
+                        </span>
+                      </h4>
+                      <p className='card-desc'>
+                        Implemented by the team at Enqbator, the Lakeland
+                        website showcases many of the proven features of the
+                        Sitefinity CMS platform, including news, events,
+                        taxonomy and workflow.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /> <br />
+      <hr />
+      <br /> <br />
+      {/* <section className='section-py'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col text-center'>
+              <div className='grow-line-box center'>
+                <div
+                  className='grow-line grad-vert-pink-green mx-auto aos-init aos-animate'
+                  data-aos='grow-animation'
+                  data-aos-delay='0'
+                  data-aos-duration='1000'
+                ></div>
+              </div>
+              <p className='h3'>
+                Enqbator and Sitefinity: A Winning Partnership.
+              </p>
+            </div>
+          </div>
+          <div className='row my-4'>
+            <div className='col-lg-3 py-3'>
+              <div className='card card-bg'>
+                <div className='card-body'>
+                  <h5 className='card-title'>
+                    Award winning & industry recognized
+                  </h5>
+                  <p className='card-text'>
+                    Multiple Enqbator designs have received awards. Plus
+                    Sitefinity was named to the 2022 Gartner Magic Quadrant for
+                    Digital Experience Platforms.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-3 py-3'>
+              <div className='card card-bg'>
+                <div className='card-body'>
+                  <h5 className='card-title'>
+                    Enqbator - Sitefinity Partnership gives you the advantage
+                  </h5>
+                  <p className='card-text'>
+                    Enqbator's Premium partnership with Progress Sitefinity
+                    means you get the best of the web's most useful and proven
+                    DX platform.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-3 py-3'>
+              <div className='card card-bg'>
+                <div className='card-body'>
+                  <h5 className='card-title'>Cost effective & Efficient</h5>
+                  <p className='card-text'>
+                    Enqbator's expert team will get the most out of Sitefinity,
+                    just for you. Sitefinity has over 2,700 customers delivering
+                    a cost-effective WCM solution at 3X efficiency.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-3 py-3'>
+              <div className='card card-bg'>
+                <div className='card-body'>
+                  <h5 className='card-title'>
+                    Thousands of Sitefinity clients
+                  </h5>
+                  <p className='card-text'>
+                    Over 10,000 websites use Sitefinity to deliver rich,
+                    relevant customer experiences. And all of Enqbator's clients
+                    are 100% referable.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col'>
+              <h4 className='text-center'>Looking for a strategic partner?</h4>
+              <p className='text-center'>
+                <a href='#' className='btn btn-primary'>
+                  Let's talk.
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <section className='section-py'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-4'>
+              <TitleLine
+                title='Enqbator and Sitefinity: A Winning Partnership.'
+                description='Optional This is some placeholder content for this section.'
+                aosDelay='0'
+                aosDuration='1000'
+              />
+            </div>
+            <div className='col-lg-8'>
+              <div className='row'>
+                <div className='col-lg-12'>
+                  <div className='d-flex justify-content-between flex-wrap'>
+                    {/* <Image
+                      src='/img/badges/20-Projects-Sitefinity.png'
+                      width='128'
+                      height='146'
+                      alt='Sitefinity'
+                    /> */}
+                    <Image
+                      src='/img/badges/sitefinity-cms-logo.png'
+                      width='128'
+                      height='146'
+                      alt='Sitefinity'
+                      className='img-fluid m-3'
+                    />
+                    <Image
+                      src='/img/badges/digital-agency-premium-badge.png'
+                      width='128'
+                      height='146'
+                      alt='Sitefinity'
+                      className='img-fluid m-3'
+                    />
+                    <Image
+                      src='/img/badges/sitefinity_champion-min.png'
+                      width='128'
+                      height='146'
+                      alt='Sitefinity'
+                      className='img-fluid m-3'
+                    />
+
+                    <Image
+                      src='/img/badges/technical-accredited-sitefinity.png'
+                      width='128'
+                      height='146'
+                      alt='Sitefinity'
+                      className='img-fluid m-3'
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-6'>
+                  <h4>Award winning & industry recognized</h4>
+                </div>
+                <div className='col-lg-6'>
+                  Multiple Enqbator designs have received awards. Plus
+                  Sitefinity was named to the 2022 Gartner Magic Quadrant for
+                  Digital Experience Platforms.
+                </div>
+              </div>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-6'>
+                  <h4>
+                    Enqbator - Sitefinity Partnership gives you the advantage
+                  </h4>
+                </div>
+                <div className='col-lg-6'>
+                  Enqbator&apos;s Premium partnership with Progress Sitefinity
+                  means you get the best of the web&apos;s most useful and
+                  proven DX platform.
+                </div>
+              </div>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-6'>
+                  {' '}
+                  <h4>Cost effective & Efficient</h4>
+                </div>
+                <div className='col-lg-6'>
+                  Enqbator&apos;s expert team will get the most out of
+                  Sitefinity, just for you. Sitefinity has over 2,700 customers
+                  delivering a cost-effective WCM solution at 3X efficiency.
+                </div>
+              </div>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-6'>
+                  <h4>Thousands of Sitefinity clients</h4>
+                </div>
+                <div className='col-lg-6'>
+                  Over 10,000 websites use Sitefinity to deliver rich, relevant
+                  customer experiences. And all of Enqbator&apos;s clients are
+                  100% referable.
+                </div>
+              </div>
+              <div className='row my-4 py-4 border-bottom'>
+                <div className='col-lg-12'>
+                  <h4>Looking for a strategic partner? </h4>
+                  <h4>
+                    <a
+                      href='/components/'
+                      className='underline link-circle-arrow'
+                      aria-label='Components'
+                    >
+                      <div className='circle-arrow me-2'>
+                        <svg
+                          className='svg-arrow'
+                          width='16'
+                          height='16'
+                          viewBox='0 0 16 16'
+                          fill='none'
+                          aria-hidden='true'
+                          focusable='false'
+                        >
+                          <path
+                            fill='currentColor'
+                            className='svg-caret'
+                            d='M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z'
+                          ></path>
+                          <path
+                            className='svg-stem'
+                            stroke='currentColor'
+                            d='M1.75 8H11'
+                            stroke-width='1.5'
+                            stroke-linecap='round'
+                          ></path>
+                        </svg>
+                      </div>
+                      <span className='txt'>Let&apos;s Talk</span>
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /> <br />
+      <hr />
+      <br /> <br />
       <div className='sticky'>
         <AutoPlayVideo
           videoSrc='/video/sample.mp4'
@@ -1124,11 +1785,14 @@ const Components = () => {
           <div className='row'>
             <div className='col text-center'>
               <div className='grow-line-box center'>
-                <GrowLine
+                {/* <GrowLine
                   aosDelay='500'
                   aosDuration='1500'
-                  alignmentClass='text-left'
-                />
+                  alignmentClass='center'
+                  class='text-left'
+                /> */}
+
+                <GrowLine aosDelay='500' aosDuration='1500' />
               </div>
               <h2 className='text-white text-center display-3'>
                 Scrolling effect for optional section

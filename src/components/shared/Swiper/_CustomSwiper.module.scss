@@ -1,14 +1,1 @@
 @use '../../../assets/scss/variables' as *;
-
-.quote {
-  padding: 0 0 40px 0;
-}
-
-.customSwiper {
-  padding-bottom: 80px;
-  @media (min-width: $md) {
-    width: calc(100% + 38%);
-    margin-right: -100px;
-    position: relative;
-  }
-}

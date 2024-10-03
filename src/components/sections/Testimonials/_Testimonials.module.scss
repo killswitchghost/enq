@@ -1,14 +1,12 @@
 @use '../../../assets/scss/variables' as *;
 
-.testimonialSection {
-}
-
 .testimonialsWrap {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-
+  .swiper-slide-active,
   .slideActive {
     width: 100%;
     height: 100%;
@@ -36,11 +34,14 @@
       animation-delay: 0.8s;
     }
     .quoteText {
+      display: flex;
+      align-items: center;
       font-weight: 100;
       color: rgba(var(--bs-emphasis-color-rgb), 1);
       font-size: 1.2rem;
       animation-delay: 0.4s;
       letter-spacing: 0.03em;
+      min-height: 300px;
       @media (min-width: $lg) {
         font-size: 2rem;
       }

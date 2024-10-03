@@ -228,9 +228,9 @@ const HomePage = () => {
                 spaceBetween={40}
                 slidesPerView={1}
                 loop={true}
-                navigationEnabled={true}
-                paginationClickable={true}
-                scrollbarDraggable={true}
+                //navigationEnabled={true}
+                //paginationClickable={true}
+                //scrollbarDraggable={true}
                 //className={styles.InsightSwiper}
                 breakpoints={{
                   768: {
